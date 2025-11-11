@@ -10,8 +10,8 @@ Tato příručka je rozdělena na několik stránek, které jsou uvedeny v horn�
 
 - [Home - Domovská stránka](index-cs.html) - Domovská stránka: Tato stránka poskytuje úvodní informace, stručný rozsah použití, reference, závislosti, rozdílovou analýzu verzí a prohlášení o duševním vlastnictví. 
 - Introduction: 
-  - [Rozsah použití a obsah](scope-and-content-cs.html): Tento segment obsahuje úvodní obecné informace o sdíleném zdravotní záznamu. 
-  - [Background](background-cs.html): Tento segment obsahuje obecné informace o původu definice záznamu o sdíleném zdravotní záznamu. 
+  - [Rozsah použití a obsah](scope-and-content-cs.html): Tento segment obsahuje úvodní obecné informace o sdíleném zdravotním záznamu. 
+  - [Background](background-cs.html): Tento segment obsahuje obecné informace o původu definice záznamu o sdíleném zdravotním záznamu. 
 - Functional: 
   - [Případy užití](use-cases-cs.html): Tento segment obsahuje informace o případech použití. 
   - [Logické modely](logical-models-cs.html): Tento segment obsahuje informace o logických modelech. 
