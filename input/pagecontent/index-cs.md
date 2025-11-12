@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 ### Úvod
 
 Tato implementační specifikace vychází ze standardu [HL7 FHIR ve verzi R4](https://hl7.org/fhir/R4/) a definuje jednotný rámec pro reprezentaci Sdílení zdravotní záznam (SZZ) v českém národním kontextu. Specifikace stanovuje obsahové a strukturální komponenty dokumentu a zajišťuje jejich soulad s právními požadavky České republiky a s evropskými iniciativami v oblasti interoperability elektronických zdravotních záznamů. 

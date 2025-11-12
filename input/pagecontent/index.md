@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 ## Introduction 
 This implementation specification is based on the [FHIR version R4](https://hl7.org/fhir/R4/), and defines a unified framework for representing the Shared Health Record Record in the Czech national context. The specification defines the content and structural components of the document and ensures their compliance with the legal requirements of the Czech Republic as well as with European initiatives in the field of electronic health record interoperability. 
 
