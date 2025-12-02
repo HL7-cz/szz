@@ -1,5 +1,5 @@
 Logical: LogCzSubjectCz
-Id: logSubjectCzSZZ
+Id: LogSubjectCz
 Title: "A.1.1 - Identifikace a A.1.2 - Kontaktní informace Pacienta/subjektu"
 Description: """Sdílený zdravotní záznam - Identifikace pacienta a kontaktní informace pacienta"""
 

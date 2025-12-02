@@ -37,6 +37,9 @@ publisher:
 dependencies:
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.cz.core: current
+  hl7.fhir.eu.base: 0.1.0-ballot
+  hl7.fhir.eu.extensions: 0.1.1-ballot
+  hl7.fhir.extensions.r5: 4.0.1
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -308,6 +311,15 @@ groups:
     name: Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
+      - StructureDefinition/LogAngiologistCz
+      - StructureDefinition/LogBiochemistryLabCz
+      - StructureDefinition/logDigitalSignatureCz
+      - StructureDefinition/logGastroenterologistCz
+      - StructureDefinition/logGynecologistCz
+      - StructureDefinition/LogPulmonologistCz
+      - StructureDefinition/LogRadiologistCz
+      - StructureDefinition/LogSubjectCz
+      - StructureDefinition/LogUrologistCz
       - StructureDefinition/LogSzzCz
       - StructureDefinition/LogHeaderSzzCz
       - StructureDefinition/LogEmergencyRecordCz

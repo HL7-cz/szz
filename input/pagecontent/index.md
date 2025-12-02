@@ -6,7 +6,7 @@ This implementation specification is based on the [FHIR version R4](https://hl7.
 The main objective is to create a standardized form of the Shared Health Record as part of the patient’s medical documentation, which will be used for the electronic exchange of health information between healthcare providers, the patient, and the national infrastructure.
 
 ### Scope
-his guide is divided into several pages, which are listed in the menu bar at the top of each page. 
+This guide is divided into several pages, which are listed in the menu bar at the top of each page. 
 
 - [Home](index.html): This page provides introductory information, a brief scope of use, references, dependencies, version difference analysis, and intellectual property statements. 
 - Introduction: 

@@ -1,5 +1,5 @@
 Logical: LogEnSubjectCz
-Id: LogSubjectSZZ
+Id: SubjectCz
 Title: "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
 Description: """Shared Health Record - subject data element"""
 

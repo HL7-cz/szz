@@ -3,14 +3,14 @@ Id: LogHeaderSzzCz
 Title: "A.1 - Hlavička dokumentu"
 Description: """Hlavička sdíleného zdravotního záznamu podle české specifikace."""
 
-* subjekt 1..1 logSubjectCzSZZ "A.1.1 - Identifikace a A.1.2 - Kontaktní informace pacienta" """Identifikace pacienta a kontaktní informace pacienta"""
+* subjekt 1..1 LogSubjectCz "A.1.1 - Identifikace a A.1.2 - Kontaktní informace pacienta" """Identifikace pacienta a kontaktní informace pacienta"""
 
 * pojistovna 0..1 Base "A.1.3 Zdravotní pojištění" """Informace o pojištění pacienta."""
   * kodPojistovny 0..1 Identifier "A.1.3.1 Kód zdravotní pojišťovny" """Kód zdravotní pojišťovny."""
   * nazev 0..1 string "A.1.3.2 Název zdravotní pojišťovny" """Oficiální název pojišťovny."""
   * cisloPojistence 0..1 Identifier "A.1.3.3 Číslo zdravotního pojištění" """Číslo pojištěnce."""
 
-* prijemce 0..* Base "A.1.4 Příjemce dokumentu" """Zamýšlený příjemce zprávy o výjezdu."""
+* prijemce 0..* Base "A.1.4 Příjemce dokumentu" """Zamýšlený příjemce sdíleného zdravotního záznamu."""
   * idPrijemce 0..1 Identifier "A.1.4.1 ID příjemce" """Identifikační číslo zdravotnického pracovníka nebo osobní identifikátor pacienta."""
   * jmeno 0..1 HumanName "A.1.4.2 Jméno příjemce" """Jméno a příjmení osoby příjemce."""
   * idOrganizace 0..1 Identifier "A.1.4.3 ID organizace příjemce" """Identifikátor organizace příjemce (např. NRPZS, IČO)."""

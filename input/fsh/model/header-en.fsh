@@ -3,7 +3,7 @@ Id: HeaderSzzCz
 Title: "A.1 - Document header"
 Description: """Header of the shared health record according to Czech specifications."""
 
-* subject 1..1 LogSubjectSZZ "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject" """Identification of the patient/subject and Patient/subject related contact information"""
+* subject 1..1 SubjectCz "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject" """Identification of the patient/subject and Patient/subject related contact information"""
 * payer 0..1 Base "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care." """Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."""
 * payer.insuranceCode 0..1 Identifier "A.1.3.1 - Health insurance code" """Unique health insurance company identification code."""
 * payer.insuranceName 0..1 string "A.1.3.2 - Health insurance name" """Full, official name of the healthcare insurance provider."""

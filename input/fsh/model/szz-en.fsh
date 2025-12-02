@@ -1,5 +1,5 @@
 Logical: LogEnSzzCz
-Id: LogSzz
+Id: SzzCz
 Title: "A - Shared Health Record"
 Description: """Logical model of the Shared Health Record according to Czech specifications."""
 
