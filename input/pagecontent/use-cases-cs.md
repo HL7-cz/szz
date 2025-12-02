@@ -88,4 +88,5 @@ Přístup k údajům mají pouze oprávněné osoby, a to v rozsahu stanoveném 
 - Zdravotnický pracovník – přístup pouze v přímé souvislosti s poskytováním zdravotní péče.
 - ZZS a urgentní příjmy – přístup k emergentnímu záznamu v urgentních situacích.
 - ÚZIS – přístup k anonymizovaným datům pro statistické účely.
+  
 Příklad scénáře: Posádka ZZS přijíždí k pacientovi v bezvědomí. Po zadání identifikátoru do systému se zobrazí emergentní záznam s krevní skupinou a alergiemi. Díky tomu se lékař vyhne podání kontraindikovaného léku.
