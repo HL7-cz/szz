@@ -1,4 +1,4 @@
-Logical: LogEnGastroenterologistCz
-Id: LogEnGastroenterologistCz
-Title: "A.2.2 - Gastroenterologist"
-Description: """Shared Health Record - Gastroenterologist"""
+Logical: LogCzGastroenterologistCz
+Id: logGastroenterologistCz
+Title: "A.2.3 - Gastroenterolog"
+Description: """Sdílený zdravotní záznam - Gastroenterolog"""

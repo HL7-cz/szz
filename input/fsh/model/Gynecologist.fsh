@@ -1,4 +1,4 @@
-Logical: LogCzGynecologistCz
-Id: logGynecologistCz
-Title: "A.2.1 - Gynekolog"
-Description: """Sdílený zdravotní záznam - Gynekolog"""
+Logical: LogEnGynecologistCz
+Id: LogEnGynecologistCz
+Title: "A.2.2 - Gynecologist"
+Description: """Shared Health Record - Gynecologist"""

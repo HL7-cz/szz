@@ -1,4 +1,4 @@
-Logical: LogEnGeneralPractitionerCz
-Id: LogEnGeneralPractitionerCz
-Title: "A.2.1 - General Practitioner"
-Description: """Shared Health Record - General Practitioner"""
+Logical: LogCzGeneralPractitionerCz
+Id: logGeneralPractitionerCz
+Title: "A.2.1 - Praktický lékař"
+Description: """Sdílený zdravotní záznam - Praktický lékař"""
