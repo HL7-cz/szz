@@ -15,7 +15,8 @@ Tato příručka je rozdělena na několik stránek, které jsou uvedeny v horn�
   - [Rozsah použití a obsah](scope-and-content-cs.html): Tento segment obsahuje úvodní obecné informace o sdíleném zdravotním záznamu. 
   - [Background](background-cs.html): Tento segment obsahuje obecné informace o původu definice záznamu o sdíleném zdravotním záznamu. 
 - Functional: 
-  - [Případy užití](use-cases-cs.html): Tento segment obsahuje informace o případech použití. 
+  - [Případy užití](use-cases-cs.html): Tento segment obsahuje informace o případech použití.
+  - [Workflow](workflow-cs.html): Tento segment obsahuje informace o pracovním postupu. 
   - [Logické modely](logical-models-cs.html): Tento segment obsahuje informace o logických modelech. 
 - Implementation: 
   - [Mapování logického modelu](model-map-cs.html): Tento segment obsahuje informace o mapování logického modelu na profily sdíleného zdravotního záznamu. 

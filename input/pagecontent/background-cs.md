@@ -1,0 +1,35 @@
+#### Odpovědnosti za údaje a povinnost mazání údajů ⚖️
+
+**Sdílený zdravotní záznam** je definovaná část elektronického zdravotnictví, která zahrnuje *emergentní zdravotní záznam a výsledky preventivních a screeningových vyšetření*. 
+
+**Zapisující osoba (poskytovatel):** Zákon jednoznačně vymezuje, kdo má povinnost údaje do emergentního záznamu zapisovat. Pro údaje typu krevní skupina, alergie, nežádoucí účinky léčiv apod. je zapisující osobou každý poskytovatel zdravotních služeb, který takový údaj zjistí. Tedy každý lékař či zařízení, které u pacienta odhalí například alergii nebo závažnou reakci relevantní pro emergentní záznam, musí tuto informaci do sdíleného záznamu doplnit. Poskytovatel lůžkové péče pak zapisuje údaje o použitých léčivech dle `písm. h)` (podávané léky za posledních 12 měsíců). Ministerstvo zdravotnictví samo zajišťuje doplnění údajů o vydaných lécích (posledních 12 měsíců) z centrálního úložiště eRecept.
+
+**Odpovědnost za správnost:** Jakmile poskytovatel takový údaj zaznamená, odpovídá za jeho správnost. Zákon tedy jasně stanoví, že ten, kdo údaj do emergentního záznamu vložil, nese odpovědnost za to, že je správný a aktuální. Tato povinnost platí od okamžiku zápisu – poskytovatel musí zapisovat bez zbytečného odkladu poté, co se o nové skutečnosti dozví.
+
+**Povinnost aktualizace a výmazu:** Klíčová je věta v `odst. 6 §34a: „Zapisující osoba údajů podle odstavce 3 písm. b) je povinna údaj povinně uváděný v emergentním zdravotním záznamu zaznamenat a v případě zjištění neaktuálnosti tohoto údaje je povinna jej opravit nebo vymazat.“`. To znamená, že poskytovatel má nejen právo, ale přímo povinnost udržovat emergentní údaje aktuální. Pokud zjistí, že dříve zapsaný údaj už není platný (např. pacient už danou diagnózou netrpí, alergie byla vyvrácena apod.), musí jej aktualizovat nebo odstranit. Zákon tedy explicitně ukládá povinnost údaj skutečně vymazat, je-li neaktuální – nejde jen o oprávnění, ale o závazný požadavek. Z tohoto ustanovení vyplývá, že poskytovatel musí provést výmaz neplatného údaje, aby v emergentním záznamu nezůstávala mylná či zastaralá informace.
+
+**Sankce za nesplnění:** Tato povinnost není jen formální – novela zavádí i postihy. Pokud by poskytovatel požadovaný údaj nezaznamenal, neopravil, nevymazal nebo dokonce zapsal nesprávný údaj v rozporu s `§34a odst. 6`, dopustí se správního deliktu. Jinými slovy, nesplnění těchto povinností může být sankcionováno. 
+
+**Shrnutí odpovědností:** Za správnost a aktuálnost emergentních údajů ručí ten poskytovatel, který je do systému vložil. Je povinen je průběžně udržovat – při změně zdravotního stavu ihned opravit a zastaralé údaje odstranit. Poskytovatel tedy nejen smí, ale musí neplatný záznam smazat.
+
+> Poznámka: Pacient má právo přístup k těmto sdíleným údajům o sobě a také právo rozhodnout o jejich sdílení. Pokud pacient vysloví nesouhlas s nahlížením, zdravotníci ani statistický ústav k nim přístup nemají. Toto reflektuje i naše nastavení viz. Registr oprávnění. To však nemění nic na povinnosti poskytovatele údaje zapisovat a aktualizovat – jen to omezuje jejich využití.
+
+#### Emergentní údaje v rámci SZZ - rozdíly proti Pacientskému souhrnu 🩺
+
+**Pacientský souhrn** slouží jako dokument pro výměnu informací mezi systémy různých zemí (případně i vnitrostátně). Když pacient cestuje nebo se ocitne v péči jiného zařízení, přes NCP lze jeho PS vyžádat. NCP funguje jako zprostředkovatel – zajistí, aby se žádost dostala k poskytovateli, který PS vede, a od něj získá strukturovaný souhrn, který předá žadateli (lékaři, který pacienta aktuálně ošetřuje). Toto je plně v souladu s evropským standardem přeshraničního sdílení Patient Summary.
+
+**Obsah a využití vs. emergentní záznam:** Emergentní zdravotní záznam (součást SZAZ) i pacientský souhrn mají společný cíl – poskytnout zdravotníkům rychlý přehled klíčových informací o pacientovi. V čem se liší?
+- Emergentní záznam je užší. Obsahuje jen vybrané údaje nutné zejména při ohrožení života či urgentní péči(krevní skupina, alergie, závažné reakce, poslední vydané a podané léky). Je to skutečně minimální dataset pro zajištění bezpečí pacienta v akutních situacích.
+- Pacientský souhrn je širší (byť stále omezený výtah). Zahrnuje obecné anamnestické údaje, základní diagnózy, prodělané nemoci, zákroky, alergie, léky, rodinnou anamnézu, atd. – zkrátka strukturovaný souhrn pro účely pokračování léčby. Pacientský souhrn není omezen jen na urgentní info -  slouží i při plánované péči, druhých názorech, předání mezi praktickým lékařem a specialistou apod.
+
+**Centralizovaný vs. decentralizovaný přístup:** Z hlediska systému je zásadní rozdíl v umístění dat: Emergentní záznam je centralizovaný dataset, zatímco pacientský souhrn zůstává jako součást dokumentace u jednotlivých poskytovatelů. To znamená:
+- Emergentní údaje se sbíhají do centrální databáze (spravované státem), odkud je mohou čerpat oprávnění zdravotníci napříč celou ČR (pokud pacient neodmítl sdílení). Každý poskytovatel tak vidí stejný emergentní záznam pacienta – jde skutečně o sdílený záznam.
+- Pacientský souhrn naproti tomu není uložen centrálně. Existuje například v nemocničním systému konkrétní nemocnice, která ho vede. Nešíří se automaticky všem ostatním lékařům. Je dostupný teprve, když si o něj někdo zažádá (ať už přes NCP, nebo DÚ, časem AAfD atd...).
+
+##### Shrnutí
+
+- **Právní rámec:** Sdílený záznam (emergentní) je v zákoně o elektronizaci zdravotnictví (`325/2021 Sb. ve znění novely`), pacientský souhrn v zákoně o zdravotních službách (`372/2011 Sb.`).
+- **Povinnost vs. volitelnost:** Emergentní záznam – povinný zápis pro všechny relevantní poskytovatele. Pacientský souhrn – vedení dobrovolné (poskytovatel se může rozhodnout).
+- **Umístění dat:** Emergentní – centrální systém státu. Pacientský souhrn – u poskytovatele, žádné centrální úložiště všech PS (jen evidence v NCP, kdo má PS k dispozici).
+- **Přístup a sdílení:** Emergentní – automaticky přístupný oprávněným lékařům v ČR (opt-out pacienta možný). Pacientský souhrn – sdílen jen na vyžádání (typicky při ošetření v cizině, nebo novým lékařem) přes NCP, jinak je součástí dokumentace a cizí lékař do něj nenahlíží, pokud si ho nevyžádá oficiálně.
+- **Obsah:** Emergentní – úzce vymezené život zachraňující údaje. Pacientský souhrn – širší, obecné základní zdravotní informace (dle vyhlášky k zákonu).
