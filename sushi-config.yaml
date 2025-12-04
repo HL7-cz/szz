@@ -316,6 +316,7 @@ groups:
       - StructureDefinition/logDigitalSignatureCz
       - StructureDefinition/logGastroenterologyCz
       - StructureDefinition/logGynecologyCz
+      - StructureDefinition/logGeneralPractitionerCz
       - StructureDefinition/LogPulmonologyCz
       - StructureDefinition/LogRadiologyCz
       - StructureDefinition/LogSubjectCz
@@ -324,6 +325,7 @@ groups:
       - StructureDefinition/LogHeaderSzzCz
       - StructureDefinition/LogEmergencyRecordCz
       - StructureDefinition/LogPreventiveAndScreeningRecordCz
+
 #   GroupA:
 #     name: Group A
 #     description: The Alpha Group
