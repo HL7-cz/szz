@@ -1,7 +1,7 @@
 Logical: LogEnEmergencyRecordCz
 Id: EmergencyRecordCz
 Title: "A.2 - Emergency health record"
-Description: """Logical model for Emergency Health Record."""
+Description: """Shared Health Record - Logical model of Emergency Health Record."""
 
 * bloodGroup 0..1 Base "A.2.1 - Blood Group" """Information about the patient's blood group."""
   * bloodType 0..1 CodeableConcept "A.2.1.1 - Blood Group Type" """Record of the patient's blood group according to the AB0 system (A, B, AB, 0)."""

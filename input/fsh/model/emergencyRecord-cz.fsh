@@ -1,7 +1,7 @@
 Logical: LogCzEmergencyRecordCz
 Id: LogEmergencyRecordCz
 Title: "A.2 - Emergentní zdravotní záznam"
-Description: """Logický model pro Emergentní zdravotní záznam."""
+Description: """Sdílený zdravotní záznam - Logický model pro Emergentní zdravotní záznam."""
 
 * krevniSkupina 0..1 Base "A.2.1 - Krevní skupina" """Informace o krevní skupině pacienta."""
   * typ 0..1 CodeableConcept "A.2.1.1 - Typ krevní skupiny" """Záznam krevní skupiny pacienta dle systému AB0 (A, B, AB, 0)."""
