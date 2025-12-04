@@ -4,7 +4,7 @@ Title: "A.3 - Emergency health record"
 Description: """Emergency health record"""
 
 * bloodGroup 0..1 Base "A.2.1 - Blood Group" """Information about the patient's blood group"""
-  * bloodType 0..1 CodeableConcept "A.2.1.1 - Blood Group Type" """Record of the patient's blood group according to the AB0 system (A, B, AB, 0)."" "
+  * bloodType 0..1 CodeableConcept "A.2.1.1 - Blood Group Type" """Record of the patient's blood group according to the AB0 system (A, B, AB, 0)."""
   * rhFactor 0..1 CodeableConcept "A.2.1.2 - Rh Factor" """Record of Rh(D) factor."""
   * testCode 0..1 CodeableConcept "A.2.1.3 - Blood group test code" """Code identifying the type of blood group test performed."""
   * dateOfDetection 0..1 dateTime "A.2.1.4 - Date of blood group detection" """Date and time when the result was determined."""
