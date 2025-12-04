@@ -102,58 +102,6 @@ Contains other administrative information about the document – e.g., category,
 
 A section designated for electronic signature or timestamp according to Act No. 327/2011 Coll., §54a.
 
-#### Body - Screening Examinations
-
-**General Practitioner**
-
-The section contains the results of examinations within the data collected by a general practitioner for adults, which may include examination results within the scope of:
-- colorectal carcinoma screening
-- early detection of prostate carcinoma
-- preventive check-ups
-
-**Gynecologist**
-
-The section contains the results of examinations within the data collected by a gynecologist, which may include results within the scope of:
-- colorectal carcinoma screening examination
-- cytological examination for cervical carcinoma screening
-- HPV testing for cervical carcinoma screening
-- expert colposcopy for cervical carcinoma screening
-- preventive check-ups
-
-**Gastroenterologist**
-
-The section contains the results of examinations within the data collected by a gastroenterologist, which may include the examination result within the scope of colorectal carcinoma screening.
-
-**Radiologist**
-
-The section contains the results of examinations within the scope of data collected by a radiologist, which may include results within the scope of:
-- mammographic examination for breast carcinoma screening
-- biopsy for breast carcinoma screening
-- examination for early detection of lung carcinoma
-- examination for early detection of prostate carcinoma
-- examination for abdominal aortic aneurysm screening
-
-**Biochemistry Laboratory**
-
-The section contains the results of examinations by a biochemistry laboratory, which may include examination results within the scope of:
-- colorectal carcinoma screening
-- early detection of prostate carcinoma
-
-**Pulmonologist**
-
-The section contains the results of examinations within the scope of data collected by a pulmonologist, which may include the examination result within the scope of early detection of lung carcinoma.
-
-**Urologist**
-
-The section contains the results of examinations within the scope of data collected by a urologist, which may include the result of:
-- initial PSA testing within the scope of early detection of prostate carcinoma
-- subsequent urological examination within the scope of early detection of prostate carcinoma
-- subsequent biopsy examination within the scope of early detection of prostate carcinoma
-
-**Angiologist**
-
-The section contains the results of examinations within the scope of data collected by an angiologist, which may include the examination result within the scope of abdominal aortic aneurysm screening.
-
 #### Body - Emergent Health Record
 
 **Blood Group**
@@ -171,3 +119,55 @@ Contains records of significant adverse events. Typically, this includes adverse
 **Medicinal Products Used During Healthcare Provision by Inpatient Care Providers**
 
 This section contains a list of medicinal products that were used on the patient during the provision of healthcare services by inpatient care providers over the period of the last 12 months.
+
+#### Body - Screening and preventive examinations
+
+**General Practitioner**
+
+The section contains the results of examinations within the data collected by a general practitioner for adults, which may include examination results within the scope of:
+- colorectal carcinoma screening
+- early detection of prostate carcinoma
+- preventive check-ups
+
+**Gynecology**
+
+The section contains the results of examinations within the data collected by a gynecologist, which may include results within the scope of:
+- colorectal carcinoma screening examination
+- cytological examination for cervical carcinoma screening
+- HPV testing for cervical carcinoma screening
+- expert colposcopy for cervical carcinoma screening
+- preventive check-ups
+
+**Gastroenterology**
+
+The section contains the results of examinations within the data collected by a gastroenterologist, which may include the examination result within the scope of colorectal carcinoma screening.
+
+**Radiology**
+
+The section contains the results of examinations within the scope of data collected by a radiologist, which may include results within the scope of:
+- mammographic examination for breast carcinoma screening
+- biopsy for breast carcinoma screening
+- examination for early detection of lung carcinoma
+- examination for early detection of prostate carcinoma
+- examination for abdominal aortic aneurysm screening
+
+**Biochemistry Laboratory**
+
+The section contains the results of examinations by a biochemistry laboratory, which may include examination results within the scope of:
+- colorectal carcinoma screening
+- early detection of prostate carcinoma
+
+**Pulmonology**
+
+The section contains the results of examinations within the scope of data collected by a pulmonologist, which may include the examination result within the scope of early detection of lung carcinoma.
+
+**Urology**
+
+The section contains the results of examinations within the scope of data collected by a urologist, which may include the result of:
+- initial PSA testing within the scope of early detection of prostate carcinoma
+- subsequent urological examination within the scope of early detection of prostate carcinoma
+- subsequent biopsy examination within the scope of early detection of prostate carcinoma
+
+**Angiology**
+
+The section contains the results of examinations within the scope of data collected by an angiologist, which may include the examination result within the scope of abdominal aortic aneurysm screening.

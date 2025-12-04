@@ -1,15 +1,15 @@
 Logical: LogCzEmergencyRecordCz
 Id: LogEmergencyRecordCz
 Title: "A.2 - Emergentní zdravotní záznam"
-Description: """Logický model pro  Emergentní zdravotní záznam"""
+Description: """Logický model pro Emergentní zdravotní záznam."""
 
-* krevniSkupina 0..1 Base "A.2.1 - Krevní skupina" """Informace o krevní skupině pacienta"""
+* krevniSkupina 0..1 Base "A.2.1 - Krevní skupina" """Informace o krevní skupině pacienta."""
   * typ 0..1 CodeableConcept "A.2.1.1 - Typ krevní skupiny" """Záznam krevní skupiny pacienta dle systému AB0 (A, B, AB, 0)."""
   * rhFaktor 0..1 CodeableConcept "A.2.1.2 - Rh faktor" """Záznam Rh(D) faktoru."""
   * kodVysetreni 0..1 CodeableConcept "A.2.1.3 - Kód vyšetření krevní skupiny" """Kód identifikující typ provedeného vyšetření krevní skupiny."""
   * datumZjisteni 0..1 dateTime "A.2.1.4 - Datum zjištění krevní skupiny" """Datum a čas, kdy byl výsledek stanoven."""
 * alergie 0..* Base "A.2.2 - Alergie a nežádoucí reakce" """Záznam alergie či jiné významné nežádoucí reakce na látku nebo léčivý přípravek."""
-  * latka 0..1 CodeableConcept "A.2.2.1 - Popis alergie" """Textový popis alergie nebo intolerance"""
+  * latka 0..1 CodeableConcept "A.2.2.1 - Popis alergie" """Textový popis alergie nebo intolerance."""
   * kategorieAlergenu 0..1 CodeableConcept "A.2.2.2 - Kategorie alergenu" """Typ alergenu z hlediska původu."""
   * kryticnost 0..1 CodeableConcept "A.2.2.3 - Původce" """Látka, skupina látek nebo faktor prostředí, na které je pacient alergický nebo přecitlivělý. Původce je možné vyjádřit pomocí kódu substance, ATC skupiny nebo kódu produktu SÚKL (v případě léčivých přípravků)."""
   * typReakce 0..1 CodeableConcept "A.2.2.4 - Typ reakce" """Informace zda jde o alergii nebo intoleranci."""

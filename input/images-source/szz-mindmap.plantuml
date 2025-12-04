@@ -1,6 +1,7 @@
 @startmindmap
-* Shared health record
+* Shared Health Record
 ** Header
-** Body - Screening Examinations
-** Body - Emergent Health Record
+** Body
+*** Emergent Health Record
+*** Screening and preventive examinations
 @endmindmap

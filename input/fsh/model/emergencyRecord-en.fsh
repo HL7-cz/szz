@@ -1,15 +1,15 @@
 Logical: LogEnEmergencyRecordCz
 Id: EmergencyRecordCz
-Title: "A.3 - Emergency health record"
-Description: """Emergency health record"""
+Title: "A.2 - Emergency health record"
+Description: """Logical model for Emergency Health Record."""
 
-* bloodGroup 0..1 Base "A.2.1 - Blood Group" """Information about the patient's blood group"""
+* bloodGroup 0..1 Base "A.2.1 - Blood Group" """Information about the patient's blood group."""
   * bloodType 0..1 CodeableConcept "A.2.1.1 - Blood Group Type" """Record of the patient's blood group according to the AB0 system (A, B, AB, 0)."""
   * rhFactor 0..1 CodeableConcept "A.2.1.2 - Rh Factor" """Record of Rh(D) factor."""
   * testCode 0..1 CodeableConcept "A.2.1.3 - Blood group test code" """Code identifying the type of blood group test performed."""
   * dateOfDetection 0..1 dateTime "A.2.1.4 - Date of blood group detection" """Date and time when the result was determined."""
 * allergy 0..* Base "A.2.2 - Allergies and adverse reactions" """Record of allergy or other significant adverse reaction to a substance or medicinal product."""
-  * substance 0..1 CodeableConcept "A.2.2.1 - Description of allergy" """Text description of allergy or intolerance"""
+  * substance 0..1 CodeableConcept "A.2.2.1 - Description of allergy" """Text description of allergy or intolerance."""
   * allergenCategory 0..1 CodeableConcept "A.2.2.2 - Allergen category" """Type of allergen in terms of origin."""
   * causativeAgent 0..1 CodeableConcept "A.2.2.3 - Causative agent" """Substance, group of substances, or environmental factor to which the patient is allergic or hypersensitive. The causative agent can be expressed using a substance code, ATC group, or SÚKL product code (in the case of medicinal products)."""
   * reactionType 0..1 CodeableConcept "A.2.2.4 - Reaction type" """Information on whether it is an allergy or intolerance."""

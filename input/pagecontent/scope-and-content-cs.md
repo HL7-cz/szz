@@ -100,58 +100,6 @@ Obsahuje další administrativní informace o dokumentu – např. kategorie, ve
 
 Sekce určená pro elektronický podpis či časové razítko podle zákona č. 327/2011 Sb., §54a. 
 
-#### Tělo záznamu - Screeningová vyšetření
-
-**Praktický lékař**
-
-Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných všeobecným praktickým lékařem pro dospělé, který může obsahovat výsledek vyšetření v rámci:
-- screeningu kolorektálního karcinomu
-- časného záchytu karcinomu prostaty
-- preventivní prohlídky
-
-**Gynekolog**
-
-Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných gynekologem, který může obsahovat výsledek v rámci:
-- vyšetření screeningu kolorektálního karcinomu
-- cytologického vyšetření pro screening karcinomu děložního hrdla
-- HPV vyšetření pro screening karcinomu děložního hrdla
-- expertní kolposkopie pro screening karcinomu děložního hrdla
-- prteventivní prohlídky
-
-**Gastroenterolog**
-
-Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných gastroenterologem, který může obsahovat výsledek vyšetření v rámci screeningu kolorektálního karcinomu.
-
-**Radiolog**
-
-Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných radiologem, který může obsahovat výsledek v rámci:
-- mamografického vyšetření pro screening karcinomu prsu
-- biopsie pro screening karcinomu prsu
-- vyšetření pro časný záchyt karcinomu plic
-- vyšetření pro časný záchyt karcinomu prostaty
-- vyšetření pro screening aneuryysmatu abdominální aorty
-
-**Laboratoř biochemie**
-
-Oddíl obsahuje výsledky vyšetření laboratoří biochemie, který může obsahovat výsledek vyšetření v rámci:
-- screeningu kolorektálního karcinomu
-- časného záchytu karcinomu prostaty
-
-**Pneumolog**
-
-Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných plicním lékařem, který může obsahovat výsledek vyšetření v rámci časného záchytu karcinomu plic.
-
-**Urolog**
-
-Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných urologem, který může obsahovat výsledek:
-- vstupního PSA vyšetření v rámci časného záchytu karcinomu prostaty
-- navazujících urologického vyšetření  v rámci časného záchytu karcinomu prostaty
-- navazujícího bioptického vyšetření  v rámci časného záchytu karcinomu prostaty
-
-**Angiolog**
-
-Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných angiologem, který může obsahovat výsledek vyšetření v rámci screeningu aneurysmatu abdominální aorty.
-
 #### Tělo záznamu - Emergentní zdravotní záznam
 
 **Krevní skupina**
@@ -170,3 +118,55 @@ Obsahuje záznamy o významných nežádoucích příhodách. Typicky jde o než
 **Léčivé přípravky použité při poskytování zdravotních služeb u poskytovatelů lůžkové péče**
 
 Tento oddíl obsahuje výčet léčivých přípravků, které byly použité u pacienta při poskytování zdravotních služeb u poskytovatelů lůžkové péče za období posledních 12 měsíců.
+
+#### Tělo záznamu - Screeningová a preventivní vyšetření
+
+**Praktický lékař**
+
+Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných všeobecným praktickým lékařem pro dospělé, který může obsahovat výsledek vyšetření v rámci:
+- screeningu kolorektálního karcinomu
+- časného záchytu karcinomu prostaty
+- preventivní prohlídky
+
+**Gynekologie**
+
+Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných gynekologem, který může obsahovat výsledek v rámci:
+- vyšetření screeningu kolorektálního karcinomu
+- cytologického vyšetření pro screening karcinomu děložního hrdla
+- HPV vyšetření pro screening karcinomu děložního hrdla
+- expertní kolposkopie pro screening karcinomu děložního hrdla
+- prteventivní prohlídky
+
+**Gastroenterologie**
+
+Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných gastroenterologem, který může obsahovat výsledek vyšetření v rámci screeningu kolorektálního karcinomu.
+
+**Radiologie**
+
+Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných radiologem, který může obsahovat výsledek v rámci:
+- mamografického vyšetření pro screening karcinomu prsu
+- biopsie pro screening karcinomu prsu
+- vyšetření pro časný záchyt karcinomu plic
+- vyšetření pro časný záchyt karcinomu prostaty
+- vyšetření pro screening aneuryysmatu abdominální aorty
+
+**Laboratoř biochemie**
+
+Oddíl obsahuje výsledky vyšetření laboratoří biochemie, který může obsahovat výsledek vyšetření v rámci:
+- screeningu kolorektálního karcinomu
+- časného záchytu karcinomu prostaty
+
+**Pneumologie**
+
+Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných plicním lékařem, který může obsahovat výsledek vyšetření v rámci časného záchytu karcinomu plic.
+
+**Urologie**
+
+Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných urologem, který může obsahovat výsledek:
+- vstupního PSA vyšetření v rámci časného záchytu karcinomu prostaty
+- navazujících urologického vyšetření  v rámci časného záchytu karcinomu prostaty
+- navazujícího bioptického vyšetření  v rámci časného záchytu karcinomu prostaty
+
+**Angiologie**
+
+Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných angiologem, který může obsahovat výsledek vyšetření v rámci screeningu aneurysmatu abdominální aorty.
