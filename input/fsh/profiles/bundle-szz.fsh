@@ -39,7 +39,8 @@ Description: "Clinical document used to represent a Shared Health Record for the
     practitionerRole 0..* and
     organization 0..* and
     observation 0..* and
-    adverseEvent 0..*
+    adverseEvent 0..* and
+    documentReference 0..*
 
 * entry[composition].resource only CZ_CompositionSzz
 * entry[patient].resource only CZ_PatientCore
@@ -48,6 +49,7 @@ Description: "Clinical document used to represent a Shared Health Record for the
 * entry[organization].resource only CZ_OrganizationCore
 * entry[observation].resource only Observation or CZ_ObservationBloodType
 * entry[adverseEvent].resource only CZ_AdverseEvent
+* entry[documentReference].resource only CZ_Attachment or CZ_Logo
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

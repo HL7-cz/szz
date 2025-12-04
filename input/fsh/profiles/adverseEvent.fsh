@@ -10,7 +10,7 @@ Description: "Czech profile for adverse event. "
 
 * date 0..1
 * event 0..1
-// zde je potřeba doplnit číselník
+* event from TypeOfAdverseEventSzzVS (required)
 
 * suspectEntity ^slicing.discriminator[+].type = #profile
 * suspectEntity ^slicing.discriminator[=].path = "instance"

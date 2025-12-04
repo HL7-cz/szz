@@ -52,7 +52,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * section[emergencyRecord]
   * ^short = "Emergency record Section"
   * ^definition = "This section holds information about emergency record."
-  //* code = $loinc# //""
+  * code = DocumentSectionCzSzzCs#10001 "Emergency health record"
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -87,7 +87,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * section[preventingAndScreeningRecord]
   * ^short = "Preventing and screening record Section"
   * ^definition = "This section holds information about preventing and screening examination."
-  //* code = $loinc# //""
+  * code = DocumentSectionCzSzzCs#10002 "Preventive and screening health record"
   * section
     * title 1..
     * text 1..
@@ -110,7 +110,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * section[generalPractitioner]
     * ^short = "General Practitioner Section"
     * ^definition = "This section holds information about an examination of general practitioner."
-  //* code = $loinc# //""
+    * code = DocumentSectionCzSzzCs#10003 "General practitioner record"
   
     * entry
       * insert SliceElement( #profile, $this )

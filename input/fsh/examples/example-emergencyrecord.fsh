@@ -26,6 +26,9 @@ Usage: #example
 * entry[observation].fullUrl = "urn:uuid:5da80cc6-b699-42dc-aeba-86e229063975"
 * entry[observation].resource = cz-example-observation-bloodType
 
+* entry[documentReference][+].fullUrl = "urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877"
+* entry[documentReference][=].resource = cz-logo-example
+
 Instance: cz-example-composition
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Emergency Report (CZ)"
@@ -43,7 +46,8 @@ Usage: #example
 * confidentiality = #N
 * language = #cs
 * section[emergencyRecord].title = "Emergency Record"
-* section[emergencyRecord].entry[0] = Reference(urn:uuid:5da80cc6-b699-42dc-aeba-86e229063975)
+* section[emergencyRecord].code = DocumentSectionCzSzzCs#10001 "Emergency health record"
+* section[emergencyRecord].entry[bloodType] = Reference(urn:uuid:5da80cc6-b699-42dc-aeba-86e229063975)
 
 Instance: cz-example-organization
 InstanceOf: cz-organization-core
@@ -70,13 +74,13 @@ Description: "An example of the organization with logo extension"
 * address[=].city = "Město"
 * address[=].postalCode = "10000"
 * address[=].country = "CZ"
-* extension[logo].valueReference = Reference(urn:uuid:c23fc55c-e576-4fc4-8526-6f31f0b9377c)
+* extension[logo].valueReference = Reference(urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877)
 
 Instance: cz-logo-example
 InstanceOf: CZ_Logo
 Usage: #example
 Description: "Example of logo as document reference for FN Obláčkov."
-* id = "c23fc55c-e576-4fc4-8526-6f31f0b9377c"
+* id = "040eb849-a513-4d74-b3f3-d2f246a26877"
 * status = #current
 * content.attachment
   * contentType = #image/jpeg
