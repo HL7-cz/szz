@@ -1,7 +1,8 @@
-CodeSystem:   TypeOfAdverseEventEzzCS
-Id:         cz-type-of-adverse-event-cs
+CodeSystem:   TypeOfAdverseEventSzzCs
+Id:         cz-type-of-adverse-event-szz-cs
 Title:      "Type of adverse event Code System"
-Description:  """Type of adverse event codesystem defines the classification of events (e.g., adverse drug reaction, transfusion reaction).."""
+Description:  """Type of adverse event codesystem defines the classification of events (e.g., adverse drug reaction, transfusion reaction)."""
+
 * ^language = #cs-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -17,10 +18,10 @@ Description:  """Type of adverse event codesystem defines the classification of 
 * #01 "nežádoucí účinek"
 * #02 "reakce po transfuzi"
 
-ValueSet:   TypeOfAdverseEventEzzVS
-Id:         cz-type-of-adverse-event-vs
+ValueSet:   TypeOfAdverseEventSzzVS
+Id:         cz-type-of-adverse-event-szz-vs
 Title:      "Type of adverse event Value Set"
 Description:  """Type of adverse event value set includes selected codes from Type of adverse event Code System."""
 * insert SetFmmandStatusRule (1, draft)
 * ^experimental = false
-* codes from system TypeOfAdverseEventEzzCS
+* codes from system TypeOfAdverseEventSzzCs

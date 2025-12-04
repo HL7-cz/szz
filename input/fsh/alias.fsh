@@ -2,12 +2,13 @@
 // Valuesets:
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
 Alias: $dlp_lecprip = https://ncez.mzcr.cz/fhir/ValueSet/cz-dlplecivepripravky-vs
-
-/*
-Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
-Alias: $orpha = https://www.orpha.net
 Alias: $hl7-observation-category = http://hl7.org/fhir/ValueSet/observation-category
-*/
+Alias: $hl7-reaction-event-severity = http://hl7.org/fhir/ValueSet/reaction-event-severity
+Alias: $hl7-allergy-intolerance-type = http://hl7.org/fhir/ValueSet/allergy-intolerance-type
+Alias: $hl7-allergy-intolerance-criticality = http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality
+Alias: $hl7-allergy-intolerance-category = http://hl7.org/fhir/ValueSet/allergy-intolerance-category
+Alias: $hl7-allergyintolerance-code = http://hl7.org/fhir/ValueSet/allergyintolerance-code
+Alias: $hl7-AllergenWithExceptions = https://ncez.mzcr.cz/terminology/ValueSet/AllergenWithExceptions
 
 // Code systems
 Alias: $loinc =  http://loinc.org
