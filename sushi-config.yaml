@@ -311,15 +311,15 @@ groups:
     name: Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
-      - StructureDefinition/LogAngiologistCz
+      - StructureDefinition/LogAngiologyCz
       - StructureDefinition/LogBiochemistryLabCz
       - StructureDefinition/logDigitalSignatureCz
-      - StructureDefinition/logGastroenterologistCz
-      - StructureDefinition/logGynecologistCz
-      - StructureDefinition/LogPulmonologistCz
-      - StructureDefinition/LogRadiologistCz
+      - StructureDefinition/logGastroenterologyCz
+      - StructureDefinition/logGynecologyCz
+      - StructureDefinition/LogPulmonologyCz
+      - StructureDefinition/LogRadiologyCz
       - StructureDefinition/LogSubjectCz
-      - StructureDefinition/LogUrologistCz
+      - StructureDefinition/LogUrologyCz
       - StructureDefinition/LogSzzCz
       - StructureDefinition/LogHeaderSzzCz
       - StructureDefinition/LogEmergencyRecordCz
