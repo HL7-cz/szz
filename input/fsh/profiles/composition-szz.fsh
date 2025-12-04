@@ -1,6 +1,6 @@
 Profile: CZ_CompositionSzz
 Parent: Composition
-Id: cz-composition-Szz
+Id: cz-composition-szz
 Title: "Composition (SZZ CZ)"
 Description: "This profile defines how to represent Composition resource in HL7 FHIR for the scope of this guide."
 
@@ -19,8 +19,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
 
-* encounter only Reference (CZ_Encounter)
-* encounter 1..1 
+//* encounter only Reference (CZ_Encounter)
+//* encounter 1..1 
 
 * date ^short = "SZZ date"
 * author ^short = "Who and/or what authored the Shared Health Record"
@@ -48,19 +48,42 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * obeys text-or-section
 
 * section contains
-    emergencyRecord 1..1 and
+    emergencyRecord 0..1 and
     preventingAndScreeningRecord 0..1
 
-///////////////////////////////// MEDICAL EXAMINATION SECTION ///////////////////////////////////////
+///////////////////////////////// Emergency record SECTION ///////////////////////////////////////
 * section[emergencyRecord]
   * ^short = "Emergency record Section"
   * ^definition = "This section holds information about emergency record."
   //* code = $loinc# //""
-  * entry 0..*
   * entry
-    * ^short = "Emergency Record"
-    * ^definition = "This entry holds a reference about emergency information."
-//  * entry only Reference(CZ_AppointmentELP)
+    * insert SliceElement( #profile, $this )
+  * entry contains 
+      bloodType 0..1 and
+      allergiesAndAdverseReactions 0..* and
+      otherEmergencyInformation 0..* and
+      medicationHistoryDuringHospitalization 0..*
+
+  * entry[bloodType]
+    * ^short = "Blood Type Information"
+    * ^definition = "This entry holds a reference to the observation about blood type."
+  * entry[bloodType] only Reference(CZ_ObservationBloodType) 
+
+  * entry[allergiesAndAdverseReactions]
+    * ^short = "Allergies and Adverse Reactions Information"
+    * ^definition = "This entry holds a reference to the allergy or adverse reaction record."
+  * entry[allergiesAndAdverseReactions] only Reference(CZ_AllergyIntolerance)
+
+  * entry[otherEmergencyInformation]
+    * ^short = "Other Emergency Information"
+    * ^definition = "This entry holds a reference to other emergency information."
+  * entry[otherEmergencyInformation] only Reference(CZ_AdverseEvent)
+
+  * entry[medicationHistoryDuringHospitalization]
+    * ^short = "Medication History Information"
+    * ^definition = "This entry holds a reference to the medication history."
+  * entry[medicationHistoryDuringHospitalization] only Reference(CZ_MedicationStatement) 
+
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 ///////////////////////////////// MEDICAL REPORT SECTION ///////////////////////////////////////
@@ -68,12 +91,53 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * ^short = "Preventing and screening record Section"
   * ^definition = "This section holds information about preventing and screening examination."
   //* code = $loinc# //""
-  * entry 0..*
-  * entry
-    * ^short = "Medical Report"
-    * ^definition = "This entry holds a reference to preventing and screening examination."
-//  * entry only Reference(CZ_DiagnosticReportELP)
-  * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+  * section
+    * title 1..
+    * text 1..
+    * text only Narrative
+    // Slicing rules for section based on code value
+  * section ^slicing.discriminator[0].type = #value
+  * section ^slicing.discriminator[0].path = "code"
+  * section ^slicing.ordered = false
+  * section ^slicing.rules = #open
+  * section contains 
+    generalPractitioner ..1 and
+    gynecology ..1 and
+    // oncology ..1 and ???
+    biochemistryLaboratory ..1 and
+    urology ..1 and
+    pneumology ..1 and
+    gastroenterology ..1 and
+    radiology ..1 and
+    angiology ..1
+
+  * section[generalPractitioner]
+    * ^short = "General Practitioner Section"
+    * ^definition = "This section holds information about an examination of general practitioner."
+  //* code = $loinc# //""
+  
+    * entry
+      * insert SliceElement( #profile, $this )
+    * entry contains 
+      observationColorectalCancerScreening 0..* and
+      observationProstateCancerScreening 0..* and
+      preventingExamination 0..*
+
+    * entry[observationColorectalCancerScreening]
+      * ^short = "Observation Colorectal Cancer Screening"
+      * ^definition = "This entry holds a reference to the observation about colorectal cancer screening."
+    * entry[observationColorectalCancerScreening] only Reference(Observation)
+
+    * entry[observationProstateCancerScreening]
+      * ^short = "Observation Prostate Cancer Screening"
+      * ^definition = "This entry holds a reference to the observation about prostate cancer screening."
+    * entry[observationProstateCancerScreening] only Reference(Observation)
+
+    * entry[preventingExamination]
+      * ^short = "Preventing Examination"
+      * ^definition = "This entry holds a reference to the preventing examination."
+    * entry[preventingExamination] only Reference(Observation)
+    * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."

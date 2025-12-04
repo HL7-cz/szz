@@ -15,6 +15,7 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $sct =  http://snomed.info/sct
 Alias: $UCUM = http://unitsofmeasure.org
 Alias: $dlp_lecivePripravky = https://ncez.mzcr.cz/fhir/CodeSystem/dlp-lecive-pripravky-cs
+Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/nclppol
 
 /*
 // CodeSystems:
