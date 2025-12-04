@@ -1,4 +1,4 @@
 Logical: LogEnRadiologyCz
 Id: RadiologyCz
-Title: "A.2.4 - Radiologist"
+Title: "A.3.4 - Radiologist"
 Description: """Shared Health Record - Radiologist"""

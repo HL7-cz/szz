@@ -5,5 +5,5 @@ Description: """Logický model Sdíleného zdravotního záznamu podle české s
 
 * hlavicka 1..1 LogHeaderSzzCz "A.1 - Hlavička dokumentu" """Hlavička sdíleného zdravotního záznamu podle české specifikace"""
 * telo 1..1 Base "Tělo dokumentu" """Tělo obsahuje emergentní záznam a preventivní/screeningový záznam."""
-  * preventivniAscreeningovyZZ 1..1 LogPreventiveAndScreeningRecordCz "A.2 - Preventivní a screeningový zdravotní záznam" """Preventivní a screeningový zdravotní záznam"""
-  * emergentniZZ 1..1 LogEmergencyRecordCz "A.3 - Emergentní zdravotní záznam" """Emergentní zdravotní záznam"""
+  * emergentniZZ 0..1 LogEmergencyRecordCz "A.3 - Emergentní zdravotní záznam" """Emergentní zdravotní záznam"""
+  * preventivniAscreeningovyZZ 0..1 LogPreventiveAndScreeningRecordCz "A.3 - Preventivní a screeningový zdravotní záznam" """Preventivní a screeningový zdravotní záznam"""
