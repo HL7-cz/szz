@@ -100,7 +100,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * section contains 
     generalPractitioner ..1 and
     gynecology ..1 and
-    // oncology ..1 and ???
     biochemistryLaboratory ..1 and
     urology ..1 and
     pneumology ..1 and

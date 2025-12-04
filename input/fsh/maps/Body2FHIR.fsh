@@ -18,6 +18,28 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:emergencyRecord.entry:bloodType
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.allergy
+* group[=].element[=].display = "A.2.2 - Allergies and adverse reactions"
+* group[=].element[=].target.code = #Composition.section:emergencyRecord.entry:allergiesAndAdverseReactions
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.otherEmergentData
+* group[=].element[=].display = "A.2.3 - Other emergent data"
+* group[=].element[=].target.code = #Composition.section:emergencyRecord.entry:otherEmergencyInformation
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.usedMedication
+* group[=].element[=].display = "A.2.4 - Medicinal products used in the provision of healthcare services by inpatient care providers"
+* group[=].element[=].target.code = #Composition.section:emergencyRecord.entry:medicationHistoryDuringHospitalization
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.preventiveAndScreeningRecordCz
+* group[=].element[=].display = "A.3 - Preventive and screening health record"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/SzzCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-blood-type"
 * group[=].element[+].code = #Body.emergencyRecord.bloodGroup.bloodType
 * group[=].element[=].display = "A.2.1.1 - Blood Group Type"
 * group[=].element[=].target.code = #CZ_ObservationBloodType.valueCodeableableConcept
@@ -38,8 +60,15 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ObservationBloodType.date
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Body.preventiveAndScreeningRecordCz
-* group[=].element[=].display = "A.3 - Preventive and screening health record"
-* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord
+* group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/SzzCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-allergy-intolerance"
+* group[=].element[+].code = #Body.emergencyRecord.allergy.substance
+* group[=].element[=].display = "A.2.2.1 - Substance"
+* group[=].element[=].target.code = #CZ_AllergyIntolerance.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.allergy.allergenCategory
+* group[=].element[=].display = "A.2.2.2 - Allergen category"
+* group[=].element[=].target.code = #CZ_AllergyIntolerance.category
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent

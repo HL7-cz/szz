@@ -149,8 +149,8 @@ Description: "Blood type observation for Patient Králík in RTG Imaging report"
 
 * id = "5da80cc6-b699-42dc-aeba-86e229063975"
 * status = #final
-* code = $nclp#14806 "Krevní skupina - popis"
+* code = $nclp#05162 "Krevní skupina AB0 RhD kompletní (B; přítomnost [-] Aglutinace (gel))"
 * subject = Reference(urn:uuid:142534ac-0274-4a16-b6a2-d4d4f24ff67b)
 
-* valueString = "A RhD pozitivní"
+* valueCodeableConcept = $sct#112144000 "Blood group A"
 
