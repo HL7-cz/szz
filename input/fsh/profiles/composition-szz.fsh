@@ -1,6 +1,6 @@
 Profile: CZ_CompositionSzz
 Parent: Composition
-Id: cz-composition-szz
+Id: cz-composition-sharedhealthrecord
 Title: "Composition (SZZ CZ)"
 Description: "This profile defines how to represent Composition resource in HL7 FHIR for the scope of this guide."
 
@@ -29,9 +29,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
 
 * title ^short = "Shared Health Record"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Shared Health Record\" or any equivalent translation"
-
-* custodian only Reference(CZ_OrganizationCore)
-* custodian 1..1
 
 * confidentiality 1..1
 * language 1..1

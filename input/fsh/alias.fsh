@@ -16,6 +16,7 @@ Alias: $sct =  http://snomed.info/sct
 Alias: $UCUM = http://unitsofmeasure.org
 Alias: $dlp_lecivePripravky = https://ncez.mzcr.cz/fhir/CodeSystem/dlp-lecive-pripravky-cs
 Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/nclppol
+Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 
 /*
 // CodeSystems:

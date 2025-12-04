@@ -1,6 +1,6 @@
 Profile: CZ_BundleSzz
 Parent: Bundle
-Id: cz-bundle-szz
+Id: cz-bundle-sharedhealthrecord
 Title: "Bundle (SZZ CZ)"
 Description: "Clinical document used to represent a Shared Health Record for the scope of this guide."
 
@@ -36,14 +36,18 @@ Description: "Clinical document used to represent a Shared Health Record for the
     composition 1..1 and
     patient 1..* and
     practitioner 1..* and
-    practitionerRole 1..* and
-    organization 1..*
+    practitionerRole 0..* and
+    organization 0..* and
+    observation 0..* and
+    adverseEvent 0..*
 
 * entry[composition].resource only CZ_CompositionSzz
 * entry[patient].resource only CZ_PatientCore
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 * entry[organization].resource only CZ_OrganizationCore
+* entry[observation].resource only Observation or CZ_ObservationBloodType
+* entry[adverseEvent].resource only CZ_AdverseEvent
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
