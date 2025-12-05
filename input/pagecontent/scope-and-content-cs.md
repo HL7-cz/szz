@@ -56,13 +56,13 @@ Sdílený zdravotní záznam lze rozdělit do několika částí: záhlaví a t�
   {% include szz-mindmap-cs.svg %}
 </figure>
 
-###### Hlavička
+###### Hlavička s administrativními údaji dokumentu 
 
 <figure>
   {% include header-mindmap-cs.svg %}
 </figure>
 
-###### Tělo
+###### Obsah dokumentu
 
 <figure>
   {% include body-mindmap-cs.svg %}
@@ -73,63 +73,50 @@ Sdílený zdravotní záznam lze rozdělit do několika částí: záhlaví a t�
 #### Hlavička záznamu 
 
 **Identifikace pacienta** 
-
 Tento oddíl obsahuje základní údaje o pacientovi, včetně identifikátorů (RID/DRID), jména, příjmení, data narození, státní příslušnosti a dalších podpůrných údajů, které umožňují jednoznačnou identifikaci v českém národním kontextu. 
 
 **Kontaktní informace pacienta** 
-
 Oddíl zahrnuje kontaktní osoby pacienta (zákonní zástupci, blízcí příbuzní nebo jiné osoby), které mohou poskytovat dodatečné informace o pacientovi. Typ kontaktu je rozlišen podle role (např. emergentní kontakt, zákonný zástupce, jiný vztah k pacientovi). 
 
 **Zdravotní pojištění** 
-
 Obsahuje údaje o zdravotní pojišťovně pacienta, čísle pojištěnce a případné doplňující informace o pojistném vztahu. 
 
 **Příjemce dokumentu** 
-
 Uvedení zamýšleného příjemce zprávy, zpravidla cílového poskytovatele akutní lůžkové péče (CPALP) nebo jiného zdravotnického zařízení, kterému je pacient předán. 
 
 **Autor** 
-
 Identifikační údaje člena výjezdové skupiny ZZS, který záznam vytvořil a je za něj zodpovědný. 
 
 **Metadata dokumentu** 
-
 Obsahuje další administrativní informace o dokumentu – např. kategorie, verze, datum a čas vytvoření, stav dokumentu, jazyk a stupeň důvěrnosti. 
 
 **Elektronické podpisy** 
-
 Sekce určená pro elektronický podpis či časové razítko podle zákona č. 327/2011 Sb., §54a. 
 
 #### Tělo záznamu - Emergentní zdravotní záznam
 
 **Krevní skupina**
-
 Zaznamenává AB0 systém a Rh faktor. Informace uvedené v tomto oddíle zahrnují i datum zjištění a kód identifikující typ provedeného vyšetření.
 
 **Alergie a nežádoucí reakce**
-
 Uvádí alergie, které se u pacienta projevily a byly jako alergie hodnoceny, tak i jiné projevy nesnášenlivosti, označované jako nežádoucí reakce na látku nebo léčivý přípravek. Uvádějí se zejména alergické reakce na léčivé přípravky a jiné látky, používané při poskytování zdravotní péče – vyvolávající látka (původce), typ (charakter)
 reakce a její závažnost.
 
 **Ostatní emergentní údaje**
-
 Obsahuje záznamy o významných nežádoucích příhodách. Typicky jde o nežádoucí účinky léčiv, transfuzní reakce, komplikace při podání krevních derivátů apod.
 
 **Léčivé přípravky použité při poskytování zdravotních služeb u poskytovatelů lůžkové péče**
-
 Tento oddíl obsahuje výčet léčivých přípravků, které byly použité u pacienta při poskytování zdravotních služeb u poskytovatelů lůžkové péče za období posledních 12 měsíců.
 
 #### Tělo záznamu - Screeningová a preventivní vyšetření
 
 **Praktický lékař**
-
 Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných všeobecným praktickým lékařem pro dospělé, který může obsahovat výsledek vyšetření v rámci:
 - screeningu kolorektálního karcinomu
 - časného záchytu karcinomu prostaty
 - preventivní prohlídky
 
 **Gynekologie**
-
 Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných gynekologem, který může obsahovat výsledek v rámci:
 - vyšetření screeningu kolorektálního karcinomu
 - cytologického vyšetření pro screening karcinomu děložního hrdla
@@ -138,11 +125,9 @@ Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných gynekologem, kte
 - prteventivní prohlídky
 
 **Gastroenterologie**
-
 Oddíl obsahuje výsledky vyšetření v rámci dat sbíraných gastroenterologem, který může obsahovat výsledek vyšetření v rámci screeningu kolorektálního karcinomu.
 
 **Radiologie**
-
 Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných radiologem, který může obsahovat výsledek v rámci:
 - mamografického vyšetření pro screening karcinomu prsu
 - biopsie pro screening karcinomu prsu
@@ -151,22 +136,18 @@ Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných radiologem, kte
 - vyšetření pro screening aneuryysmatu abdominální aorty
 
 **Laboratoř biochemie**
-
 Oddíl obsahuje výsledky vyšetření laboratoří biochemie, který může obsahovat výsledek vyšetření v rámci:
 - screeningu kolorektálního karcinomu
 - časného záchytu karcinomu prostaty
 
 **Pneumologie**
-
 Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných plicním lékařem, který může obsahovat výsledek vyšetření v rámci časného záchytu karcinomu plic.
 
 **Urologie**
-
 Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných urologem, který může obsahovat výsledek:
 - vstupního PSA vyšetření v rámci časného záchytu karcinomu prostaty
 - navazujících urologického vyšetření  v rámci časného záchytu karcinomu prostaty
 - navazujícího bioptického vyšetření  v rámci časného záchytu karcinomu prostaty
 
 **Angiologie**
-
 Oddíl obsahuje výsledky vyšetření v rozsahu dat sbíraných angiologem, který může obsahovat výsledek vyšetření v rámci screeningu aneurysmatu abdominální aorty.

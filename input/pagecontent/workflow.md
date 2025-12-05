@@ -11,27 +11,27 @@ This chapter therefore presents typical process scenarios for working with the S
 
 Data stored in the SZZ goes through several basic phases, which are repeated during its creation, modification, and use.
 
-1.    Collection
+1.    **Collection**
 - Data is created during the provision of healthcare or as part of a preventive or screening program.
 - The person recording the data (e.g., doctor, inpatient care provider, laboratory, screening provider) is responsible.
-2.	Recording
+2.	**Recording**
 - The data is recorded in the IS PZS.
 - It is transferred to the central SZZ via B2B API in FHIR format.
 - The central system provides it with a time stamp and electronic seal.
-3.    Storage
+3.    **Storage**
 - The data is stored in the central SZZ repository and becomes available to authorized persons.
 - At the same time, it is recorded in the Activity Log (audit trail).
-4.    Use
+4.    **Use**
 - The data is made available to healthcare professionals directly involved in care (e.g., emergency room doctors, EMS crews).
 - Patients have access to the data via the NPEZ portal or the EZKarta app.
 - The IHIS and other institutions may use the data in anonymized form for statistics and quality of care assessment.
-5.    Updates
+5.    **Updates**
 - If the data changes (e.g., allergy refuted), the person recording the data enters the new version.
 - The original data is marked as invalid but remains traceable in the history.
-6.    Deletion/invalidation
+6.    **Deletion/invalidation**
 - If the data is incorrect or no longer valid, it must be invalidated.
 - It is no longer displayed in the patient's active overview but is part of the audit trail.
-7.    Audit and control
+7.    **Audit and control**
 - Every operation (entry, update, viewing, invalidation) is recorded in the activity log.
 - The patient can retrospectively verify who accessed their data and when.
 - Supervisory authorities have the option of monitoring and verifying compliance with legislation.

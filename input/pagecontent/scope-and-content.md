@@ -75,62 +75,49 @@ The Shared Health Record can be divided into several parts: the document header 
 #### Header
 
 **Patient Identification**
-
 This section contains basic patient data, including identifiers (RID/DRID), given name, surname, date of birth, nationality, and other supporting data that allow for unambiguous identification in the Czech national context.
 
 **Patient Contact Information**
-
 The section includes the patient's contact persons (legal representatives, close relatives, or other persons) who can provide additional information about the patient. The contact type is differentiated by role (e.g., emergent contact, legal representative, other relationship to the patient).
 
 **Health Insurance**
-
 Contains data on the patient's health insurance company, policy number, and any supplementary information on the insurance relationship.
 
 **Document Recipient**
-
 Specification of the intended recipient of the report, usually the target acute inpatient care provider (CPALP) or another healthcare facility to which the patient is transferred.
 
 **Author**
-
 Identification data of the member of the Emergency Medical Service (ZZS) team who created the record and is responsible for it.
 
 **Document Metadata**
-
 Contains other administrative information about the document – e.g., category, version, date and time of creation, document status, language, and degree of confidentiality.
 
 **Electronic Signatures**
-
 A section designated for electronic signature or timestamp according to Act No. 327/2011 Coll., §54a.
 
 #### Body - Emergent Health Record
 
 **Blood Group**
-
 Records the AB0 system and Rh factor. Information listed in this section also includes the date of determination and a code identifying the type of examination performed.
 
 **Allergies and Adverse Reactions**
-
 Lists allergies that have manifested in the patient and were assessed as allergies, as well as other manifestations of intolerance, referred to as adverse reactions to a substance or medicinal product. This primarily includes allergic reactions to medicinal products and other substances used in the provision of healthcare – the causative substance (agent), the type (character) of the reaction, and its severity.
 
 **Other Emergent Data**
-
 Contains records of significant adverse events. Typically, this includes adverse drug effects, transfusion reactions, complications during the administration of blood derivatives, etc.
 
 **Medicinal Products Used During Healthcare Provision by Inpatient Care Providers**
-
 This section contains a list of medicinal products that were used on the patient during the provision of healthcare services by inpatient care providers over the period of the last 12 months.
 
 #### Body - Screening and preventive examinations
 
 **General Practitioner**
-
 The section contains the results of examinations within the data collected by a general practitioner for adults, which may include examination results within the scope of:
 - colorectal carcinoma screening
 - early detection of prostate carcinoma
 - preventive check-ups
 
 **Gynecology**
-
 The section contains the results of examinations within the data collected by a gynecologist, which may include results within the scope of:
 - colorectal carcinoma screening examination
 - cytological examination for cervical carcinoma screening
@@ -139,11 +126,9 @@ The section contains the results of examinations within the data collected by a 
 - preventive check-ups
 
 **Gastroenterology**
-
 The section contains the results of examinations within the data collected by a gastroenterologist, which may include the examination result within the scope of colorectal carcinoma screening.
 
 **Radiology**
-
 The section contains the results of examinations within the scope of data collected by a radiologist, which may include results within the scope of:
 - mammographic examination for breast carcinoma screening
 - biopsy for breast carcinoma screening
@@ -152,22 +137,18 @@ The section contains the results of examinations within the scope of data collec
 - examination for abdominal aortic aneurysm screening
 
 **Biochemistry Laboratory**
-
 The section contains the results of examinations by a biochemistry laboratory, which may include examination results within the scope of:
 - colorectal carcinoma screening
 - early detection of prostate carcinoma
 
 **Pulmonology**
-
 The section contains the results of examinations within the scope of data collected by a pulmonologist, which may include the examination result within the scope of early detection of lung carcinoma.
 
 **Urology**
-
 The section contains the results of examinations within the scope of data collected by a urologist, which may include the result of:
 - initial PSA testing within the scope of early detection of prostate carcinoma
 - subsequent urological examination within the scope of early detection of prostate carcinoma
 - subsequent biopsy examination within the scope of early detection of prostate carcinoma
 
 **Angiology**
-
 The section contains the results of examinations within the scope of data collected by an angiologist, which may include the examination result within the scope of abdominal aortic aneurysm screening.
