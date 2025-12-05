@@ -1,9 +1,21 @@
+CodeSystem:  TypeOfAdverseEventSzzCS
+Id:         cz-type-of-adverse-event-szz-cs
+Title:      "Type of adverse event Code System"
+Description:  """Type of adverse event code system according to act $34a para 2 of Act No. 325/2021 Coll., on health services, as amended."""
+
+* ^experimental = false
+
+* #01 "nežádoucí účinky, závažné nežádoucí účinky a neočekávané nežádoucí účinky léčivých přípravků"
+* #02 "nežádoucí příhody a závažné nežádoucí příhody související s léčivými přípravky"
+* #03 "závažné nežádoucí reakce související s odběrem krve nebo její složky nebo s transfúzí transfúzního přípravku"
+* #04 "závažné nežádoucí události související s odběrem krve nebo její složky nebo s transfúzním přípravkem"
+
+
 ValueSet:   TypeOfAdverseEventSzzVS
 Id:         cz-type-of-adverse-event-szz-vs
 Title:      "Type of adverse event Value Set"
 Description:  """Type of adverse event value set includes selected codes from Type of adverse event Code System."""
-* insert SetFmmandStatusRule (1, draft)
+
 * ^experimental = false
 
-* $sct#62014003 "Adverse drug reaction"
-* $sct#82545002 "Blood transfusion reaction"
+* include codes from system TypeOfAdverseEventSzzCS
