@@ -19,8 +19,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
 
-//* encounter only Reference (CZ_Encounter)
-//* encounter 1..1 
+* custodian only Reference(CZ_OrganizationCore)
+* custodian 1..1
 
 * date ^short = "SZZ date"
 * author ^short = "Who and/or what authored the Shared Health Record"
@@ -54,7 +54,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * ^definition = "This section holds information about emergency record."
   * code = DocumentSectionCzSzzCs#10001 "Emergency health record"
   * entry
-    * insert SliceElement( #profile, $this )
+    * insert SliceElement( #profile, [[resolve()]] )
   * entry contains 
       bloodType 0..1 and
       allergiesAndAdverseReactions 0..* and

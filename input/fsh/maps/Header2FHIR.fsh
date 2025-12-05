@@ -76,7 +76,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/HeaderSzzCz"
-* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-bundle-szz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-bundle-sharedhealthrecord"
 * group[=].element[+].code = #Header.documentMetadata.identifier
 * group[=].element[=].display = "A.1.6.1 - Document ID"
 * group[=].element[=].target.code = #Bundle.identifier					
@@ -98,7 +98,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "Digital signature of the Bundle"
 
 * group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/HeaderSzzCz"
-* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-composition-szz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-composition-sharedhealthrecord"
 * group[=].element[+].code = #Header.subject
 * group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
 * group[=].element[=].target.code = #Composition.subject		

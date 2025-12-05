@@ -45,6 +45,7 @@ Usage: #example
 * title = "Shared Health Record  - Emergency Report for patient Ing. Králíka"
 * confidentiality = #N
 * language = #cs
+* custodian = Reference(urn:uuid:f84d821c-ba13-412b-a340-2547a6f36b7f)
 * section[emergencyRecord].title = "Emergency Record"
 * section[emergencyRecord].code = DocumentSectionCzSzzCs#10001 "Emergency health record"
 * section[emergencyRecord].entry[bloodType] = Reference(urn:uuid:5da80cc6-b699-42dc-aeba-86e229063975)

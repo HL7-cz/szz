@@ -7,7 +7,7 @@ Usage: #definition
 * experimental = true
 * description = """CZ Shared Health Record Model to this guide mapping"""
 * group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/SzzCz"
-* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/sharedhealthrecord"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-composition-sharedhealthrecord"
 * group[=].element[+].code = #Body.emergencyRecord
 * group[=].element[=].display = "A.2 - Emergency health record"
 * group[=].element[=].target.code = #Composition.section:emergencyRecord
