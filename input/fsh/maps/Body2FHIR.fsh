@@ -23,8 +23,8 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:emergencyRecord.entry:allergiesAndAdverseReactions
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Body.emergencyRecord.otherEmergentData
-* group[=].element[=].display = "A.2.3 - Other emergent data"
+* group[=].element[+].code = #Body.emergencyRecord.otherEmergencyData
+* group[=].element[=].display = "A.2.3 - Other emergency data"
 * group[=].element[=].target.code = #Composition.section:emergencyRecord.entry:otherEmergencyInformation
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent

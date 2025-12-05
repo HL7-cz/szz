@@ -3,7 +3,7 @@
 The Shared Health Record (SZZ) is an electronic health record containing selected data about the patient's health status, intended for central sharing between the patient, Healthcare Providers (healthcare provider), and other authorized entities.
 
 It is composed of two parts:
-- Emergent Health Record (EZZ) – contains a set of critical information essential for providing urgent and immediate care regarding the patient's health status, namely concerning:
+- Emergency Health Record (EZZ) – contains a set of critical information essential for providing urgent and immediate care regarding the patient's health status, namely concerning:
   - blood group,
   - allergies,
   - adverse effects, serious adverse effects, and unexpected adverse effects of medicinal products,
@@ -26,7 +26,7 @@ the national register of preventive and screening examinations, newly introduced
 
 According to the amendment to the Act on the Electronisation of Healthcare, the recording person is:
 - Healthcare provider who participate in preventive care or screening programs.
-- Healthcare provider who ascertain data mandatorily included in the emergent health record (e.g., information on blood group, allergies, adverse effects of medicines, etc.).
+- Healthcare provider who ascertain data mandatorily included in the emergency health record (e.g., information on blood group, allergies, adverse effects of medicines, etc.).
 - Inpatient care providers who record data on medicinal products used during a patient's hospitalization.
 - The Ministry of Health (MZČR), which makes data on dispensed medicinal products available through the electronic prescription (eRecept) system.
   
@@ -50,7 +50,7 @@ Basic Sections
 
 ##### Conceptual View
 
-The Shared Health Record can be divided into several parts: the document header and the document body, which consists of the results of screening examinations and the emergent health record.
+The Shared Health Record can be divided into several parts: the document header and the document body, which consists of the results of screening examinations and the emergency health record.
 
 ###### Components of the Shared Health Record
 
@@ -78,7 +78,7 @@ The Shared Health Record can be divided into several parts: the document header 
 This section contains basic patient data, including identifiers (RID/DRID), given name, surname, date of birth, nationality, and other supporting data that allow for unambiguous identification in the Czech national context.
 
 **Patient Contact Information**
-The section includes the patient's contact persons (legal representatives, close relatives, or other persons) who can provide additional information about the patient. The contact type is differentiated by role (e.g., emergent contact, legal representative, other relationship to the patient).
+The section includes the patient's contact persons (legal representatives, close relatives, or other persons) who can provide additional information about the patient. The contact type is differentiated by role (e.g., emergency contact, legal representative, other relationship to the patient).
 
 **Health Insurance**
 Contains data on the patient's health insurance company, policy number, and any supplementary information on the insurance relationship.
@@ -95,7 +95,7 @@ Contains other administrative information about the document – e.g., category,
 **Electronic Signatures**
 A section designated for electronic signature or timestamp according to Act No. 327/2011 Coll., §54a.
 
-#### Body - Emergent Health Record
+#### Body - Emergency Health Record
 
 **Blood Group**
 Records the AB0 system and Rh factor. Information listed in this section also includes the date of determination and a code identifying the type of examination performed.
@@ -103,7 +103,7 @@ Records the AB0 system and Rh factor. Information listed in this section also in
 **Allergies and Adverse Reactions**
 Lists allergies that have manifested in the patient and were assessed as allergies, as well as other manifestations of intolerance, referred to as adverse reactions to a substance or medicinal product. This primarily includes allergic reactions to medicinal products and other substances used in the provision of healthcare – the causative substance (agent), the type (character) of the reaction, and its severity.
 
-**Other Emergent Data**
+**Other Emergency Data**
 Contains records of significant adverse events. Typically, this includes adverse drug effects, transfusion reactions, complications during the administration of blood derivatives, etc.
 
 **Medicinal Products Used During Healthcare Provision by Inpatient Care Providers**

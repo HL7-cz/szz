@@ -17,7 +17,7 @@ Description: """Shared Health Record - Logical model of Emergency Health Record.
   * severityReaction 0..1 CodeableConcept "A.2.2.6 - Clinical severity of manifestation" """Clinical severity of manifestation."""
   * dateOfDetection 0..1 dateTime "A.2.2.7 - Date of detection" """Date when the allergy/reaction was first diagnosed (onset)."""
   * recordOriginator 0..1 Base "A.2.2.8 - Record originator" """Healthcare provider who recorded the data."""
-* otherEmergentData 0..* Base "A.2.3 - Other emergent data" """Other data includes records of significant adverse events. These typically include adverse drug reactions, transfusion reactions, complications during the administration of blood products, etc."""
+* otherEmergencyData 0..* Base "A.2.3 - Other emergency data" """Other data includes records of significant adverse events. These typically include adverse drug reactions, transfusion reactions, complications during the administration of blood products, etc."""
   * eventType 0..1 CodeableConcept "A.2.3.1 - Event type" """Classification of the event (e.g., adverse drug reaction, transfusion reaction)."""
   * suspectedSubstance 0..1 Base "A.2.3.2. - Suspected substance" """A substance, drug, or other factor suspected of causing the event."""
   * dateOfDiscovery 0..1 dateTime "A.2.3.3 - Date of discovery" """Date and time when the adverse event occurred."""

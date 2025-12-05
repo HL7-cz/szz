@@ -18,6 +18,9 @@ Alias: $UCUM = http://unitsofmeasure.org
 Alias: $dlp_lecivePripravky = https://ncez.mzcr.cz/fhir/CodeSystem/dlp-lecive-pripravky-cs
 Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/nclppol
 Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
+Alias: $hl7-allergy-intolerance-category-cs = http://hl7.org/fhir/allergy-intolerance-category
+Alias: $hl7-allergy-intolerance-type-cs = http://hl7.org/fhir/allergy-intolerance-type
+Alias: $hl7-allergy-intolerance-criticality-cs = http://hl7.org/fhir/allergy-intolerance-criticality
 
 /*
 // CodeSystems:

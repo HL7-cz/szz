@@ -9,7 +9,7 @@ Description: """Sdílený zdravotní záznam - Preventivní a screeningové vyš
   * hladinaTOKS 0..1 integer "A.3.2.1.3 - Hladina TOKS" """Hodnota kvantitativního imunochemického testu (µg/g)."""
 * cytologickeVysetreni 0..1 Base "A.3.2.2 - Výsledek cytologického vyšetření v rámci screeningu karcinomu děložního hrdla" """"""
   * datumVysetreni 0..1 dateTime "A.3.2.2.1 - Datum cytologického vyšetření" """Datum odběru materiálu pro cytologické vyšetření (stěr z děložního hrdla)."""
-  * vysledekVysetreni 0..1 CodeableConcept "A.3.1.2.2 - Výsledek cytologického vyšetření" """Výsledek cytologického vyšetření."""
+  * vysledekVysetreni 0..1 CodeableConcept "A.3.2.2.2 - Výsledek cytologického vyšetření" """Výsledek cytologického vyšetření."""
 * HPVVysetreni 0..1 Base "A.3.2.3 - Výsledek HPV vyšetření v rámci screeningu karcinomu děložního hrdla" """"""
   * datumVysetreni 0..1 dateTime "A.3.2.3.1 - Datum high risk HPV vyšetření" """Datum, kdy je pacientce proveden odběr materiálu z děložního hrdla."""
   * vysledekHPV 0..1 CodeableConcept "A.3.2.3.2 - Výsledek high risk HPV vyšetření" """Výsledek HPV vyšetření."""

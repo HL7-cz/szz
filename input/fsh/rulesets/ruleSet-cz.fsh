@@ -19,8 +19,10 @@ RuleSet: SNOMEDCopyrightForVS
 RuleSet: ImposeProfile ( profile, index )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile][{index}].valueCanonical = {profile}
 
-RuleSet: ValuSetSupplementRule (codeSystem)
-* ^extension[http://hl7.org/fhir/StructureDefinition/valueset-supplement].valueCanonical = {codeSystem}
+RuleSet: ValueSetSupplementRule (codeSystem)
+//* ^extension[http://hl7.org/fhir/StructureDefinition/valueset-supplement].valueCanonical = {codeSystem}
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/valueset-supplement"
+* ^extension[=].valueCanonical = {codeSystem}
 
 RuleSet: SectionSliceComRules (short, def)
 // Slicing rules for section based on code value

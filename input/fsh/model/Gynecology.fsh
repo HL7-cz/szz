@@ -9,7 +9,7 @@ Description: """Shared Health Record - Preventive and screening examinations by 
   * TOKSLevel 0..1 integer "A.3.2.1.3 - TOKS level" """Quantitative immunochemical test value (µg/g)."""
 * cytologickeVysetreni 0..1 Base "A.3.2.2 - Result of cytological examination as part of cervical cancer screening" """"""
   * examinationDate 0..1 dateTime "A.3.2.2.1 - Date of cytological examination" """Date of collection of material for cytological examination (cervical smear)."""
-  * examinationResult 0..1 CodeableConcept "A.3.1.2.2 - Result of cytological examination" """Result of cytological examination."""
+  * examinationResult 0..1 CodeableConcept "A.3.2.2.2 - Result of cytological examination" """Result of cytological examination."""
 * HPVVerset 0..1 Base "A.3.2.3 - Result of HPV test as part of cervical cancer screening" """"""
   * examinationDate 0..1 dateTime "A.3.2.3.1 - Date of high-risk HPV test" """Date on which material is collected from the patient's cervix."""
   * HPVResult 0..1 CodeableConcept "A.3.2.3.2 - Result of high-risk HPV test" """Result of HPV test."""
