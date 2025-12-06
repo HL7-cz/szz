@@ -3,7 +3,7 @@ Id: cz-allergy-intolerance-criticality-szz-cs
 Title: "Allergy reaction criticality (CZ supplement)"
 Description: "The Code System is used for Record of allergy or other significant adverse reaction to a substance or medicinal product in the Shared Health Record to indicate the Allergy reaction criticality."
 
-* ^language = #cs-CZ
+* ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
 * ^status = #active

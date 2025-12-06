@@ -3,7 +3,7 @@ Id: cz-allergy-intolerance-category-szz-cs
 Title: "Allergy intolerance category (CZ supplement)"
 Description: "The Code System is used for Record of allergy or other significant adverse reaction to a substance or medicinal product in the Shared Health Record to indicate the Allergy intolerance category."
 
-* ^language = #cs-CZ
+* ^language = #cs
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
 * ^status = #active
