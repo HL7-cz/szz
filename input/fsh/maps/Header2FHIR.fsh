@@ -48,7 +48,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "Composition.extension:information-recipient.valueReference.resolve()"
 * group[=].element[+].code = #Header.author
-* group[=].element[=].display = "A.1.5 - Author (by whom the EMS was/were authored). Multiple authors could be provided."
+* group[=].element[=].display = "A.1.5 - Author (by whom the SZZ was/were authored). Multiple authors could be provided."
 * group[=].element[=].target.code = #PractitionerRole
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
@@ -153,7 +153,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #Header.author
-* group[=].element[=].display = "A.1.5 - Author (by whom the EMS was/were authored). Multiple authors could be provided."
+* group[=].element[=].display = "A.1.5 - Author (by whom the SZZ was/were authored). Multiple authors could be provided."
 * group[=].element[=].target.code = #Composition.author					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					

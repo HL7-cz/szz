@@ -57,7 +57,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.emergencyRecord.bloodGroup.dateOfDetection
 * group[=].element[=].display = "A.2.1.4 - Date of blood group detection"
-* group[=].element[=].target.code = #CZ_ObservationBloodType.date
+* group[=].element[=].target.code = #CZ_ObservationBloodType.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Header.author
+* group[=].element[=].display = "A.1.5 - Author (by whom the SZZ was/were authored)"
+* group[=].element[=].target.code = #CZ_ObservationBloodType.performer
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/SzzCz"
