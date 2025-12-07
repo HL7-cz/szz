@@ -66,7 +66,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/SzzCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-allergy-intolerance"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-allergyIntolerance-szz"
 * group[=].element[+].code = #Body.emergencyRecord.allergy.substance
 * group[=].element[=].display = "A.2.2.1 - Substance"
 * group[=].element[=].target.code = #CZ_AllergyIntolerance.code

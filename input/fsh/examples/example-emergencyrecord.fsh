@@ -166,7 +166,7 @@ Description: "Example of logo as document reference for FN Obláčkov."
 Instance: cz-example-practitioner
 InstanceOf: CZ_PractitionerCore
 Title: "Practitioner Testovací"
-Description: "Author of RTG Imaging report"
+Description: "Author of SZZ report"
 Usage: #example
 * id = "c3830e95-5f0a-46e8-a9e4-403f299ab2c5"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
@@ -181,7 +181,7 @@ Usage: #example
 Instance: cz-example-practitionerRole
 InstanceOf: CZ_PractitionerRoleCore
 Title: "PractitionerRole Testovací"
-Description: "Author of RTG Imaging report"
+Description: "Author of SZZ report"
 Usage: #example
 * id = "428025b5-e328-4542-8812-dd6a874c44f9"
 * specialty = $sct#394914008 "Radiology"
@@ -192,7 +192,7 @@ Instance: cz-example-patient
 InstanceOf: CZ_PatientCore
 Usage: #example
 Title: "Patient Králík"
-Description: "Patient in RTG Imaging report"
+Description: "Patient in SZZ"
 * id = "142534ac-0274-4a16-b6a2-d4d4f24ff67b"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
 * identifier[CPOJ][=].value = "0551621110"
@@ -225,7 +225,7 @@ Instance: cz-example-observation-bloodType
 InstanceOf: CZ_ObservationBloodType
 Usage: #example
 Title: "Observation Blood Type for Patient Králík"
-Description: "Blood type observation for Patient Králík in RTG Imaging report"
+Description: "Blood type observation for Patient Králík in SZZ"
 
 * id = "5da80cc6-b699-42dc-aeba-86e229063975"
 * status = #final

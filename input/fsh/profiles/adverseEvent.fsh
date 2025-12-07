@@ -1,6 +1,6 @@
 Profile: CZ_AdverseEvent
 Parent: AdverseEvent
-Id: cz-adverseEvent
+Id: cz-adverse-event
 Title: "Adverse event: Shared Health Record (CZ)"
 Description: "Czech profile for adverse event. "
 
