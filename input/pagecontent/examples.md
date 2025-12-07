@@ -2,7 +2,7 @@ All examples can be found on the [artifacts](artifacts.html) page.
 
 ### SZZ examples
 
-- [Example of an SZZ for an emergency record](Bundle-en-example-bundle-emergencyrecord.html) - Example of an SZZ with a fully completed emergency record
+- [Example of an SZZ for an emergency record](Bundle-cz-example-bundle-emergencyrecord.html) - Example of an SZZ with a fully completed emergency record
 
 ### Profile examples
 
