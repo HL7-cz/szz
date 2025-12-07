@@ -1,5 +1,5 @@
-ValueSet: AllergyReactionCategorySzzCs
-Id: cz-allergy-reaction-category-szz-cs
+ValueSet: AllergyReactionCategorySzzVs
+Id: cz-allergy-reaction-category-szz-vs
 Title: "Allergy reaction category"
 Description: "The Value Set is used for Record of allergy or other significant adverse reaction to a substance or medicinal product in the Shared Health Record to indicate the Allergy reaction category."
 

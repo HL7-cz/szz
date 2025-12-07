@@ -73,18 +73,18 @@ Usage: #example
 * id = "4b343429-16da-4a5b-be80-17e4122f5956"
 * identifier[+].system = "http://example.org/allergies"
 * identifier[=].value = "ALG20200115"
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $hl7-allergy-intolerance-clinical#active
+* verificationStatus = $hl7-allergy-intolerance-verification#confirmed
 * type = AllergyIntoleranceTypeSzzCs#allergy "alergie"
 * category[0] = AllergyIntoleranceCategorySzzCs#medication "léčivo"
 * criticality = AllergyIntoleranceCriticalitySzzCs#high "vysoká"
-* code = $sct#7980 "Allergy to penicillin"
+* code = $dlp_lecivePripravky#0233172 "V-PENICILIN BBP"
 * patient = Reference(urn:uuid:142534ac-0274-4a16-b6a2-d4d4f24ff67b)
 * onsetDateTime = "2020-01-15"
 * recordedDate = "2020-01-16"
 * recorder = Reference(urn:uuid:428025b5-e328-4542-8812-dd6a874c44f9)
 * reaction[0].severity = ClinicalSeverityOfSymptomsSzzCs#mild "mírná"
-* reaction[0].manifestation[0] = $sct#267036007 "Dušnost"
+* reaction[0].manifestation[0] = $sct#267036007 "Dyspnea"
 
 Instance: cz-example-medicationstatement
 InstanceOf: CZ_MedicationStatement
@@ -109,9 +109,9 @@ Description: "Example of AdverseEvent resource representing rash due to Penicill
 Usage: #example
 * id = "74d87d39-d681-4df4-80a5-975b359e6210"
 * actuality = #actual
-* event = #01 "nežádoucí účinky, závažné nežádoucí účinky a neočekávané nežádoucí účinky léčivých přípravků"
+* event = TypeOfAdverseEventSzzCS#01 "nežádoucí účinky, závažné nežádoucí účinky a neočekávané nežádoucí účinky léčivých přípravků"
 * subject = Reference(urn:uuid:142534ac-0274-4a16-b6a2-d4d4f24ff67b)
-* suspectEntity.instance = Reference(urn:uuid:4b343429-16da-4a5b-be80-17e4122f5956)
+* suspectEntity.instance = Reference(urn:uuid:d6511f3f-a311-4050-a34a-542f1ffe40bd)
 * date = "2024-12-01"
 * recorder = Reference(urn:uuid:428025b5-e328-4542-8812-dd6a874c44f9)
 

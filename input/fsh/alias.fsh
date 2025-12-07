@@ -21,6 +21,8 @@ Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 Alias: $hl7-allergy-intolerance-category-cs = http://hl7.org/fhir/allergy-intolerance-category
 Alias: $hl7-allergy-intolerance-type-cs = http://hl7.org/fhir/allergy-intolerance-type
 Alias: $hl7-allergy-intolerance-criticality-cs = http://hl7.org/fhir/allergy-intolerance-criticality
+Alias: $hl7-allergy-intolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
+Alias: $hl7-allergy-intolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $hl7-reaction-event-severity-cs = http://hl7.org/fhir/reaction-event-severity
 
 /*

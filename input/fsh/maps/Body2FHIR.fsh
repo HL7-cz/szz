@@ -116,7 +116,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.emergencyRecord.otherEmergencyData.suspectedSubstance
 * group[=].element[=].display = "A.2.3.2. - Suspected substance"
-* group[=].element[=].target.code = #CZ_AdverseEvent.suspect.instance.code
+* group[=].element[=].target.code = #CZ_AdverseEvent.suspectEntity.instance.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.emergencyRecord.otherEmergencyData.dateOfDiscovery
@@ -138,7 +138,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.emergencyRecord.usedMedication.quantity
 * group[=].element[=].display = "A.3.4.2 - Quantity"
-* group[=].element[=].target.code = #CZ_MedicationStatement.dosage.dose
+* group[=].element[=].target.code = #CZ_MedicationStatement.dosage.doseAndRate.doseQuantity
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.emergencyRecord.usedMedication.dateOfAdministration
