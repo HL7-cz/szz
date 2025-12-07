@@ -13,7 +13,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * identifier ^short = "SZZ business identifier"
 * status ^short = "SZZ status"
 
-* type = $loinc#104990-7 "Driver license medical fitness certificate" //TODO - opravit code 
+* type = $loinc#34117-2 "History and physical note" 
 
 * subject only Reference(CZ_PatientCore)
 * subject 1..1
