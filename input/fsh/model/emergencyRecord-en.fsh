@@ -11,7 +11,7 @@ Description: """Shared Health Record - Logical model of Emergency Health Record.
 * allergy 0..* Base "A.2.2 - Allergies and adverse reactions" """Record of allergy or other significant adverse reaction to a substance or medicinal product."""
   * substance 0..1 CodeableConcept "A.2.2.1 - Substance - allergen" """Identification of the substance, medicinal product, or other substance causing the reaction."""
   * allergenCategory 0..1 CodeableConcept "A.2.2.2 - Allergen category" """Type of allergen in terms of origin."""
-  * causativeAgent 0..1 CodeableConcept "A.2.2.3 - Causative agent" """Substance, group of substances, or environmental factor to which the patient is allergic or hypersensitive. The causative agent can be expressed using a substance code, ATC group, or SÚKL product code (in the case of medicinal products)."""
+  * criticality 0..1 CodeableConcept "A.2.2.3 - Criticality" """Substance, group of substances, or environmental factor to which the patient is allergic or hypersensitive. The causative agent can be expressed using a substance code, ATC group, or SÚKL product code (in the case of medicinal products)."""
   * reactionType 0..1 CodeableConcept "A.2.2.4 - Reaction type" """Information on whether it is an allergy or intolerance."""
   * manifestation 0..1 CodeableConcept "A.2.2.5 - Manifestation" """Clinical manifestations of the reaction."""
   * severityReaction 0..1 CodeableConcept "A.2.2.6 - Clinical severity of manifestation" """Clinical severity of manifestation."""

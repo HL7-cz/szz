@@ -77,3 +77,78 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_AllergyIntolerance.category
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.allergy.criticality
+* group[=].element[=].display = "A.2.2.3 - Criticality"
+* group[=].element[=].target.code = #CZ_AllergyIntolerance.criticality
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.allergy.reactionType
+* group[=].element[=].display = "A.2.2.4 - Reaction type"
+* group[=].element[=].target.code = #CZ_AllergyIntolerance.type
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.allergy.manifestation
+* group[=].element[=].display = "A.2.2.5 - Manifestation"
+* group[=].element[=].target.code = #CZ_AllergyIntolerance.reaction.manifestation
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.allergy.severityReaction
+* group[=].element[=].display = "A.2.2.6 - Clinical severity of manifestation"
+* group[=].element[=].target.code = #CZ_AllergyIntolerance.reaction.severity
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.allergy.dateOfDetection
+* group[=].element[=].display = "A.2.2.7 - Date of detection"
+* group[=].element[=].target.code = #CZ_AllergyIntolerance.reaction.onset
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.allergy.recordOriginator
+* group[=].element[=].display = "A.2.2.8 - Record originator"
+* group[=].element[=].target.code = #CZ_AllergyIntolerance.recorder
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/SzzCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-adverse-event"
+* group[=].element[+].code = #Body.emergencyRecord.otherEmergencyData.eventType
+* group[=].element[=].display = "A.2.3.1 - Event type"
+* group[=].element[=].target.code = #CZ_AdverseEvent.event
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.otherEmergencyData.suspectedSubstance
+* group[=].element[=].display = "A.2.3.2. - Suspected substance"
+* group[=].element[=].target.code = #CZ_AdverseEvent.suspect.instance.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.otherEmergencyData.dateOfDiscovery
+* group[=].element[=].display = "A.2.3.3 - Date of discovery"
+* group[=].element[=].target.code = #CZ_AdverseEvent.date
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.otherEmergencyData.recordOriginator
+* group[=].element[=].display = "A.2.3.4 - Record originator"
+* group[=].element[=].target.code = #CZ_AdverseEvent.recorder
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/SzzCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-MedicationStatement"
+* group[=].element[+].code = #Body.emergencyRecord.usedMedication.identification
+* group[=].element[=].display = "A.3.4.1 - Identification of medicinal product"
+* group[=].element[=].target.code = #CZ_MedicationStatement.medicationCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.usedMedication.quantity
+* group[=].element[=].display = "A.3.4.2 - Quantity"
+* group[=].element[=].target.code = #CZ_MedicationStatement.dosage.quantity
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.usedMedication.dateOfAdministration
+* group[=].element[=].display = "A.2.4.3 - Date of administration"
+* group[=].element[=].target.code = #CZ_MedicationStatement.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.emergencyRecord.usedMedication.sourceOfRecord
+* group[=].element[=].display = "A.2.4.4 - Source of record"
+* group[=].element[=].target.code = #CZ_MedicationStatement.informationSource
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+

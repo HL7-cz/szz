@@ -44,7 +44,6 @@ Usage: #example
 * author = Reference(urn:uuid:428025b5-e328-4542-8812-dd6a874c44f9)
 * title = "Shared Health Record  - Emergency Report for patient Ing. Králíka"
 * confidentiality = #N
-* type = $loinc#34117-2
 * language = #cs
 * custodian = Reference(urn:uuid:f84d821c-ba13-412b-a340-2547a6f36b7f)
 * section[emergencyRecord].title = "Emergency Record"
