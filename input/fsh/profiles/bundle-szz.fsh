@@ -40,6 +40,9 @@ Description: "Clinical document used to represent a Shared Health Record for the
     organization 0..* and
     observation 0..* and
     adverseEvent 0..* and
+    allergiesAndIntolerances 0..* and
+    medicationStatements 0..* and
+    medications 0..* and
     documentReference 0..*
 
 * entry[composition].resource only CZ_CompositionSzz
@@ -49,6 +52,9 @@ Description: "Clinical document used to represent a Shared Health Record for the
 * entry[organization].resource only CZ_OrganizationCore
 * entry[observation].resource only Observation or CZ_ObservationBloodType
 * entry[adverseEvent].resource only CZ_AdverseEvent
+* entry[allergiesAndIntolerances].resource only CZ_AllergyIntoleranceSzz
+* entry[medicationStatements].resource only CZ_MedicationStatement
+* entry[medications].resource only CZ_Medication
 * entry[documentReference].resource only CZ_Attachment or CZ_Logo
 
 * signature ^short = "Report Digital Signature"

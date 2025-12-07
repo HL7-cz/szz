@@ -29,6 +29,18 @@ Usage: #example
 * entry[documentReference][+].fullUrl = "urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877"
 * entry[documentReference][=].resource = cz-logo-example
 
+* entry[allergiesAndIntolerances].fullUrl = "urn:uuid:4b343429-16da-4a5b-be80-17e4122f5956"
+* entry[allergiesAndIntolerances].resource = cz-example-allergyintolerance
+
+* entry[medicationStatements].fullUrl = "urn:uuid:ce0f692f-0461-4ed0-8df3-f8db265f755c"
+* entry[medicationStatements].resource = cz-example-medicationstatement
+
+* entry[adverseEvent].fullUrl = "urn:uuid:74d87d39-d681-4df4-80a5-975b359e6210"
+* entry[adverseEvent].resource = cz-example-adverseevent
+
+* entry[medications].fullUrl = "urn:uuid:d6511f3f-a311-4050-a34a-542f1ffe40bd"
+* entry[medications].resource = cz-example-medication
+
 Instance: cz-example-composition
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Emergency Report (CZ)"
@@ -49,6 +61,69 @@ Usage: #example
 * section[emergencyRecord].title = "Emergency Record"
 * section[emergencyRecord].code = DocumentSectionCzSzzCs#10001 "Emergency health record"
 * section[emergencyRecord].entry[bloodType] = Reference(urn:uuid:5da80cc6-b699-42dc-aeba-86e229063975)
+* section[emergencyRecord].entry[allergiesAndAdverseReactions] = Reference(urn:uuid:4b343429-16da-4a5b-be80-17e4122f5956)
+* section[emergencyRecord].entry[otherEmergencyInformation] = Reference(urn:uuid:74d87d39-d681-4df4-80a5-975b359e6210)
+* section[emergencyRecord].entry[medicationHistoryDuringHospitalization] = Reference(urn:uuid:ce0f692f-0461-4ed0-8df3-f8db265f755c)
+
+Instance: cz-example-allergyintolerance
+InstanceOf: CZ_AllergyIntoleranceSzz
+Title: "AllergyIntolerance: Penicillin Allergy (CZ)"
+Description: "Example of AllergyIntolerance resource representing allergy to Penicillin."
+Usage: #example
+* id = "4b343429-16da-4a5b-be80-17e4122f5956"
+* identifier[+].system = "http://example.org/allergies"
+* identifier[=].value = "ALG20200115"
+* clinicalStatus = #active
+* verificationStatus = #confirmed
+* type = AllergyIntoleranceTypeSzzCs#allergy "alergie"
+* category[0] = AllergyIntoleranceCategorySzzCs#medication "léčivo"
+* criticality = AllergyIntoleranceCriticalitySzzCs#high "vysoká"
+* code = $sct#7980 "Allergy to penicillin"
+* patient = Reference(urn:uuid:142534ac-0274-4a16-b6a2-d4d4f24ff67b)
+* onsetDateTime = "2020-01-15"
+* recordedDate = "2020-01-16"
+* recorder = Reference(urn:uuid:428025b5-e328-4542-8812-dd6a874c44f9)
+* reaction[0].severity = ClinicalSeverityOfSymptomsSzzCs#mild "mírná"
+* reaction[0].manifestation[0] = $sct#267036007 "Dušnost"
+
+Instance: cz-example-medicationstatement
+InstanceOf: CZ_MedicationStatement
+Title: "MedicationStatement: Fludeoxythymidin (CZ)"
+Description: "Example of MedicationStatement resource representing Fludeoxythymidin medication."
+Usage: #example
+* id = "ce0f692f-0461-4ed0-8df3-f8db265f755c"
+* identifier[+].system = "http://example.org/medicationstatements"
+* identifier[=].value = "MEDSTAT2024"
+* status = #active
+* medicationCodeableConcept = $dlp_lecivePripravky#0226200 "Fludeoxythymidin"
+* subject = Reference(urn:uuid:142534ac-0274-4a16-b6a2-d4d4f24ff67b)
+* effectiveDateTime = "2024-12-01"
+* informationSource = Reference(urn:uuid:f84d821c-ba13-412b-a340-2547a6f36b7f)
+* dosage[0].doseAndRate.doseQuantity.value = 260000
+* dosage[0].doseAndRate.doseQuantity.unit = "ul"
+
+Instance: cz-example-adverseevent
+InstanceOf: CZ_AdverseEvent
+Title: "AdverseEvent: Rash due to Penicillin (CZ)"
+Description: "Example of AdverseEvent resource representing rash due to Penicillin."
+Usage: #example
+* id = "74d87d39-d681-4df4-80a5-975b359e6210"
+* actuality = #actual
+* event = #01 "nežádoucí účinky, závažné nežádoucí účinky a neočekávané nežádoucí účinky léčivých přípravků"
+* subject = Reference(urn:uuid:142534ac-0274-4a16-b6a2-d4d4f24ff67b)
+* suspectEntity.instance = Reference(urn:uuid:4b343429-16da-4a5b-be80-17e4122f5956)
+* date = "2024-12-01"
+* recorder = Reference(urn:uuid:428025b5-e328-4542-8812-dd6a874c44f9)
+
+Instance: cz-example-medication
+InstanceOf: CZ_Medication
+Title: "Medication: Fludeoxythymidin (CZ)"
+Description: "Example of Medication resource representing Fludeoxythymidin medication."
+Usage: #example
+* id = "d6511f3f-a311-4050-a34a-542f1ffe40bd"
+* identifier[+].system = "http://example.org/medications"
+* identifier[=].value = "FLUDEX2024"
+* code = $dlp_lecivePripravky#0226200 "Fludeoxythymidin"
 
 Instance: cz-example-organization
 InstanceOf: cz-organization-core

@@ -12,7 +12,12 @@ Description: "The Value Set is used for Record of allergy or other significant a
 * ^experimental = false
 * ^content = #supplement
 * ^supplements = $hl7-reaction-event-severity-cs
-* ^url = "https://hl7.cz/fhir/szz/CodeSystem/ClinicalSeverityOfSymptomsSzzCs"
+* ^url = "https://hl7.cz/fhir/szz/CodeSystem/cz-clinical-severity-of-symptoms-szz-cs"
+
+* ^property[+].code = #notSelectable
+* ^property[=].uri = "http://hl7.org/fhir/concept-properties#notSelectable"
+* ^property[=].description = "Not Selectable"
+* ^property[=].type = #boolean
 
 * #mild "mírná"
 * #mild ^definition = "mírná"

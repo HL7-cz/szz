@@ -158,7 +158,7 @@ Description: "The Value Set is used for Record of allergy or other significant a
 * $sct#432807008 "Pollen-food allergy"
 * $sct#432807008 ^designation.language = #cs
 * $sct#432807008 ^designation.value = "Pylově-potravinová alergie"
-* $sct#279333002 "Pruritus of skin"
+* $sct#279333002 "Pruritus - disorder"
 * $sct#279333002 ^designation.language = #cs
 * $sct#279333002 ^designation.value = "Pruritus kůže"
 * $sct#91175000 "Seizure"

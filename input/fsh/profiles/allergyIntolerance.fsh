@@ -8,5 +8,6 @@ Description: "Czech profile for allergy intolerance. "
 * criticality from ClinicalSeverityOfSymptomsSzzVs (required)
 * reaction 0..*
   * severity from ClinicalSeverityOfSymptomsSzzVs (required)
+  * manifestation from AllergyReactionCategorySzzCs (required)
 * recorder only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore) 
 * type from AllergyIntoleranceTypeSzzVs (required)
