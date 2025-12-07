@@ -118,6 +118,14 @@ pages:
   implementation-notes-cs.md:
     title: Poznámky k implementaci
 # === MAP ====
+  Header-map.html:
+    title: Header Model map
+  Header-map-cs.html:
+    title: Mapování logického modelu hlavičky
+  ezz-map.html:
+    title: Emergency Health Record Model map
+  ezz-map-cs.html:
+    title: Mapování logického modelu emergentního zdravotního záznamu
 
 # general-guidance.md:
 #   title: General Guidance

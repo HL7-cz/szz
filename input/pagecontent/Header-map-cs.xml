@@ -1,0 +1,9 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir../../input-cache/schemas/R5/fhir-single.xsd">
+<!--h3 id="overview">Mapování logického modelu hlavičky</h3>
+<a> </a-->
+<p>V této části je uveden diagram, který ukazuje, jak je logický model hlavičky Sdíleného zdravotního záznamu mapován na profily HL7 FHIR v rámci implementační specifikace.</p>
+<!--p>Hereafter a browseable diagram showing how the Imaging Order header model is realized by the HL7 FHIR Profiles of this guide</p-->
+<h3 id="model">Model Overview</h3>
+<a> </a>
+<p>{% include szzHead-map-cs.svg %}</p>
+</div>
