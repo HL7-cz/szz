@@ -3,7 +3,7 @@ Id: cz-blood-type-laboratory-code-szz-vs
 Title: "Laboratory methods for blood type determination"
 Description: "The Value Set is used for Laboratory methods for blood type determination in the Shared Health Record."
 
-* ^language = #cs-CZ
+* ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
 * ^status = #active
