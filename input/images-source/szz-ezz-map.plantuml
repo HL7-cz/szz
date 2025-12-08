@@ -1,0 +1,39 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+class "Emergency Health Record" <<LogicalModel>> [[StructureDefinition-EmergencyRecordCz.html]]
+note top #EEEEAE [[ConceptMap-Body2FHIR-cz.html]]
+Concept Map
+endnote
+
+class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
+class "cz-observation-blood-type" <<Profile>> [[StructureDefinition-cz-observation-blood-type.html]]
+class "cz-allergyIntolerance-szz" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-szz.html]]
+class "cz-adverse-event" <<Profile>> [[StructureDefinition-cz-adverse-event.html]]
+class "cz-MedicationStatement" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-MedicationStatement.html]]
+
+"Emergency Health Record" <|. "cz-composition-sharedhealthrecord"
+"Emergency Health Record" <|. "cz-observation-blood-type"
+"Emergency Health Record" <|. "cz-allergyIntolerance-szz"
+"Emergency Health Record" <|. "cz-adverse-event"
+"Emergency Health Record" <|. "cz-MedicationStatement"
+
+"cz-composition-sharedhealthrecord" -d[hidden]-> "cz-observation-blood-type"
+"cz-observation-blood-type" -d[hidden]-> "cz-allergyIntolerance-szz"
+"cz-allergyIntolerance-szz" -d[hidden]-> "cz-adverse-event"
+"cz-adverse-event" -d[hidden]-> "cz-MedicationStatement"
+
+@enduml
+

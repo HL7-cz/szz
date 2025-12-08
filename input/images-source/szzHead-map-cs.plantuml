@@ -1,0 +1,39 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+class "Hlavička sdíleného zdravotního záznamu" <<LogicalModel>> [[StructureDefinition-header-cz.html]]
+note top #EEEEAE [[ConceptMap-Header2FHIR-cz.html]]
+Concept Mapa
+endnote
+
+class "cz-organization-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
+class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
+class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
+class "cz-bundle-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-bundle-sharedhealthrecord.html]]
+class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
+
+"Hlavička sdíleného zdravotního záznamu" <|. "cz-composition-sharedhealthrecord"
+"Hlavička sdíleného zdravotního záznamu" <|. "cz-bundle-sharedhealthrecord"
+"Hlavička sdíleného zdravotního záznamu" <|. "cz-patient-core"
+"Hlavička sdíleného zdravotního záznamu" <|. "cz-coverage"
+"Hlavička sdíleného zdravotního záznamu" <|. "cz-practitioner-core"
+"Hlavička sdíleného zdravotního záznamu" <|. "cz-organization-core"
+
+"cz-bundle-sharedhealthrecord" -d[hidden]-> "cz-composition-sharedhealthrecord"
+"cz-composition-sharedhealthrecord" -d[hidden]-> "cz-patient-core"
+"cz-patient-core" -d[hidden]-> "cz-coverage"
+"cz-coverage" -d[hidden]-> "cz-practitioner-core"
+"cz-practitioner-core" -d[hidden]-> "cz-organization-core"
+@enduml
