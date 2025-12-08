@@ -12,7 +12,7 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Shared Health Record" <<LogicalModel>> [[StructureDefinition-head-en.html]]
+class "Shared Health Record" <<LogicalModel>> [[StructureDefinition-HeaderSzzCz.html]]
 note top #EEEEAE [[ConceptMap-Header2FHIR-cz.html]]
 Concept Map
 endnote

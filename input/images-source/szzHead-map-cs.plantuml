@@ -12,7 +12,7 @@ legend right
 | <#APPLICATION>  Logický model |
 | <#TECHNOLOGY>  Profil |
 endlegend
-class "Hlavička sdíleného zdravotního záznamu" <<LogicalModel>> [[StructureDefinition-header-cz.html]]
+class "Hlavička sdíleného zdravotního záznamu" <<LogicalModel>> [[StructureDefinition-HeaderSzzCz.html]]
 note top #EEEEAE [[ConceptMap-Header2FHIR-cz.html]]
 Concept Mapa
 endnote
