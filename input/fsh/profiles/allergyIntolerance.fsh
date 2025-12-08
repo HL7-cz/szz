@@ -1,7 +1,7 @@
 Profile: CZ_AllergyIntoleranceSzz
 Parent: CZ_AllergyIntolerance
 Id: cz-allergyIntolerance-szz
-Title: "Allergy intolerance: Shared Health Record (CZ)"
+Title: "Allergy intolerance (SZZ CZ)"
 Description: "Czech profile for allergy intolerance. "
 
 * category from AllergyIntoleranceCategorySzzVs (required)
