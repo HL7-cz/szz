@@ -59,12 +59,15 @@ Description: "Example of Body Weight Observation for Shared Health Record."
 Usage: #example
 * id = "8a6733be-e107-44b6-99a8-77869faea42a"
 * subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * code.coding[SNOMEDCT] = $sct#27113001
 * code.coding[LOINC] = $loinc#29463-7
 * code.coding[NCLP] = $nclp#20042
 * valueQuantity.value = 75.0
 * valueQuantity.unit = "kg"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
 * effectiveDateTime = "2025-05-15T10:30:00+01:00"
 * status = #final
 * performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
@@ -94,7 +97,7 @@ Description: "An example of the organization with logo extension"
 * address[=].city = "Město"
 * address[=].postalCode = "10000"
 * address[=].country = "CZ"
-* extension[logo].valueReference = Reference(urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877)
+* extension[logo].valueReference = Reference(urn:uuid:7248f0f4-a508-4668-acd8-9782ab4e0f98)
 
 Instance: cz-logo-example2
 InstanceOf: CZ_Logo
@@ -129,8 +132,8 @@ Description: "Author of SZZ report"
 Usage: #example
 * id = "38e5929e-afe4-40bc-ba9d-c0a80549791e"
 * specialty = $sct#394914008 "Radiology"
-* practitioner = Reference(urn:uuid:c3830e95-5f0a-46e8-a9e4-403f299ab2c5)
-* organization = Reference(urn:uuid:f84d821c-ba13-412b-a340-2547a6f36b7f)
+* practitioner = Reference(urn:uuid:e031c581-1616-4f9c-a0fe-3d7b5094bf1a)
+* organization = Reference(urn:uuid:2ef3f712-d586-4b3e-92eb-6a5bddc58a68)
 
 Instance: cz-example-patient2
 InstanceOf: CZ_PatientCore
