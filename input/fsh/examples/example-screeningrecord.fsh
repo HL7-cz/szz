@@ -29,6 +29,9 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a"
 * entry[observation][=].resource = cz-example-observation-weight
 
+* entry[observation][+].fullUrl = "urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1"
+* entry[observation][=].resource = cz-example-observation-bloodPressure
+
 Instance: cz-example-composition2
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Emergency Report (CZ)"
@@ -50,7 +53,8 @@ Usage: #example
 * section[preventingAndScreeningRecord].code = DocumentSectionCzSzzCs#10002 "Preventive and screening health record"
 * section[preventingAndScreeningRecord].section[generalPractitioner].title = "General practitioner record"
 * section[preventingAndScreeningRecord].section[generalPractitioner].code = DocumentSectionCzSzzCs#10003 "General practitioner record"
-* section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination] = Reference(urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a)
+* section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][0] = Reference(urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a)
+* section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][1] = Reference(urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1)
 
 Instance: cz-example-observation-weight
 InstanceOf: CZ_BodyWeight
@@ -69,6 +73,31 @@ Usage: #example
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #kg
 * effectiveDateTime = "2025-05-15T10:30:00+01:00"
+* status = #final
+* performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
+
+Instance: cz-example-observation-bloodPressure
+InstanceOf: CZ_ObservationBloodPressure
+Title: "Observation: Blood Pressure Example (CZ)"
+Description: "Example of Blood Pressure Observation for Shared Health Record."
+Usage: #example
+* id = "d87b5700-f89c-444b-8360-29c9f7673bf1"
+* subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code = $loinc#85354-9 "BP pnl w all optional"
+* component[0].code.coding = $loinc#8480-6 "Systolic blood pressure"
+* component[0].valueQuantity.value = 120
+* component[0].valueQuantity.unit = "mmHg"
+* component[0].valueQuantity.system = "http://unitsofmeasure.org"
+* component[0].valueQuantity.code = #mm[Hg]
+* component[1].code.coding = $loinc#8462-4 "Diastolic blood pressure"
+* component[1].valueQuantity.value = 80
+* component[1].valueQuantity.unit = "mmHg"
+* component[1].valueQuantity.system = "http://unitsofmeasure.org"
+* component[1].valueQuantity.code = #mm[Hg]
+
+* effectiveDateTime = "2025-05-15T10:35:00+01:00"
 * status = #final
 * performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
 

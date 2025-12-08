@@ -13,3 +13,96 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner
+* group[=].element[=].display = "A.3.1 - General practitioner record"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord.section:generalPractitioner
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.GynecologyCz
+* group[=].element[=].display = "A.3.2 - Gynecology"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord.section:gynekology
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.GastroenterologyCz
+* group[=].element[=].display = "A.3.3 - Gatroenterology"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord.section:gastroenterology
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.RadiologyCz
+* group[=].element[=].display = "A.3.4 - Radiology"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord.section:radiology
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.BiochemistryLabCz¨
+* group[=].element[=].display = "A.3.5 - Biochemistry Lab"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord.section:biochemistryLab
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.PulmonologyCz
+* group[=].element[=].display = "A.3.6 - Pulmonology"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord.section:pulmonology
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.UrologyCz
+* group[=].element[=].display = "A.3.7 - Urology"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord.section:urology
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.AngiologyCz
+* group[=].element[=].display = "A.3.8 - Angiology"
+* group[=].element[=].target.code = #Composition.section:preventingAndScreeningRecord.section:angiology
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "httpa://hl7.cz/fhir/szz/StructureDefinition/cz-observation-height"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.examinationDate
+* group[=].element[=].display = "A.3.1.3.1 - Date of result of preventive check-up performed"
+* group[=].element[=].target.code = #CZ_BodyHeight.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.height
+* group[=].element[=].display = "A.3.1.3.2 - Height"
+* group[=].element[=].target.code = #CZ_BodyHeight.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-weight"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.examinationDate
+* group[=].element[=].display = "A.3.1.3.1 - Date of result of preventive check-up performed"
+* group[=].element[=].target.code = #CZ_BodyWeight.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.weight
+* group[=].element[=].display = "A.3.1.3.3 - Weight"
+* group[=].element[=].target.code = #CZ_BodyWeight.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-waistcircumference"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.examinationDate
+* group[=].element[=].display = "A.3.1.3.1 - Date of result of preventive check-up performed"
+* group[=].element[=].target.code = #CZ_WaistCircumference.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.waistCircumference
+* group[=].element[=].display = "A.3.1.3.6 - Waist circumference"
+* group[=].element[=].target.code = #CZ_WaistCircumference.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-blood-pressure"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.examinationDate
+* group[=].element[=].display = "A.3.1.3.1 - Date of result of preventive check-up performed"
+* group[=].element[=].target.code = #CZ_ObservationBloodPressure.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.systolicPressure
+* group[=].element[=].display = "A.3.1.3.4 - Pressure (systolic)"
+* group[=].element[=].target.code = #CZ_ObservationBloodPressure.component[0].valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.diastolicPressure
+* group[=].element[=].display = "A.3.1.3.5 - Pressure (diastolic)"
+* group[=].element[=].target.code = #CZ_ObservationBloodPressure.component[1].valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
