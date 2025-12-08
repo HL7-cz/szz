@@ -12,10 +12,10 @@ Description:  """Type of adverse event code system according to act $34a para 2 
 * ^experimental = false
 * ^caseSensitive = true
 
-* #01 "nežádoucí účinky, závažné nežádoucí účinky a neočekávané nežádoucí účinky léčivých přípravků"
-* #02 "nežádoucí příhody a závažné nežádoucí příhody související s léčivými přípravky"
-* #03 "závažné nežádoucí reakce související s odběrem krve nebo její složky nebo s transfúzí transfúzního přípravku"
-* #04 "závažné nežádoucí události související s odběrem krve nebo její složky nebo s transfúzním přípravkem"
+* #01 "Nežádoucí účinky, závažné nežádoucí účinky a neočekávané nežádoucí účinky léčivých přípravků"
+* #02 "Nežádoucí příhody a závažné nežádoucí příhody související s léčivými přípravky"
+* #03 "Závažné nežádoucí reakce související s odběrem krve nebo její složky nebo s transfúzí transfúzního přípravku"
+* #04 "Závažné nežádoucí události související s odběrem krve nebo její složky nebo s transfúzním přípravkem"
 
 
 ValueSet:   TypeOfAdverseEventSzzVS

@@ -14,7 +14,7 @@ legend right
 endlegend
 
 class "Emergency Health Record" <<LogicalModel>> [[StructureDefinition-EmergencyRecordCz.html]]
-note top #EEEEAE [[ConceptMap-Body2FHIR-cz.html]]
+note top #EEEEAE [[ConceptMap-EmergencyRecord2FHIR-cz.html]]
 Concept Map
 endnote
 

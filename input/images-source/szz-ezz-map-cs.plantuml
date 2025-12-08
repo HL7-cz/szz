@@ -14,7 +14,7 @@ legend right
 endlegend
 
 class "Emergentní zdravotní záznam" <<LogicalModel>> [[StructureDefinition-LogEmergencyRecordCz.html]]
-note top #EEEEAE [[ConceptMap-Body2FHIR-cz.html]]
+note top #EEEEAE [[ConceptMap-EmergencyRecord2FHIR-cz.html]]
 Concept Mapa
 endnote
 

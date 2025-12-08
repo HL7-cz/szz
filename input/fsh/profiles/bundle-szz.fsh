@@ -50,7 +50,7 @@ Description: "Clinical document used to represent a Shared Health Record for the
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 * entry[organization].resource only CZ_OrganizationCore
-* entry[observation].resource only Observation or CZ_ObservationBloodType
+* entry[observation].resource only Observation or CZ_ObservationBloodType or CZ_BodyWeight or CZ_BodyWeight
 * entry[adverseEvent].resource only CZ_AdverseEvent
 * entry[allergiesAndIntolerances].resource only CZ_AllergyIntoleranceSzz
 * entry[medicationStatements].resource only CZ_MedicationStatement

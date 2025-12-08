@@ -15,4 +15,11 @@ Id: cz-document-section-szz-cs
 * #10001 "Emergency health record"
 * #10002 "Preventive and screening health record"
 * #10003 "General practitioner record"
+* #10004 "Gynecology record"
+* #10005 "Biochemistry laboratory record"
+* #10006 "Urology record"
+* #10007 "Pneumology record"
+* #10008 "Gastroenterology record"
+* #10009 "Radiology record"
+* #10010 "Angiology record"
 

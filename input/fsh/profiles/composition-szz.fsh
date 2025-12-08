@@ -90,9 +90,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * code = DocumentSectionCzSzzCs#10002 "Preventive and screening health record"
   * section
     * title 1..
-    * text 1..
-    * text only Narrative
-    // Slicing rules for section based on code value
   * section ^slicing.discriminator[0].type = #value
   * section ^slicing.discriminator[0].path = "code"
   * section ^slicing.ordered = false
@@ -113,7 +110,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * code = DocumentSectionCzSzzCs#10003 "General practitioner record"
   
     * entry
-      * insert SliceElement( #profile, $this )
+      * insert SliceElement( #profile, [[resolve()]] )
     * entry contains 
       observationColorectalCancerScreening 0..* and
       observationProstateCancerScreening 0..* and
@@ -134,6 +131,42 @@ Description: "This profile defines how to represent Composition resource in HL7 
       * ^definition = "This entry holds a reference to the preventing examination."
     * entry[preventingExamination] only Reference(CZ_BodyHeight or CZ_BodyWeight or Observation)
     * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+
+  * section[gynecology]
+    * ^short = "General Practitioner Section"
+    * ^definition = "This section holds information about an examination of general practitioner."
+    * code = DocumentSectionCzSzzCs#10004 "Gynecology record"
+
+  * section[biochemistryLaboratory]
+    * ^short = "Biochemistry Laboratory Section"
+    * ^definition = "This section holds information about biochemistry laboratory."
+    * code = DocumentSectionCzSzzCs#10005 "Biochemistry laboratory record"
+
+  * section[urology]
+    * ^short = "Urology Section"
+    * ^definition = "This section holds information about urology."
+    * code = DocumentSectionCzSzzCs#10006 "Urology record"
+
+  * section[pneumology]
+    * ^short = "Pneumology Section"
+    * ^definition = "This section holds information about pneumology."
+    * code = DocumentSectionCzSzzCs#10007 "Pneumology record"
+
+  * section[gastroenterology]
+    * ^short = "Gastroenterology Section"
+    * ^definition = "This section holds information about gastroenterology."
+    * code = DocumentSectionCzSzzCs#10008 "Gastroenterology record"
+
+  * section[radiology]
+    * ^short = "Radiology Section"
+    * ^definition = "This section holds information about radiology."
+    * code = DocumentSectionCzSzzCs#10009 "Radiology record"
+
+  * section[angiology]
+    * ^short = "Angiology Section"
+    * ^definition = "This section holds information about angiology."
+    * code = DocumentSectionCzSzzCs#10010 "Angiology record"
+      
 
 Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."
