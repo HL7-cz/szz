@@ -3,7 +3,7 @@ Title: "CZ Document Section SZZ Code System"
 Description: "This Code System defines codes for sections used in the Shared Health Record (SZZ) in Czechia."
 Id: cz-document-section-szz-cs
 
-* ^language = #cs-CZ
+* ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
 * ^status = #active

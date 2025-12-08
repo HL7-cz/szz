@@ -3,7 +3,7 @@ Id: cz-clinical-severity-of-symptoms-szz-cs
 Title: "Clinical severity of symptoms"
 Description: "The Value Set is used for Record of allergy or other significant adverse reaction to a substance or medicinal product in the Shared Health Record to indicate the Clinical severity of symptoms."
 
-* ^language = #cs-CZ
+* ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "4.0.1"
 * ^status = #active

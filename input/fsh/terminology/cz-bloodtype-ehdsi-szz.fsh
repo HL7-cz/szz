@@ -3,7 +3,7 @@ Id: cz-blood-type-ehdsi-vs
 Title: "EHDSI blood type codes"
 Description: "The Value Set is used for Blood Type representation in the Shared Health Record according to EHDSI specifications."
 
-* ^language = #cs-CZ
+* ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
 * ^status = #active
