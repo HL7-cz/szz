@@ -11,26 +11,31 @@ The procedural requirements ensure that:
 
 ### Overview of roles
 
-#### Recording person
+#### Ministry of Health
 
-According to the amendment to the Act on the Digitization of Healthcare, the recording person is:
-- Healthcare providers who participate in preventive care or screening programs.
-- Healthcare providers who discover information that must be included in emergency medical records (e.g., information about blood type, allergies, adverse drug reactions, etc.).
-- Inpatient care providers who record information about medications used during a patient's hospitalization.
-- The Ministry of Health, which makes data on dispensed medicinal products available through the eRecept system.
-Any person making an entry who discovers information that must be recorded in the SZZ is obliged to record it without undue delay. At the same time, they are responsible for its accuracy and are obliged to ensure that it is updated or deleted if it becomes outdated. This obligation applies to all healthcare providers regardless of the size or technical equipment of their practice.
+As the operator of the Shared Health Record system, it ensures the secure and reliable operation of this system, including the management of its technical infrastructure, cybersecurity, and protection of processed data. It is also responsible for implementing functionalities for data entry and access (including an emergency access mechanism) and for maintaining an audit trail, as well as for cooperating with the State Institute for Drug Control in connecting the Shared Health Record system with the shared drug record.
 
-#### Authorized person
+#### State Institute for Drug Control
 
-An authorized person is an entity that has the right to access the SZZ to the extent specified by law:
-- Patient – has access to all data concerning him or her.
-- Healthcare providers/medical staff (doctors, pharmacists, nurses) – may access the patient's medical records only in direct connection with the provision of healthcare services.
-- ÚZIS – may use anonymized data for statistical evaluation of the quality of healthcare services provided.
-- Other entities, such as health insurance companies or administrative authorities, if permitted by law.
+As the administrator of the drug record, it manages and operates the drug record in accordance with `Act No. 378/2007 Coll.` Act on Medicinal Products and on Amendments to Certain Related Acts (Act on Medicinal Products) and ensures its continuous updating and the integrity of data on medicinal products. furthermore, it cooperates with the Ministry of Health to integrate  the drug record into the Shared Health Record system and to securely make data on medicinal products available to authorized persons.
 
-Patients also have the right to grant or withdraw consent for authorized persons to view their data.
+#### Recording persons
 
-Each access is recorded in the Activity Log, and patients have the right to view an overview of these accesses.
+Healthcare providers designated to record data are required to record the data required by the `Act on the Electronic Health Care System` and this standard in the Shared Health Record without undue delay after discovering the facts documented by this data, to update this data on an ongoing basis and, in the event of incorrect or outdated data being discovered, to correct or invalidate it without delay. Data entry personnel are responsible for the accuracy and completeness of all data they enter into the Shared Health Record.
+
+#### Authorized persons
+
+They may obtain and use the data kept in the Shared Health Record only to the extent and in the manner specified by the `Act on the Electronization of Healthcare` and this standard, and they are obliged to ensure that this data is accessed exclusively by their authorized employees who have been assigned the relevant user rights in accordance with Section 5 of `Act No. 325/ 2021 Coll.`, on the digitization of healthcare, authorized persons may use data from the Shared Health Record only for the purpose of providing healthcare services to the relevant patient or for another lawful purpose, and must maintain confidentiality in accordance with applicable legal regulations.
+
+#### Life cycle of recorded information
+
+The entry of new data, its updating, correction, or invalidation must not interfere with the immutability of already stored records. Any subsequent change to the data is made in the form of a new record with a unique identifier and time stamp, while the original record remains unchanged. Before data is stored, an automated check (validation) of its format and completeness is performed, and the information system
+
+#### Conditions threatening the life or health of the patient
+
+In the case of providing urgent or acute care, especially in the event of a direct threat to the patient's life or serious damage to their health, the relevant healthcare professionals may view the necessary patient data in the Emergency Health Record only under the conditions set out in the `Act on the Electronization of Healthcare` and the `Act on Healthcare Services`, and only if the patient has not expressed their disagreement with the viewing of data in the Shared Health Record in accordance with this `Act, in particular in accordance with Section 32(6)(d) in conjunction with Section 34a(7) of Act No. 325/2021 Coll`. 
+
+Each such access must be immediately recorded in the Activity Log with the designation "urgent access." The designation "urgent access" serves solely as audit evidence that the access occurred in connection with the provision of urgent or acute care; it does not in itself constitute an exception to the patient's objection.
 
 ### Use cases
 

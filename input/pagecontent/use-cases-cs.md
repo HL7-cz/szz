@@ -10,28 +10,33 @@ Procesní požadavky zajišťují, aby:
 - byl zajištěn jednotný postup pro všechny PZS, bez ohledu na velikost či typ zařízení,
 - pacient měl možnost sledovat, kdo a kdy do jeho záznamu přistupoval nebo jej měnil.
 
-### Přehled rolí
+### Přehled rolí a odpovědností
 
-#### Zapisující osoba
+#### Ministerstvo zdravotnictví
 
-Dle novely zákona o elektronizaci zdravotnictví je zapisující osobou:
-- PZS, kteří se účastní preventivní péče nebo screeningových programů.
-- PZS, kteří zjistí údaj povinně uváděný v emergentním zdravotním záznamu (např. informace o krevní skupině, alergiích, nežádoucích účincích léků apod.).
-- Poskytovatelé lůžkové péče, kteří zaznamenávají údaje o použitých léčivých přípravcích během hospitalizace pacienta.
-- MZd, které zpřístupňuje údaje o vydaných léčivých přípravcích prostřednictvím systému eRecept.
-Každá zapisující osoba, která zjistí údaj povinně vedený v SZZ, je povinná jej zapsat bez zbytečného odkladu. Současně je odpovědná za jeho správnost a povinná zajistit jeho aktualizaci nebo výmaz, pokud se stane neaktuálním. Povinnost se vztahuje na všechny PZS bez ohledu na velikost či technické vybavení ordinace.
+Jakožto provozovatel systému Sdíleného zdravotního záznamu zajišťuje bezpečný a spolehlivý provoz tohoto systému, včetně správy jeho technické infrastruktury, kybernetické bezpečnosti a ochrany zpracovávaných údajůDále odpovídá za implementaci funkcionalit pro vkládání a přístup k údajům (včetně mechanismu nouzového přístupu) a pro vedení auditní stopy, a za součinnost se Státním ústavem pro kontrolu léčiv při propojení systému Sdíleného zdravotního záznamu se sdíleným lékovým záznamem,
 
-#### Oprávněná osoba
+#### Státní ústav pro kontrolu léčiv
 
-Oprávněná osoba je subjekt, který má právo nahlížet na SZZ, a to v rozsahu stanoveném zákonem:
-- Pacient – má přístup ke všem údajům, které se ho týkají.
-- PZS/zdravotnický personál (lékaři, farmaceuti, zdravotní sestry) – mohou nahlížet do zdravotního záznamu pacienta pouze v přímé souvislosti s poskytováním zdravotních služeb.
-- ÚZIS – může využívat anonymizovaná data ke statistickému hodnocení kvality poskytovaných zdravotních služeb.
-- Další subjekty, jako zdravotní pojišťovny nebo správní orgány, pokud jim to zákon umožňuje.
+Jako správce  lékového záznamu spravuje a provozuje lékový záznam v souladu se `zákonem č. 378/2007 Sb. Zákon o léčivech` a o změnách některých souvisejících zákonů (zákon o léčivech) a zajišťuje jeho nepřetržitou aktualizaci a integritu údajů o léčivých přípravcích, dále poskytuje Ministerstvu zdravotnictví součinnost k integraci  lékového záznamu do systému Sdíleného zdravotního záznamu a k bezpečnému zpřístupnění údajů o léčivých přípravcích oprávněným osobám,
 
-Pacient má zároveň právo udělit nebo odebrat souhlas k nahlížení na své údaje oprávněnými osobami.
+#### Zapisující osoby
 
-Každý přístup je evidován v Žurnálu činností a pacient má právo nahlížet na přehled těchto přístupů.
+Poskytovatelé zdravotních služeb určení k zápisu údajů jsou povinny zapisovat údaje vyžadované `zákonem o elektronizaci zdravotnictví` a  tímto standardem  do Sdíleného zdravotního záznamu bez zbytečného odkladu poté, co zjistí skutečnosti, které jsou těmito údaji dokumentovány, průběžně tyto údaje aktualizovat a v případě zjištění nesprávného nebo neaktuálního údaje neprodleně provést jeho opravu nebo zneplatnění. Zapisující osoby odpovídají za správnost a úplnost všech údajů, které do Sdíleného zdravotního záznamu vložily.
+
+#### Oprávněné osoby
+
+Mohou získávat a využívat údaje vedené v Sdíleném zdravotním záznamu pouze v rozsahu a způsobem stanoveným `zákonem o elektronizaci zdravotnictví` a tímto standardem a jsou povinny zajistit, že k těmto údajům budou přistupovat výhradně jejich pověření pracovníci, jimž byla přidělena příslušná uživatelská oprávnění v souladu s `§5 zákona č. 325/2021 Sb.`, o elektronizaci zdravotnictví údaje ze Sdíleného zdravotního záznamu smějí oprávněné osoby použít pouze za účelem poskytování zdravotních služeb příslušnému pacientovi nebo k jinému zákonnému účelu a musí o nich zachovávat mlčenlivost podle platných právních předpisů.
+
+#### Životní cyklus evidovaných informací
+
+Zápis nových údajů, jejich aktualizace, opravy ani zneplatňování nesmějí narušit neměnnost již uložených záznamů jakákoliv následná změna údajů se provádí formou nového záznamu s jedinečným identifikátorem a časovým údajem, přičemž původní záznam zůstává nezměněn. Před uložením údajů se provádí automatizovaná kontrola (validace) jejich formátu a úplnosti a informační systém
+
+#### Stavy ohrožující život nebo zdraví pacienta
+
+V případě poskytování neodkladné nebo akutní péče, zejména jde-li o přímé ohrožení života nebo vážné poškození zdraví pacienta, mohou příslušní zdravotničtí pracovníci nahlížet na nezbytné údaje pacienta v Emergentním zdravotním záznamu pouze za podmínek stanovených `zákonem o elektronizaci zdravotnictví` a `zákonem o zdravotních službách`, a pouze tehdy, nevyslovil-li pacient nesouhlas s nahlížením na údaje ve Sdíleném zdravotním záznamu podle tohoto zákona, zejména podle `§ 32 odst. 6 písm. d) ve spojení s § 34a odst. 7 zákona č. 325/2021 Sb.`“ 
+
+Každý takový přístup musí být neprodleně zaznamenán v Žurnálu činností s označením „urgentní přístup“. Označení „urgentní přístup“ slouží výhradně k auditnímu doložení, že k nahlédnutí došlo v souvislosti s poskytováním neodkladné nebo akutní péče; samo o sobě nezakládá výjimku z uplatněného nesouhlasu pacienta.
 
 ### Případy užití
 
