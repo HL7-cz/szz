@@ -29,6 +29,9 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a"
 * entry[observation][=].resource = cz-example-observation-weight
 
+* entry[observation][+].fullUrl = "urn:uuid:5031be23-9628-49af-8cac-d23ea87cb8e0"
+* entry[observation][=].resource = cz-example-observation-height
+
 * entry[observation][+].fullUrl = "urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1"
 * entry[observation][=].resource = cz-example-observation-bloodPressure
 
@@ -55,6 +58,8 @@ Usage: #example
 * section[preventingAndScreeningRecord].section[generalPractitioner].code = DocumentSectionCzSzzCs#10003 "General practitioner record"
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][0] = Reference(urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a)
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][1] = Reference(urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1)
+* section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][2] = Reference(urn:uuid:5031be23-9628-49af-8cac-d23ea87cb8e0)
+
 
 Instance: cz-example-observation-weight
 InstanceOf: CZ_BodyWeight
@@ -76,6 +81,26 @@ Usage: #example
 * status = #final
 * performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
 
+Instance: cz-example-observation-height
+InstanceOf: CZ_BodyHeight
+Title: "Observation: Body Height Example (CZ)"
+Description: "Example of Body Height Observation for Shared Health Record."
+Usage: #example
+* id = "5031be23-9628-49af-8cac-d23ea87cb8e0"
+* subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* code.coding[SNOMEDCT] = $sct#1153637007
+* code.coding[LOINC] = $loinc#8302-2
+* code.coding[NCLP] = $nclp#20411
+* valueQuantity.value = 180.0
+* valueQuantity.unit = "cm"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
+* effectiveDateTime = "2025-05-15T10:30:00+01:00"
+* status = #final
+* performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
+
 Instance: cz-example-observation-bloodPressure
 InstanceOf: CZ_ObservationBloodPressure
 Title: "Observation: Blood Pressure Example (CZ)"
@@ -85,7 +110,7 @@ Usage: #example
 * subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code = $loinc#85354-9 "BP pnl w all optional"
+* code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * component[0].code.coding = $loinc#8480-6 "Systolic blood pressure"
 * component[0].valueQuantity.value = 120
 * component[0].valueQuantity.unit = "mmHg"

@@ -119,17 +119,17 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * entry[observationColorectalCancerScreening]
       * ^short = "Observation Colorectal Cancer Screening"
       * ^definition = "This entry holds a reference to the observation about colorectal cancer screening."
-    * entry[observationColorectalCancerScreening] only Reference(Observation)
+    * entry[observationColorectalCancerScreening] only Reference(CZ_ObservationColorectalCancer)
 
     * entry[observationProstateCancerScreening]
       * ^short = "Observation Prostate Cancer Screening"
       * ^definition = "This entry holds a reference to the observation about prostate cancer screening."
-    * entry[observationProstateCancerScreening] only Reference(Observation)
+    * entry[observationProstateCancerScreening] only Reference(CZ_ObservationProstateCancer)
 
     * entry[preventingExamination]
       * ^short = "Preventing Examination"
       * ^definition = "This entry holds a reference to the preventing examination."
-    * entry[preventingExamination] only Reference(CZ_BodyHeight or CZ_BodyWeight or Observation)
+    * entry[preventingExamination] only Reference(CZ_BodyHeight or CZ_BodyWeight or CZ_WaistCircumference)
     * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
   * section[gynecology]

@@ -119,6 +119,11 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_AdverseEvent.suspectEntity.instance.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #EmergencyRecord.otherEmergencyData.suspectedSubstance
+* group[=].element[=].display = "A.2.3.2. - Suspected substance"
+* group[=].element[=].target.code = #CZ_AdverseEvent.suspectEntity.instance.description
+* group[=].element[=].target.display = "In case the code is not sufficient to identify the substance, e.g., for a herbal remedy."
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EmergencyRecord.otherEmergencyData.dateOfDiscovery
 * group[=].element[=].display = "A.2.3.3 - Date of discovery"
 * group[=].element[=].target.code = #CZ_AdverseEvent.date
