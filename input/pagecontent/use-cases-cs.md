@@ -14,7 +14,7 @@ Procesní požadavky zajišťují, aby:
 
 #### Ministerstvo zdravotnictví
 
-Jakožto provozovatel systému Sdíleného zdravotního záznamu zajišťuje bezpečný a spolehlivý provoz tohoto systému, včetně správy jeho technické infrastruktury, kybernetické bezpečnosti a ochrany zpracovávaných údajůDále odpovídá za implementaci funkcionalit pro vkládání a přístup k údajům (včetně mechanismu nouzového přístupu) a pro vedení auditní stopy, a za součinnost se Státním ústavem pro kontrolu léčiv při propojení systému Sdíleného zdravotního záznamu se sdíleným lékovým záznamem,
+Jakožto provozovatel systému Sdíleného zdravotního záznamu zajišťuje bezpečný a spolehlivý provoz tohoto systému, včetně správy jeho technické infrastruktury, kybernetické bezpečnosti a ochrany zpracovávaných údajů. Dále odpovídá za implementaci funkcionalit pro vkládání a přístup k údajům (včetně mechanismu nouzového přístupu) a pro vedení auditní stopy, a za součinnost se Státním ústavem pro kontrolu léčiv při propojení systému Sdíleného zdravotního záznamu se sdíleným lékovým záznamem,
 
 #### Státní ústav pro kontrolu léčiv
 
@@ -26,7 +26,7 @@ Poskytovatelé zdravotních služeb určení k zápisu údajů jsou povinny zapi
 
 #### Oprávněné osoby
 
-Mohou získávat a využívat údaje vedené v Sdíleném zdravotním záznamu pouze v rozsahu a způsobem stanoveným `zákonem o elektronizaci zdravotnictví` a tímto standardem a jsou povinny zajistit, že k těmto údajům budou přistupovat výhradně jejich pověření pracovníci, jimž byla přidělena příslušná uživatelská oprávnění v souladu s `§5 zákona č. 325/2021 Sb.`, o elektronizaci zdravotnictví údaje ze Sdíleného zdravotního záznamu smějí oprávněné osoby použít pouze za účelem poskytování zdravotních služeb příslušnému pacientovi nebo k jinému zákonnému účelu a musí o nich zachovávat mlčenlivost podle platných právních předpisů.
+Mohou získávat a využívat údaje vedené v Sdíleném zdravotním záznamu pouze v rozsahu a způsobem stanoveným `zákonem o elektronizaci zdravotnictví` a tímto standardem a jsou povinny zajistit, že k těmto údajům budou přistupovat výhradně jejich pověření pracovníci, jimž byla přidělena příslušná uživatelská oprávnění v souladu s `§ 5 zákona č. 325/2021 Sb.`, o elektronizaci zdravotnictví údaje ze Sdíleného zdravotního záznamu smějí oprávněné osoby použít pouze za účelem poskytování zdravotních služeb příslušnému pacientovi nebo k jinému zákonnému účelu a musí o nich zachovávat mlčenlivost podle platných právních předpisů.
 
 #### Životní cyklus evidovaných informací
 

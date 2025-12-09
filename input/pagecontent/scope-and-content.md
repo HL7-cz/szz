@@ -17,7 +17,7 @@ It is composed of two parts:
 
 - the patient's health documentation stored in the healthcare provider information systems,
 - the patient summary,
-- the electronic prescription (eRecept) system according to § 81d of the amended `Act No. 378/2007 Coll.`
+- the electronic prescription (eRecept) system according to `§ 81d of the amended Act No. 378/2007 Coll.`
 - data on medicinal products dispensed to the patient, which are listed in the patient's medication record, unless the patient has expressed disagreement in accordance with this Act
 - 
 the national register of preventive and screening examinations, newly introduced by the amendment to the `Healthcare Services Act, especially its Annex in part 13`.
@@ -93,7 +93,7 @@ Identification data of the member of the Emergency Medical Service (ZZS) team wh
 Contains other administrative information about the document – e.g., category, version, date and time of creation, document status, language, and degree of confidentiality.
 
 **Electronic Signatures**
-A section designated for electronic signature or timestamp according to `Act No. 327/2011 Coll., §54a`.
+A section designated for electronic signature or timestamp according to `Act No. 327/2011 Coll., § 54a`.
 
 #### Body - Emergency Health Record
 

@@ -91,7 +91,7 @@ Identifikační údaje člena výjezdové skupiny ZZS, který záznam vytvořil 
 Obsahuje další administrativní informace o dokumentu – např. kategorie, verze, datum a čas vytvoření, stav dokumentu, jazyk a stupeň důvěrnosti. 
 
 **Elektronické podpisy** 
-Sekce určená pro elektronický podpis či časové razítko podle `zákona č. 327/2011 Sb., §54a`. 
+Sekce určená pro elektronický podpis či časové razítko podle `zákona č. 327/2011 Sb., § 54a`. 
 
 #### Tělo záznamu - Emergentní zdravotní záznam
 
