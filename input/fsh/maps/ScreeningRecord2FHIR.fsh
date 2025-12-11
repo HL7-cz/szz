@@ -65,6 +65,16 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_BodyHeight.valueQuantity.value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.preventiveCheckUp.examinationDate
+* group[=].element[=].display = "A.3.2.5.1 - Date of result of preventive check-up"
+* group[=].element[=].target.code = #CZ_BodyHeight.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.preventiveCheckUp.height
+* group[=].element[=].display = "A.3.2.5.2 - Height"
+* group[=].element[=].target.code = #CZ_BodyHeight.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
 * group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-weight"
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.examinationDate
@@ -75,6 +85,16 @@ Usage: #definition
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.weight
 * group[=].element[=].display = "A.3.1.3.3 - Weight"
 * group[=].element[=].target.code = #CZ_BodyWeight.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.preventiveCheckUp.examinationDate
+* group[=].element[=].display = "A.3.2.5.1 - Date of result of preventive check-up"
+* group[=].element[=].target.code = #CZ_BodyHeight.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.preventiveCheckUp.weight
+* group[=].element[=].display = "A.3.2.5.3 - Weight"
+* group[=].element[=].target.code = #CZ_BodyHeight.valueQuantity.value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
@@ -104,5 +124,75 @@ Usage: #definition
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitioner.preventiveCheckUp.diastolicPressure
 * group[=].element[=].display = "A.3.1.3.5 - Pressure (diastolic)"
 * group[=].element[=].target.code = #CZ_ObservationBloodPressure.component[1].valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-colorectal-cancer"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.colorectalScreening.resultDate
+* group[=].element[=].display = "A.3.2.1.1 - Date of quantitative FOBT result"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.colorectalScreening.levelTOKS
+* group[=].element[=].display = "A.3.2.1.3 - TOKS level"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.colorectalScreening.resultTOKS
+* group[=].element[=].display = "A.3.2.1.2 - Quantitative TOKS result"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-colposcopy-cervical-cancer"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.expertColposcopy.examinationDate
+* group[=].element[=].display = "A.3.2.4.1 - Date of expert colposcopy"
+* group[=].element[=].target.code = #CZ_ObservationColposcopyCervicalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.expertColposcopy.examinationResult
+* group[=].element[=].display = "A.3.2.4.2 - Result of expert colposcopy"
+* group[=].element[=].target.code = #CZ_ObservationColposcopyCervicalCancer.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-cytology-cervical-cancer"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.examinationCytology.examinationDate
+* group[=].element[=].display = "A.3.2.4.1 - Date of cytological examination"
+* group[=].element[=].target.code = #CZ_ObservationColposcopyCervicalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.examinationCytology.examinationResult
+* group[=].element[=].display = "A.3.2.4.2 - Result of cytological examination"
+* group[=].element[=].target.code = #CZ_ObservationColposcopyCervicalCancer.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-hpv-cervical-cancer"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.examinationHPV.examinationDate
+* group[=].element[=].display = "A.3.2.3.1 - Date of high-risk HPV test"
+* group[=].element[=].target.code = #CZ_ObservationColposcopyCervicalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.examinationHPV.examinationResult
+* group[=].element[=].display = "A.3.2.3.2 - Result of high-risk HPV test"
+* group[=].element[=].target.code = #CZ_ObservationColposcopyCervicalCancer.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-immunization-hpv"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.preventiveCheckUp.vaccinationHPV
+* group[=].element[=].display = "A.3.2.5.4 - HPV vaccination"
+* group[=].element[=].target.code = #CZ_ImmunizationHPV.status
+* group[=].element[=].target.display = "Immunization status: completed or not done"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.preventiveCheckUp.lastHPVVaccinationDate
+* group[=].element[=].display = "A.3.2.5.5 - HPV vaccination - year of last dose"
+* group[=].element[=].target.code = #CZ_ImmunizationHPV.occurrenceDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.preventiveCheckUp.vaccineHPV
+* group[=].element[=].display = "A.3.2.5.6 - HPV vaccination - vaccine"
+* group[=].element[=].target.code = #CZ_ImmunizationHPV.vaccineCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent

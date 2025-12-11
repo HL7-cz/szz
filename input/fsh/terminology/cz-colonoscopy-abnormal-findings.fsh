@@ -10,6 +10,7 @@ Description: "This code system defines the codes for abnormal findings observed 
 * ^date = "2025-12-09"
 * ^jurisdiction = urn:iso:std:iso:3166#CZ "Czechia"
 * ^experimental = false
+* ^caseSensitive = true
 * ^status = #draft
 
 * #adenom "Adenom"

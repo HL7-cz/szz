@@ -24,6 +24,7 @@ Alias: $hl7-allergy-intolerance-criticality-cs = http://hl7.org/fhir/allergy-int
 Alias: $hl7-allergy-intolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $hl7-allergy-intolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $hl7-reaction-event-severity-cs = http://hl7.org/fhir/reaction-event-severity
+Alias: $dlp_lecivepripravky = https://ncez.mzcr.cz/fhir/CodeSystem/dlp-lecive-pripravky-cs
 
 /*
 // CodeSystems:

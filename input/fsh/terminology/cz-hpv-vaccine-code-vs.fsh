@@ -1,0 +1,41 @@
+ValueSet: CZ_HpvVaccineCodeVs
+Id: cz-hpv-vaccine-code-vs
+Title: "CZ HPV Vaccine Code Value Set"
+Description: "This value set includes codes for HPV vaccines used in the Czech Republic."
+
+* ^language = #cs //-CZ
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^version = "1.0.0"
+* ^status = #active
+* ^date = "2025-06-10"
+* ^jurisdiction = urn:iso:std:iso:3166#CZ "Czechia"
+* ^experimental = false
+
+* $dlp_lecivepripravky#0029160 "CERVARIX"
+* $dlp_lecivepripravky#0029161 "CERVARIX"
+* $dlp_lecivepripravky#0029162 "CERVARIX"
+* $dlp_lecivepripravky#0029163 "CERVARIX"
+* $dlp_lecivepripravky#0029164 "CERVARIX"
+* $dlp_lecivepripravky#0029165 "CERVARIX"
+* $dlp_lecivepripravky#0029166 "CERVARIX"
+* $dlp_lecivepripravky#0029167 "CERVARIX"
+* $dlp_lecivepripravky#0029168 "CERVARIX"
+* $dlp_lecivepripravky#0500876 "CERVARIX"
+* $dlp_lecivepripravky#0500877 "CERVARIX"
+* $dlp_lecivepripravky#0500878 "CERVARIX"
+* $dlp_lecivepripravky#0027879 "GARDASIL"
+* $dlp_lecivepripravky#0027880 "GARDASIL"
+* $dlp_lecivepripravky#0027881 "GARDASIL"
+* $dlp_lecivepripravky#0027882 "GARDASIL"
+* $dlp_lecivepripravky#0027883 "GARDASIL"
+* $dlp_lecivepripravky#0027884 "GARDASIL"
+* $dlp_lecivepripravky#0027885 "GARDASIL"
+* $dlp_lecivepripravky#0027886 "GARDASIL"
+* $dlp_lecivepripravky#0029370 "GARDASIL"
+* $dlp_lecivepripravky#0029372 "GARDASIL"
+* $dlp_lecivepripravky#0029373 "GARDASIL"
+* $dlp_lecivepripravky#0029374 "GARDASIL"
+* $dlp_lecivepripravky#0210635 "GARDASIL 9"
+* $dlp_lecivepripravky#0210636 "GARDASIL 9"
+* $dlp_lecivepripravky#0210637 "GARDASIL 9"
+* $dlp_lecivepripravky#0238503 "GARDASIL 9" 

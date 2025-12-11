@@ -136,6 +136,35 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * ^short = "General Practitioner Section"
     * ^definition = "This section holds information about an examination of general practitioner."
     * code = DocumentSectionCzSzzCs#10004 "Gynecology record"
+    * entry
+      * insert SliceElement( #profile, [[resolve()]] )
+    * entry contains 
+      observationColorectalCancerScreening 0..* and
+      observationCervicalCancerCytologyScreening 0..* and
+      observationCervicalCancerHPVScreening 0..* and
+      observationCervicalCancerColposcopy 0..* and
+      preventingExamination 0..*
+    * entry[observationColorectalCancerScreening]
+      * ^short = "Observation Colorectal Cancer Screening"
+      * ^definition = "This entry holds a reference to the observation about colorectal cancer screening."
+    * entry[observationColorectalCancerScreening] only Reference(CZ_ObservationColorectalCancer)
+    * entry[observationCervicalCancerCytologyScreening]
+      * ^short = "Observation Cervical Cancer Cytology Screening"
+      * ^definition = "This entry holds a reference to the observation about cervical cancer cytology screening."
+    * entry[observationCervicalCancerCytologyScreening] only Reference(CZ_ObservationCytologyCervicalCancer)
+    * entry[observationCervicalCancerHPVScreening]
+      * ^short = "Observation Cervical Cancer HPV Screening"
+      * ^definition = "This entry holds a reference to the observation about cervical cancer HPV screening."
+    * entry[observationCervicalCancerHPVScreening] only Reference(CZ_ObservationHPVCervicalCancer)
+    * entry[observationCervicalCancerColposcopy]
+      * ^short = "Observation Cervical Cancer Colposcopy"
+      * ^definition = "This entry holds a reference to the observation about cervical cancer colposcopy."
+    * entry[observationCervicalCancerColposcopy] only Reference(CZ_ObservationColposcopyCervicalCancer)
+    * entry[preventingExamination]
+      * ^short = "Preventing Examination"
+      * ^definition = "This entry holds a reference to the preventing examination."
+    * entry[preventingExamination] only Reference(CZ_BodyHeight or CZ_BodyWeight or CZ_ImmunizationHPV)
+    * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
   * section[biochemistryLaboratory]
     * ^short = "Biochemistry Laboratory Section"
@@ -156,6 +185,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * ^short = "Gastroenterology Section"
     * ^definition = "This section holds information about gastroenterology."
     * code = DocumentSectionCzSzzCs#10008 "Gastroenterology record"
+    * entry 0..1
+    * entry only Reference(CZ_ObservationColonoscopy)
 
   * section[radiology]
     * ^short = "Radiology Section"
