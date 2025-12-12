@@ -4,7 +4,7 @@ Id: cz-observation-colonoscopy
 Title: "Observation: Colonoscopy (SZZ CZ)"
 Description: """This profile defines how to represent Colonoscopy Observation resource in HL7 FHIR for the scope of this guide."""
 
-// * code domyslet kod
+* code.coding = $sct#73761001
 
 * subject only Reference(CZ_PatientCore)
 * effectiveDateTime 0..1
