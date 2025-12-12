@@ -14,11 +14,11 @@ Procesní požadavky zajišťují, aby:
 
 #### Ministerstvo zdravotnictví
 
-Jakožto provozovatel systému Sdíleného zdravotního záznamu zajišťuje bezpečný a spolehlivý provoz tohoto systému, včetně správy jeho technické infrastruktury, kybernetické bezpečnosti a ochrany zpracovávaných údajů. Dále odpovídá za implementaci funkcionalit pro vkládání a přístup k údajům (včetně mechanismu nouzového přístupu) a pro vedení auditní stopy, a za součinnost se Státním ústavem pro kontrolu léčiv při propojení systému Sdíleného zdravotního záznamu se sdíleným lékovým záznamem,
+Jakožto provozovatel systému Sdíleného zdravotního záznamu zajišťuje bezpečný a spolehlivý provoz tohoto systému, včetně správy jeho technické infrastruktury, kybernetické bezpečnosti a ochrany zpracovávaných údajů. Dále odpovídá za implementaci funkcionalit pro vkládání a přístup k údajům (včetně mechanismu nouzového přístupu) a pro vedení auditní stopy, a za součinnost se Státním ústavem pro kontrolu léčiv při propojení systému Sdíleného zdravotního záznamu se sdíleným lékovým záznamem.
 
 #### Státní ústav pro kontrolu léčiv
 
-Jako správce  lékového záznamu spravuje a provozuje lékový záznam v souladu se `zákonem č. 378/2007 Sb. Zákon o léčivech` a o změnách některých souvisejících zákonů (zákon o léčivech) a zajišťuje jeho nepřetržitou aktualizaci a integritu údajů o léčivých přípravcích, dále poskytuje Ministerstvu zdravotnictví součinnost k integraci  lékového záznamu do systému Sdíleného zdravotního záznamu a k bezpečnému zpřístupnění údajů o léčivých přípravcích oprávněným osobám,
+Jako správce lékového záznamu spravuje a provozuje lékový záznam v souladu se `zákonem č. 378/2007 Sb. Zákon o léčivech` a o změnách některých souvisejících zákonů (zákon o léčivech) a zajišťuje jeho nepřetržitou aktualizaci a integritu údajů o léčivých přípravcích, dále poskytuje Ministerstvu zdravotnictví součinnost k integraci lékového záznamu do systému Sdíleného zdravotního záznamu a k bezpečnému zpřístupnění údajů o léčivých přípravcích oprávněným osobám.
 
 #### Zapisující osoby
 
@@ -30,11 +30,11 @@ Mohou získávat a využívat údaje vedené v Sdíleném zdravotním záznamu p
 
 #### Životní cyklus evidovaných informací
 
-Zápis nových údajů, jejich aktualizace, opravy ani zneplatňování nesmějí narušit neměnnost již uložených záznamů jakákoliv následná změna údajů se provádí formou nového záznamu s jedinečným identifikátorem a časovým údajem, přičemž původní záznam zůstává nezměněn. Před uložením údajů se provádí automatizovaná kontrola (validace) jejich formátu a úplnosti a informační systém
+Zápis nových údajů, jejich aktualizace, opravy ani zneplatňování nesmějí narušit neměnnost již uložených záznamů jakákoliv následná změna údajů se provádí formou nového záznamu s jedinečným identifikátorem a časovým údajem, přičemž původní záznam zůstává nezměněn. Před uložením údajů se provádí automatizovaná kontrola (validace) jejich formátu a úplnosti a informační systém.
 
 #### Stavy ohrožující život nebo zdraví pacienta
 
-V případě poskytování neodkladné nebo akutní péče, zejména jde-li o přímé ohrožení života nebo vážné poškození zdraví pacienta, mohou příslušní zdravotničtí pracovníci nahlížet na nezbytné údaje pacienta v Emergentním zdravotním záznamu pouze za podmínek stanovených `zákonem o elektronizaci zdravotnictví` a `zákonem o zdravotních službách`, a pouze tehdy, nevyslovil-li pacient nesouhlas s nahlížením na údaje ve Sdíleném zdravotním záznamu podle tohoto zákona, zejména podle `§ 32 odst. 6 písm. d) ve spojení s § 34a odst. 7 zákona č. 325/2021 Sb.`“ 
+V případě poskytování neodkladné nebo akutní péče, zejména jde-li o přímé ohrožení života nebo vážné poškození zdraví pacienta, mohou příslušní zdravotničtí pracovníci nahlížet na nezbytné údaje pacienta v Emergentním zdravotním záznamu pouze za podmínek stanovených `zákonem o elektronizaci zdravotnictví` a `zákonem o zdravotních službách`, a pouze tehdy, nevyslovil-li pacient nesouhlas s nahlížením na údaje ve Sdíleném zdravotním záznamu podle tohoto zákona, zejména podle `§ 32 odst. 6 písm. d) ve spojení s § 34a odst. 7 zákona č. 325/2021 Sb.`“ .
 
 Každý takový přístup musí být neprodleně zaznamenán v Žurnálu činností s označením „urgentní přístup“. Označení „urgentní přístup“ slouží výhradně k auditnímu doložení, že k nahlédnutí došlo v souvislosti s poskytováním neodkladné nebo akutní péče; samo o sobě nezakládá výjimku z uplatněného nesouhlasu pacienta.
 

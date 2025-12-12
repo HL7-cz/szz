@@ -1,0 +1,59 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+
+class "Preventivní a screeningový zdravotní záznam" <<LogicalModel>> [[StructureDefinition-LogPreventiveAndScreeningRecordCz.html]]
+note top #EEEEAE [[ConceptMap-ScreeningRecor2FHIR-cz.html]]
+Concept Mapa
+endnote
+
+class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
+class "cz-immunization-hpv" <<Profile>> [[StructureDefinition-cz-immunization-hpv.html]]
+class "cz-observation-colposcopy-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-colposcopy-cervical-cancer.html]]
+class "cz-observation-cytology-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-cytology-cervical-cancer.html]]
+class "cz-observation-hpv-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-hpv-cervical-cancer.html]]
+class "cz-observation-colonoscopy" <<Profile>> [[StructureDefinition-cz-observation-colonoscopy.html]]
+class "cz-observation-colorectal-cancer" <<Profile>> [[StructureDefinition-cz-observation-colorectal-cancer.html]]
+class "cz-observation-prostate-cancer" <<Profile>> [[StructureDefinition-cz-observation-prostate-cancer.html]]
+class "cz-waist-circumference" <<Profile>> [[StructureDefinition-cz-waist-circumference.html]]
+class "cz-bodyweight" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
+class "cz-bodyheight" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
+class "cz-observation-blood-pressure" <<Profile>> [[StructureDefinition-cz-observation-blood-pressure.html]]
+
+"Preventivní a screeningový zdravotní záznam" <|. "cz-composition-sharedhealthrecord"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-immunization-hpv"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-observation-colposcopy-cervical-cancer"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-observation-cytology-cervical-cancer"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-observation-hpv-cervical-cancer"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-observation-colonoscopy"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-observation-colorectal-cancer"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-observation-prostate-cancer"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-waist-circumference"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-bodyweight"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-bodyheight"
+"Preventivní a screeningový zdravotní záznam" <|. "cz-observation-blood-pressure"
+
+"cz-composition-sharedhealthrecord" -d[hidden]-> "cz-immunization-hpv"
+"cz-immunization-hpv" -d[hidden]-> "cz-observation-colposcopy-cervical-cancer"
+"cz-observation-colposcopy-cervical-cancer" -d[hidden]-> "cz-observation-cytology-cervical-cancer"
+"cz-observation-cytology-cervical-cancer" -d[hidden]-> "cz-observation-hpv-cervical-cancer"
+"cz-observation-hpv-cervical-cancer" -d[hidden]-> "cz-observation-colonoscopy"
+"cz-observation-colonoscopy"-d[hidden]-> "cz-observation-colorectal-cancer"
+"cz-observation-colorectal-cancer" -d[hidden]-> "cz-observation-prostate-cancer"
+"cz-observation-prostate-cancer" -d[hidden]-> "cz-waist-circumference"
+"cz-waist-circumference" -d[hidden]-> "cz-bodyweight"
+"cz-bodyweight" -d[hidden]-> "cz-bodyheight"
+"cz-bodyheight" -d[hidden]-> "cz-observation-blood-pressure"
+
+@enduml

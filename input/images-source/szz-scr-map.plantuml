@@ -1,0 +1,59 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+class "Preventive and screening health record" <<LogicalModel>> [[StructureDefinition-PreventiveAndScreeningRecordCz.html]]
+note top #EEEEAE [[ConceptMap-ScreeningRecor2FHIR-cz.html]]
+Concept Map
+endnote
+
+class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
+class "cz-immunization-hpv" <<Profile>> [[StructureDefinition-cz-immunization-hpv.html]]
+class "cz-observation-colposcopy-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-colposcopy-cervical-cancer.html]]
+class "cz-observation-cytology-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-cytology-cervical-cancer.html]]
+class "cz-observation-hpv-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-hpv-cervical-cancer.html]]
+class "cz-observation-colonoscopy" <<Profile>> [[StructureDefinition-cz-observation-colonoscopy.html]]
+class "cz-observation-colorectal-cancer" <<Profile>> [[StructureDefinition-cz-observation-colorectal-cancer.html]]
+class "cz-observation-prostate-cancer" <<Profile>> [[StructureDefinition-cz-observation-prostate-cancer.html]]
+class "cz-waist-circumference" <<Profile>> [[StructureDefinition-cz-waist-circumference.html]]
+class "cz-bodyweight" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
+class "cz-bodyheight" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
+class "cz-observation-blood-pressure" <<Profile>> [[StructureDefinition-cz-observation-blood-pressure.html]]
+
+"Preventive and screening health record" <|. "cz-composition-sharedhealthrecord"
+"Preventive and screening health record" <|. "cz-immunization-hpv"
+"Preventive and screening health record" <|. "cz-observation-colposcopy-cervical-cancer"
+"Preventive and screening health record" <|. "cz-observation-cytology-cervical-cancer"
+"Preventive and screening health record" <|. "cz-observation-hpv-cervical-cancer"
+"Preventive and screening health record" <|. "cz-observation-colonoscopy"
+"Preventive and screening health record" <|. "cz-observation-colorectal-cancer"
+"Preventive and screening health record" <|. "cz-observation-prostate-cancer"
+"Preventive and screening health record" <|. "cz-waist-circumference"
+"Preventive and screening health record" <|. "cz-bodyweight"
+"Preventive and screening health record" <|. "cz-bodyheight"
+"Preventive and screening health record" <|. "cz-observation-blood-pressure"
+
+"cz-composition-sharedhealthrecord" -d[hidden]-> "cz-immunization-hpv"
+"cz-immunization-hpv" -d[hidden]-> "cz-observation-colposcopy-cervical-cancer"
+"cz-observation-colposcopy-cervical-cancer" -d[hidden]-> "cz-observation-cytology-cervical-cancer"
+"cz-observation-cytology-cervical-cancer" -d[hidden]-> "cz-observation-hpv-cervical-cancer"
+"cz-observation-hpv-cervical-cancer" -d[hidden]-> "cz-observation-colonoscopy"
+"cz-observation-colonoscopy"-d[hidden]-> "cz-observation-colorectal-cancer"
+"cz-observation-colorectal-cancer" -d[hidden]-> "cz-observation-prostate-cancer"
+"cz-observation-prostate-cancer" -d[hidden]-> "cz-waist-circumference"
+"cz-waist-circumference" -d[hidden]-> "cz-bodyweight"
+"cz-bodyweight" -d[hidden]-> "cz-bodyheight"
+"cz-bodyheight" -d[hidden]-> "cz-observation-blood-pressure"
+
+@enduml

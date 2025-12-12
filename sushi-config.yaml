@@ -126,6 +126,10 @@ pages:
     title: Emergency Health Record Model map
   ezz-map-cs.html:
     title: Mapování logického modelu emergentního zdravotního záznamu
+  scr-map.html:
+    title: Preventive and screening health record Model map
+  scr-map-cs.html:
+    title: Mapování logického modelu Preventivních a screeningových zdravotních záznamů
 
 # general-guidance.md:
 #   title: General Guidance

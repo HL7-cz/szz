@@ -29,7 +29,7 @@ They may obtain and use the data kept in the Shared Health Record only to the ex
 
 #### Life cycle of recorded information
 
-The entry of new data, its updating, correction, or invalidation must not interfere with the immutability of already stored records. Any subsequent change to the data is made in the form of a new record with a unique identifier and time stamp, while the original record remains unchanged. Before data is stored, an automated check (validation) of its format and completeness is performed, and the information system
+The entry of new data, its updating, correction, or invalidation must not interfere with the immutability of already stored records. Any subsequent change to the data is made in the form of a new record with a unique identifier and time stamp, while the original record remains unchanged. Before data is stored, an automated check (validation) of its format and completeness is performed, and the information system.
 
 #### Conditions threatening the life or health of the patient
 
