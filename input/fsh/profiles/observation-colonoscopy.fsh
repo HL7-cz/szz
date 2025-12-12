@@ -24,7 +24,7 @@ Description: """This profile defines how to represent Colonoscopy Observation re
     ColonoscopyAbnormal 0..*
 * component[ColonoscopyBBPS]
   * ^short = "Boston Bowel Preparation Scale (BBPS) score"
-  * code = $sct#722818007 "Boston Bowel Preparation Scale (BBPS) score"
+  * code = $sct#722818007 "Boston bowel preparation scale"
   * valueInteger 0..1
 * component[ColonoscopyNormal]
   * ^short = "Indication of normal findings during colonoscopy"
