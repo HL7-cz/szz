@@ -19,9 +19,15 @@ Description: """This profile defines how to represent Colonoscopy Observation re
   * ^slicing.rules = #open
   * ^slicing.ordered = false
 * component contains
+    ColonoscopyType 0..1 and
     ColonoscopyBBPS 0..1 and
     ColonoscopyNormal 0..1 and
     ColonoscopyAbnormal 0..*
+* component[ColonoscopyType]
+  * ^short = "Type of colonoscopy"
+  * code = $sct#276218009 "Procedure type"
+  * valueCodeableConcept from CZ_ColonoscopyTypeVS (required)
+  * valueCodeableConcept ^short = "Type of conoloscopy"
 * component[ColonoscopyBBPS]
   * ^short = "Boston Bowel Preparation Scale (BBPS) score"
   * code = $sct#722818007 "Boston bowel preparation scale"

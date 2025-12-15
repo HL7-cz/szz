@@ -128,9 +128,29 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
 * group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-colorectal-cancer"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitionerCz.colorectalScreening.resultDate
+* group[=].element[=].display = "A.3.1.1.1 - Date of quantitative TOKS result"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitionerCz.colorectalScreening.resultTOKS
+* group[=].element[=].display = "A.3.1.1.2 - Quantitative TOKS result (health service code reported to the health insurance company)"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitionerCz.colorectalScreening.levelTOKS
+* group[=].element[=].display = "A.3.1.1.3 - TOKS level"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.colorectalScreening.resultDate
 * group[=].element[=].display = "A.3.2.1.1 - Date of quantitative FOBT result"
 * group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.colorectalScreening.resultTOKS
+* group[=].element[=].display = "A.3.2.1.2 - Quantitative TOKS result"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueCodeableConcept.coding.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.colorectalScreening.levelTOKS
@@ -138,9 +158,14 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueQuantity.value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.colorectalScreening.resultTOKS
-* group[=].element[=].display = "A.3.2.1.2 - Quantitative TOKS result"
-* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueCodeableConcept.coding.code
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.colorectalScreening.resultDate
+* group[=].element[=].display = "A.3.5.1.1 - Date of quantitative TOKS result"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.colorectalScreening.levelTOKS
+* group[=].element[=].display = "A.3.5.1.2 - TOKS level"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueQuantity.value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
@@ -196,3 +221,70 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ImmunizationHPV.vaccineCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-colonoscopy"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gastroenterology.colorectalScreening.resultDate
+* group[=].element[=].display = "A.3.3.1.1 - Date of colonoscopy result"
+* group[=].element[=].target.code = #CZ_ObservationColonoscopy.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gastroenterology.type
+* group[=].element[=].display = "A.3.3.1.2 - Type of colonoscopy performed"
+* group[=].element[=].target.code = #CZ_ObservationColonoscopy.component:colonoscopyType.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gastroenterology.completeness
+* group[=].element[=].display = "A.3.3.1.3 - Completeness of the colonoscopy performed"
+* group[=].element[=].target.code = #CZ_ObservationColonoscopy.status
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gastroenterology.resultBBPS
+* group[=].element[=].display = "A.3.3.1.4 - BBPS result"
+* group[=].element[=].target.code = #CZ_ObservationColonoscopy.component:ColonoscopyBBPS.valueInteger
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gastroenterology.normalFindings
+* group[=].element[=].display = "A.3.3.1.5 - Colonoscopy result - normal findings"
+* group[=].element[=].target.code = #CZ_ObservationColonoscopy.component:ColonoscopyNormal.valueBoolean
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gastroenterology.mostSeriousFinding
+* group[=].element[=].display = "A.3.3.1.6 - Colonoscopy result - pathology (most serious finding)"
+* group[=].element[=].target.code = #CZ_ObservationColonoscopy.component:ColonoscopyAbnormal.valueCodeableConcept.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gastroenterology.numberOfAdenomasOrSerratedLesions
+* group[=].element[=].display = "A.3.3.1.7 - Colonoscopy result: pathology (adenomas and serrated lesions)"
+* group[=].element[=].target.code = #CZ_ObservationColonoscopy.component:ColonoscopyAbnormal.valueInteger
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.gastroenterology.recommendedProcedure
+* group[=].element[=].display = "A.3.3.1.8 - Colonoscopy exam.result: Further recomm.examinations"
+* group[=].element[=].target.code = #CZ_ObservationColonoscopy.interpretation.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-prostate-cancer"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitionery.prostateCancerScreening.resultDate
+* group[=].element[=].display = "A.3.1.2.1 - Date of PSA result"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitionery.prostateCancerScreening.resultTOKS
+* group[=].element[=].display = "A.3.1.2.2 - Quantitative PSA result (health service code reported to the health insurance company)"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.colorectalScreening.resultDate
+* group[=].element[=].display = "A.3.5.1.1 - Date of quantitative TOKS result"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.colorectalScreening.levelTOKS
+* group[=].element[=].display = "A.3.5.1.2 - TOKS level"
+* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+
+
+

@@ -170,6 +170,20 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * ^short = "Biochemistry Laboratory Section"
     * ^definition = "This section holds information about biochemistry laboratory."
     * code = DocumentSectionCzSzzCs#10005 "Biochemistry laboratory record"
+    * entry
+      * insert SliceElement( #profile, [[resolve()]] )
+    * entry contains 
+      observationColorectalCancerScreening 0..* and
+      observationProstateCancerScreening 0..*
+    * entry[observationColorectalCancerScreening]
+      * ^short = "Observation Colorectal Cancer Screening"
+      * ^definition = "This entry holds a reference to the observation about colorectal cancer screening."
+    * entry[observationColorectalCancerScreening] only Reference(CZ_ObservationColorectalCancer)
+    * entry[observationProstateCancerScreening]
+      * ^short = "Observation Prostate Cancer Screening"
+      * ^definition = "This entry holds a reference to the observation about prostate cancer screening."
+    * entry[observationProstateCancerScreening] only Reference(CZ_ObservationProstateCancer)
+    * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
   * section[urology]
     * ^short = "Urology Section"

@@ -9,7 +9,7 @@ Description: """Sdílený zdravotní záznam - Preventivní a screeningové vyš
   * hladinaTOKS 0..1 Quantity "A.3.1.1.3 - Hladina TOKS" """Hodnota kvantitativního imunochemického testu (µg/g)."""
 * vysetreniKarcinomuProstaty 0..1 Base "A.3.1.2 - Výsledek vyšetření v rámci časného záchytu karcinomu prostaty" """Kategorický výsledek stanovení PSA podle hodnoty."""
   * datumVysledku 0..1 dateTime "A.3.1.2.1 - Datum výsledku PSA" """Datum, kdy provádíte vyhodnocení (datum vykázání provedeného PSA  zdravotní pojišťovně)."""
-  * hladinaPSA 0..1 CodeableConcept "A.3.1.2.2 - Hladina PSA (kód zdravotního výkonu vykazovaný zdravotní pojišťovně)" """Kód  zdravotního výkonu výkazovaný pojišťovně na základě hodnoty hladiny prostatického specifického antigenu v krvi pacienta."""
+  * vysledekPSA 0..1 CodeableConcept "A.3.1.2.2 - Výsledek kvantitativního PSA (kód zdravotního výkonu vykazovaný zdravotní pojišťovně)" """Kód  zdravotního výkonu výkazovaný pojišťovně na základě hodnoty hladiny prostatického specifického antigenu v krvi pacienta."""
 * preventivniProhlidka 0..1 Base "A.3.1.3 - Výsledek vyšetření v rámci preventivní prohlídky" """"""
   * datumVysetreni 0..1 dateTime "A.3.1.3.1 - Datum výsledku provedené preventivní prohlídky" """Datum provedení preventivní prohlídky."""
   * vyska 0..1 Quantity "A.3.1.3.2 - Výška" """Výška pacienta v cm."""
