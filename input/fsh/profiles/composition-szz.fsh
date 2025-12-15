@@ -201,11 +201,41 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * code = DocumentSectionCzSzzCs#10008 "Gastroenterology record"
     * entry 0..1
     * entry only Reference(CZ_ObservationColonoscopy)
+    * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
   * section[radiology]
     * ^short = "Radiology Section"
     * ^definition = "This section holds information about radiology."
     * code = DocumentSectionCzSzzCs#10009 "Radiology record"
+    * entry
+      * insert SliceElement( #profile, [[resolve()]] )
+    * entry contains 
+      observationMammography 0..* and
+      observationMammographyBiopsy 0..* and
+      observationLungCancer 0..* and
+      observationMRIProstateCancer 0..* and
+      observationAbdominaAorticAneurysms 0..*
+    * entry[observationMammography]
+      * ^short = "Observation Mammography"
+      * ^definition = "This entry holds a reference to the mammography observation."
+    * entry[observationMammography] only Reference(CZ_ObservationMammography)
+    * entry[observationMammographyBiopsy]
+      * ^short = "Observation Mammography Biopsy"
+      * ^definition = "This entry holds a reference to the mammography biopsy observation."
+    * entry[observationMammographyBiopsy] only Reference(CZ_ObservationMammographyBiopsy) 
+    * entry[observationLungCancer]
+      * ^short = "Observation CT Lung Cancer"
+      * ^definition = "This entry holds a reference to the ct lung cancer observation."
+    * entry[observationLungCancer] only Reference(CZ_ObservationLungCancer) 
+    * entry[observationMRIProstateCancer]
+      * ^short = "Observation MRI Prostate Cancer"
+      * ^definition = "This entry holds a reference to the mri prostate cancer observation."
+    * entry[observationMRIProstateCancer] only Reference(CZ_ObservationMRIProstateCancer) 
+    * entry[observationAbdominaAorticAneurysms]
+      * ^short = "Observation Abdomina Aortic Aneurysms"
+      * ^definition = "This entry holds a reference to the abdomina aortic aneurysms observation."
+    * entry[observationAbdominaAorticAneurysms] only Reference(CZ_ObservationAbdominaAorticAneurysms)
+    * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
   * section[angiology]
     * ^short = "Angiology Section"
@@ -213,7 +243,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * code = DocumentSectionCzSzzCs#10010 "Angiology record"
     * entry 0..1
     * entry only Reference(CZ_ObservationAbdominaAorticAneurysms)
-      
+    * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+  
 
 Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."

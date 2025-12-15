@@ -285,9 +285,101 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ObservationProstateCancer.valueQuantity.value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-mammography"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.mammographyExamination.resultDate
+* group[=].element[=].display = "A.3.4.1.1 - Date of mammography examination result"
+* group[=].element[=].target.code = #CZ_ObservationMammography.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.mammographyExamination.tissueDensity
+* group[=].element[=].display = "A.3.4.1.2 - Breast tissue density according to BIRADS/Tabár classification"
+* group[=].element[=].target.code = #CZ_ObservationMammography.component:densityTabar.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.mammographyExamination.tissueDensity
+* group[=].element[=].display = "A.3.4.1.2 - Breast tissue density according to BIRADS/Tabár classification"
+* group[=].element[=].target.code = #CZ_ObservationMammography.component:densityBirads.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.mammographyExamination.examinationResult
+* group[=].element[=].display = "A.3.4.1.3 - Mammography result"
+* group[=].element[=].target.code = #CZ_ObservationMammography.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-mammography-biopsy"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.breastBiopsyResult.resultDate
+* group[=].element[=].display = "A.3.4.2.1 - Biopsy result date"
+* group[=].element[=].target.code = #CZ_ObservationMammographyBiopsy.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.breastBiopsyResult.biopsyType
+* group[=].element[=].display = "A.3.4.2.2 - Biopsy type"
+* group[=].element[=].target.code = #CZ_ObservationMammographyBiopsy.component:typeOfBiopsy.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.breastBiopsyResult.biopsyResult
+* group[=].element[=].display = "A.3.4.2.3 - Biopsy result"
+* group[=].element[=].target.code = #CZ_ObservationMammographyBiopsy.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-lung-cancer"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.lungExamination.resultDate
+* group[=].element[=].display = "A.3.4.3.1 - Date of LDCT result"
+* group[=].element[=].target.code = #CZ_ObservationLungCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.lungExamination.examinationType
+* group[=].element[=].display = "A.3.4.3.2 - Type of LDCT examination"
+* group[=].element[=].target.code = #CZ_ObservationLungCancer.component:typeOfObservation.valueCodeableConcept.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.lungExamination.examinationResult
+* group[=].element[=].display = "A.3.4.3.3 - LDCT result"
+* group[=].element[=].target.code = #CZ_ObservationLungCancer.valueCodeableConcept.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.lungExamination.recommendedProcedure
+* group[=].element[=].display = "A.3.4.3.4 - LDCT examination result"
+* group[=].element[=].target.code = #CZ_ObservationLungCancer.interpretation.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-mri-prostate-cancer"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.prostateExamination.resultDate
+* group[=].element[=].display = "A.3.4.4.1 - MRI result date"
+* group[=].element[=].target.code = #CZ_ObservationMRIProstateCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.prostateExamination.examinationType
+* group[=].element[=].display = "A.3.4.4.2 - Type of MRI examination"
+* group[=].element[=].target.code = #CZ_ObservationMRIProstateCancer.code.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.prostateExamination.examinationResult
+* group[=].element[=].display = "A.3.4.4.3 - MRI result (PI-RADS)"
+* group[=].element[=].target.code = #CZ_ObservationMRIProstateCancer.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.prostateExamination.findingPIRADS3
+* group[=].element[=].display = "A.3.4.4.4 - Finding in the case of PI-RADS 3"
+* group[=].element[=].target.code = #CZ_ObservationMRIProstateCancer.component:discoveryZone.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
 * group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-abdomina-aortic-aneurysms"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.examinationAneurysmAbnormalAorta.resultDate
+* group[=].element[=].display = "A.3.4.5.1 - Date of USG examination result"
+* group[=].element[=].target.code = #CZ_ObservationAbdominaAorticAneurysms.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.examinationAneurysmAbnormalAorta.examinationResult
+* group[=].element[=].display = "A.3.4.5.2 - Ultrasound examination result"
+* group[=].element[=].target.code = #CZ_ObservationAbdominaAorticAneurysms.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.angiology.abdominalAorticAneurysmAcreening.dateOfResult
 * group[=].element[=].display = "A.3.8.1.1 - Date of ultrasound examination result"
 * group[=].element[=].target.code = #CZ_ObservationAbdominaAorticAneurysms.effectiveDateTime
@@ -298,6 +390,8 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ObservationAbdominaAorticAneurysms.valueCodeableConcept.coding.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+
+
 
 
 
