@@ -1,7 +1,7 @@
-CodeSystem:  TypeBiopsyCS
-Id:         cz-type-biopsy-cs
-Title:      "Biopsy Type Code System"
-Description:  """Biopsy type code system"""
+CodeSystem:  TypeBiopsyBreastCS
+Id:         cz-type-biopsy-breast-cs
+Title:      "Type of Breast Biopsy Code System"
+Description:  """Type of Breast Biopsy code system"""
 
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
@@ -18,11 +18,11 @@ Description:  """Biopsy type code system"""
 * #vacuum "vakuová biopsie (mamotomie)"
 * #intact "intact"
 
-ValueSet:   TypeBiopsyVS    
-Id: cz-type-biopsy-vs
-Title: "Biopsy Type Valueset"
-Description:  """Biopsy type value set"""
+ValueSet:   TypeBiopsyBreastVS    
+Id: cz-type-biopsy-breast-vs
+Title: "Type of Breast Biopsy Valueset"
+Description:  """Type of Breast Biopsy value set"""
 
 * ^experimental = false
 
-* include codes from system TypeBiopsyCS
+* include codes from system TypeBiopsyBreastCS

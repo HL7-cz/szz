@@ -1,7 +1,7 @@
-CodeSystem:  ResultBiopsyCS
-Id:         cz-result-biopsy-cs
-Title:      "Biopsy Result Code System"
-Description:  """Biopsy result code system"""
+CodeSystem:  ResultBiopsyBreastCS
+Id:         cz-result-biopsy-breast-cs
+Title:      "Biopsy Breast Result Code System"
+Description:  """Biopsy Breast result code system"""
 
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
@@ -19,11 +19,11 @@ Description:  """Biopsy result code system"""
 * #bez "bez dalších známek nádoru"
 
 
-ValueSet:   ResultBiopsyVS    
-Id: cz-result-biopsy-vs
-Title: "Biopsy Result Valueset"
-Description:  """Biopsy Result value set"""
+ValueSet:   ResultBiopsyBreastVS    
+Id: cz-result-biopsy-breast-vs
+Title: "Biopsy Breast Result Valueset"
+Description:  """Biopsy Breast Result value set"""
 
 * ^experimental = false
 
-* include codes from system ResultBiopsyCS
+* include codes from system ResultBiopsyBreastCS

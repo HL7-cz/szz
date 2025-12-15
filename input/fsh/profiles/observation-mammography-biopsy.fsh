@@ -4,7 +4,7 @@ Id: cz-observation-mammography-biopsy
 Title: "Observation: Mammography Biopsy(SZZ CZ)"
 Description: """This profile defines how to represent Mammography Biopsy Observation resource in HL7 FHIR for the scope of this guide."""
 
-* code.coding = $sct#122548005 "Mammography"
+* code.coding = $sct#122548005 "Biopsy of breast"
 * effectiveDateTime 0..1
 
 * component 1..
@@ -19,6 +19,6 @@ Description: """This profile defines how to represent Mammography Biopsy Observa
 * component[typeOfBiopsy]
   * ^short = "Type of biopsy"
   * code = $sct#392089008 "Breast procedure"
-  * valueCodeableConcept from TypeBiopsyVS (required)
+  * valueCodeableConcept from TypeBiopsyBreastVS (required)
 
-* valueCodeableConcept from ResultBiopsyVS
+* valueCodeableConcept from ResultBiopsyBreastVS

@@ -189,6 +189,24 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * ^short = "Urology Section"
     * ^definition = "This section holds information about urology."
     * code = DocumentSectionCzSzzCs#10006 "Urology record"
+    * entry
+      * insert SliceElement( #profile, [[resolve()]] )
+    * entry contains 
+      observationProstateCancerScreening 0..* and
+      observationUrology 0..* and
+      observationUrologyBiopsy 0..*
+    * entry[observationProstateCancerScreening]
+      * ^short = "Observation Prostate Cancer Screening"
+      * ^definition = "This entry holds a reference to the prostate cancer screening."
+    * entry[observationProstateCancerScreening] only Reference(CZ_ObservationProstateCancer)
+    * entry[observationUrologyBiopsy]
+      * ^short = "Observation Urology Biopsy"
+      * ^definition = "This entry holds a reference to the urology biopsy observation."
+    * entry[observationUrologyBiopsy] only Reference(CZ_ObservationUrologyBiopsy) 
+    * entry[observationUrology]
+      * ^short = "Observation Urology"
+      * ^definition = "This entry holds a reference to the prostate urology observation."
+    * entry[observationUrology] only Reference(CZ_ObservationUrology) 
 
   * section[pneumology]
     * ^short = "Pneumology Section"

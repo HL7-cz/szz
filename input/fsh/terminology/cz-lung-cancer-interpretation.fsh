@@ -20,7 +20,7 @@ Description:  """Lung Cancer interpretation code system"""
 * #others "Jiný"
 
 ValueSet: LungCancerInterpretationVS
-Id: cz-ung-cancer-interpretation-vs
+Id: cz-lung-cancer-interpretation-vs
 Title:      "Lung Cancer interpretation Value set"
 Description:  """Lung Cancer interpretation value set"""
 

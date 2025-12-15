@@ -144,7 +144,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.gynecology.colorectalScreening.resultDate
-* group[=].element[=].display = "A.3.2.1.1 - Date of quantitative FOBT result"
+* group[=].element[=].display = "A.3.2.1.1 - Date of quantitative TOKS result"
 * group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
@@ -275,13 +275,23 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ObservationProstateCancer.valueCodeableConcept.coding.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.colorectalScreening.resultDate
-* group[=].element[=].display = "A.3.5.1.1 - Date of quantitative TOKS result"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.prostateCancerScreening.analysisDate
+* group[=].element[=].display = "A.3.5.2.1 - Date of PSA analysis"
 * group[=].element[=].target.code = #CZ_ObservationProstateCancer.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.colorectalScreening.levelTOKS
-* group[=].element[=].display = "A.3.5.1.2 - TOKS level"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.prostateCancerScreening.levelPSA
+* group[=].element[=].display = "A.3.5.2.2 - PSA level"
+* group[=].element[=].target.code = #CZ_ObservationProstateCancer.valueQuantity.value
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.prostateCancerScreening.resultDate
+* group[=].element[=].display = "A.3.7.1.1 - Date of PSA screening result"
+* group[=].element[=].target.code = #CZ_ObservationProstateCancer.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.prostateCancerScreening.levelPSA
+* group[=].element[=].display = "A.3.7.1.2 - Screening PSA level"
 * group[=].element[=].target.code = #CZ_ObservationProstateCancer.valueQuantity.value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
@@ -366,6 +376,60 @@ Usage: #definition
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.radiology.prostateExamination.findingPIRADS3
 * group[=].element[=].display = "A.3.4.4.4 - Finding in the case of PI-RADS 3"
 * group[=].element[=].target.code = #CZ_ObservationMRIProstateCancer.component:discoveryZone.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-urology"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.resultDate
+* group[=].element[=].display = "A.3.7.2.1 - Date of examination result"
+* group[=].element[=].target.code = #CZ_ObservationUrology.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.examinationResult
+* group[=].element[=].display = "A.3.7.2.2 - Result of clinical examination"
+* group[=].element[=].target.code = #CZ_ObservationUrology.component:result.valueBoolean
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.levelPSA
+* group[=].element[=].display = "A.3.7.2.3 - PSA level"
+* group[=].element[=].target.code = #CZ_ObservationUrology.component:levelPSA.valueQuantity
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.prostateVolume
+* group[=].element[=].display = "A.3.7.2.4 - Prostate volume"
+* group[=].element[=].target.code = #CZ_ObservationUrology.component:prostateVolume.valueQuantity
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.densityPSA
+* group[=].element[=].display = "A.3.7.2.5 - Determination of PSA density (PSAD)"
+* group[=].element[=].target.code = #CZ_ObservationUrology.component:PSAdensity.valueQuantity
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.velocityPSA
+* group[=].element[=].display = "A.3.7.2.6 - Determination of PSA velocity (PSAV)"
+* group[=].element[=].target.code = #CZ_ObservationUrology.component:PSAvelocity.valueQuantity
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.furtherProcedure
+* group[=].element[=].display = "A.3.7.2.7 - Examination result"
+* group[=].element[=].target.code = #CZ_ObservationUrology.interpretation.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-urology-biopsy"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupBiopsy.resultDate
+* group[=].element[=].display = "A.3.7.3.1 - Date of biopsy examination result"
+* group[=].element[=].target.code = #CZ_ObservationUrologyBiopsy.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupBiopsy.biopsyType
+* group[=].element[=].display = "A.3.7.3.2 - Type of biopsy performed"
+* group[=].element[=].target.code = #CZ_ObservationUrologyBiopsy.component:typeOfBiopsy.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupBiopsy.examinationResult
+* group[=].element[=].display = "A.3.7.3.3 - Biopsy examination result"
+* group[=].element[=].target.code = #CZ_ObservationUrologyBiopsy.valueCodeableConcept
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
