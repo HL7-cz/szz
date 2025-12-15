@@ -211,6 +211,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * ^short = "Angiology Section"
     * ^definition = "This section holds information about angiology."
     * code = DocumentSectionCzSzzCs#10010 "Angiology record"
+    * entry 0..1
+    * entry only Reference(CZ_ObservationAbdominaAorticAneurysms)
       
 
 Invariant: text-or-section

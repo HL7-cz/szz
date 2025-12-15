@@ -267,24 +267,38 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-prostate-cancer"
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitionery.prostateCancerScreening.resultDate
 * group[=].element[=].display = "A.3.1.2.1 - Date of PSA result"
-* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
+* group[=].element[=].target.code = #CZ_ObservationProstateCancer.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.generalPractitionery.prostateCancerScreening.resultTOKS
 * group[=].element[=].display = "A.3.1.2.2 - Quantitative PSA result (health service code reported to the health insurance company)"
-* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueCodeableConcept.coding.code
+* group[=].element[=].target.code = #CZ_ObservationProstateCancer.valueCodeableConcept.coding.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.colorectalScreening.resultDate
 * group[=].element[=].display = "A.3.5.1.1 - Date of quantitative TOKS result"
-* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.effectiveDateTime
+* group[=].element[=].target.code = #CZ_ObservationProstateCancer.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.biochemistry.colorectalScreening.levelTOKS
 * group[=].element[=].display = "A.3.5.1.2 - TOKS level"
-* group[=].element[=].target.code = #CZ_ObservationColorectalCancer.valueQuantity.value
+* group[=].element[=].target.code = #CZ_ObservationProstateCancer.valueQuantity.value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-abdomina-aortic-aneurysms"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.angiology.abdominalAorticAneurysmAcreening.dateOfResult
+* group[=].element[=].display = "A.3.8.1.1 - Date of ultrasound examination result"
+* group[=].element[=].target.code = #CZ_ObservationAbdominaAorticAneurysms.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.angiology.abdominalAorticAneurysmAcreening.examinationResult
+* group[=].element[=].display = "A.3.8.1.2 - Ultrasound examination result"
+* group[=].element[=].target.code = #CZ_ObservationAbdominaAorticAneurysms.valueCodeableConcept.coding.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+
 
 
 
