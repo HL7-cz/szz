@@ -22,7 +22,8 @@ Description: """This profile defines how to represent Colonoscopy Observation re
     ColonoscopyType 0..1 and
     ColonoscopyBBPS 0..1 and
     ColonoscopyNormal 0..1 and
-    ColonoscopyAbnormal 0..*
+    ColonoscopyQuantityFindings 0..1 and
+    ColonoscopyAbnormal 0..1
 * component[ColonoscopyType]
   * ^short = "Type of colonoscopy"
   * code = $sct#276218009 "Procedure type"
@@ -36,11 +37,14 @@ Description: """This profile defines how to represent Colonoscopy Observation re
   * ^short = "Indication of normal findings during colonoscopy"
   * code = $sct#313170008 "Colonoscopy normal"
   * valueBoolean 0..1
+* component[ColonoscopyQuantityFindings]
+  * ^short = "Number of abnormal findings during colonoscopy"
+  * code = $sct#30766002 "Quantitative"
+  * valueInteger 0..1
+  * valueInteger ^short = "Number of abnormal findings"
 * component[ColonoscopyAbnormal]
   * ^short = "Indication of abnormal findings during colonoscopy"
   * code = $sct#313172000 "Colonoscopy abnormal"
-  * valueInteger 0..1
-  * valueInteger ^short = "Number of abnormal findings"
   * valueCodeableConcept from CZ_ColonoscopyAbnormalFindingsVS (required)
   * valueCodeableConcept ^short = "Type of abnormal findings"
 * interpretation 0..1

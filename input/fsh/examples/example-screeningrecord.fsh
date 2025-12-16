@@ -38,6 +38,15 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:cd2b65ad-9926-4589-98c9-7e581e21602a"
 * entry[observation][=].resource = cz-example-observation-colonoscopy
 
+* entry[observation][+].fullUrl = "urn:uuid:02f3d1a4-4a5c-42ae-9f68-ba2f7dfe88a8"
+* entry[observation][=].resource = cz-example-observation-colorectal-cancer
+
+* entry[observation][+].fullUrl = "urn:uuid:824055fa-6107-49c8-b217-f029aa7b8872"
+* entry[observation][=].resource = cz-example-observation-prostate-cancer
+
+* entry[observation][+].fullUrl = "urn:uuid:76879fde-d561-4435-b119-6bb579bea0f5"
+* entry[observation][=].resource = cz-example-observation-mri-prostate-cancer
+
 Instance: cz-example-composition2
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Emergency Report (CZ)"
@@ -59,12 +68,64 @@ Usage: #example
 * section[preventingAndScreeningRecord].code = DocumentSectionCzSzzCs#10002 "Preventive and screening health record"
 * section[preventingAndScreeningRecord].section[generalPractitioner].title = "General practitioner record"
 * section[preventingAndScreeningRecord].section[generalPractitioner].code = DocumentSectionCzSzzCs#10003 "General practitioner record"
-* section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][0] = Reference(urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a)
-* section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][1] = Reference(urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1)
-* section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][2] = Reference(urn:uuid:5031be23-9628-49af-8cac-d23ea87cb8e0)
+* section[preventingAndScreeningRecord].section[generalPractitioner].entry[0] = Reference(urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a)
+* section[preventingAndScreeningRecord].section[generalPractitioner].entry[1] = Reference(urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1)
+* section[preventingAndScreeningRecord].section[generalPractitioner].entry[2] = Reference(urn:uuid:5031be23-9628-49af-8cac-d23ea87cb8e0)
+* section[preventingAndScreeningRecord].section[generalPractitioner].entry[3] = Reference(urn:uuid:02f3d1a4-4a5c-42ae-9f68-ba2f7dfe88a8)
+* section[preventingAndScreeningRecord].section[generalPractitioner].entry[4] = Reference(urn:uuid:824055fa-6107-49c8-b217-f029aa7b8872)
 * section[preventingAndScreeningRecord].section[gastroenterology].title = "Results of colorectal cancer screening tests"
 * section[preventingAndScreeningRecord].section[gastroenterology].code = DocumentSectionCzSzzCs#10008 "Gastroenterology record"
 * section[preventingAndScreeningRecord].section[gastroenterology].entry[0] =  Reference(urn:uuid:cd2b65ad-9926-4589-98c9-7e581e21602a)
+* section[preventingAndScreeningRecord].section[biochemistryLaboratory].title = "Results of biochemistry laboratory tests"
+* section[preventingAndScreeningRecord].section[biochemistryLaboratory].code = DocumentSectionCzSzzCs#10005 "Biochemistry laboratory record"
+* section[preventingAndScreeningRecord].section[biochemistryLaboratory].entry[0] = Reference(urn:uuid:02f3d1a4-4a5c-42ae-9f68-ba2f7dfe88a8)
+* section[preventingAndScreeningRecord].section[biochemistryLaboratory].entry[1] = Reference(urn:uuid:824055fa-6107-49c8-b217-f029aa7b8872)
+* section[preventingAndScreeningRecord].section[radiology].title = "Results of imaging observation"
+* section[preventingAndScreeningRecord].section[radiology].code = DocumentSectionCzSzzCs#10009 "Radiology record"
+* section[preventingAndScreeningRecord].section[radiology].entry[0] = Reference(urn:uuid:76879fde-d561-4435-b119-6bb579bea0f5)
+
+Instance: cz-example-observation-mri-prostate-cancer
+InstanceOf: CZ_ObservationMRIProstateCancer
+* id = "76879fde-d561-4435-b119-6bb579bea0f5"
+* subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* code.coding = $sct#90084008 "MRI without contrast"
+* effectiveDateTime = "2025-11-10T15:30:00+01:00"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #imaging
+* status = #final
+* component[discoveryZone].code = $sct#314399000 "Region of prostate"
+* component[discoveryZone].valueCodeableConcept = $sct#399384005 "Transition zone of prostate"
+* valueCodeableConcept = ResultMRIProstateCancerCS#3 "PI-RADS 3"
+
+Instance: cz-example-observation-colorectal-cancer
+InstanceOf: CZ_ObservationColorectalCancer
+Title: "Observation: Colorectal Cancer Screening Example (CZ)"
+Description: "Example of Colorectal Cancer Observation for Shared Health Record."
+* id = "02f3d1a4-4a5c-42ae-9f68-ba2f7dfe88a8"
+* subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* code.coding = $loinc#57803-9
+* effectiveDateTime = "2025-12-10T11:30:00+01:00"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #laboratory
+* status = #final
+* interpretation.coding = ColorectalCancerResultCS#15121
+* valueQuantity.value = 18
+* valueQuantity.code = #µg/g
+
+Instance: cz-example-observation-prostate-cancer
+InstanceOf: CZ_ObservationProstateCancer
+Title: "Observation: Prostate Cancer Screening Example (CZ)"
+Description: "Example of Prostate Cancer Observation for Shared Health Record."
+* id = "824055fa-6107-49c8-b217-f029aa7b8872"
+* subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* code.coding = $loinc#35741-8
+* effectiveDateTime = "2025-12-13T11:30:00+01:00"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #laboratory
+* status = #final
+* interpretation.coding = ProstateCancerResultCS#01133
+* valueQuantity.value = 5
+* valueQuantity.code = #µg/l
 
 Instance: cz-example-observation-colonoscopy
 InstanceOf: CZ_ObservationColonoscopy

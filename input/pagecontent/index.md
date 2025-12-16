@@ -19,7 +19,6 @@ This guide is divided into several pages, which are listed in the menu bar at th
 - Implementation: 
   - [Mapping to profiles](model-map.html): This section contains information on mapping the logical model to the Shared Health Record profiles. 
   - [Examples](examples.html): This section contains examples. 
-  - [Implementation Notes](implementation-notes.html): This section contains implementation guidance. 
 - About: 
   - [Authors](authors.html): This section contains information about the authors. 
   - [Downloads](downloads.html): This section provides information about available downloads of the implementation specification. 
