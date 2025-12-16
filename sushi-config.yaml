@@ -113,10 +113,6 @@ pages:
     title: Download
   downloads-cs.md:
     title: Download
-  implementation-notes.md:
-    title: Implementation notes
-  implementation-notes-cs.md:
-    title: Poznámky k implementaci
 # === MAP ====
   Header-map.html:
     title: Header Model map

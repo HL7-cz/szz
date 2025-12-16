@@ -454,6 +454,53 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ObservationAbdominaAorticAneurysms.valueCodeableConcept.coding.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].source = "https://hl7.cz/fhir/szz/StructureDefinition/PreventiveAndScreeningRecordCz"
+* group[=].target = "https://hl7.cz/fhir/szz/StructureDefinition/cz-observation-pulmonology"
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.dateOfResult
+* group[=].element[=].display = "A.3.6.1.1 - Date of pulmonary examination result"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.smoker
+* group[=].element[=].display = "A.3.6.1.2 - Smoking (medical history)"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.component:medicalHistoryOfSmoking.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.numberOfYearsSinceQuitting
+* group[=].element[=].display = "A.3.6.1.3 - Number of years since quitting smoking"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.component:yearsSinceQuittingSmoking.valueInteger
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.numberOfYearsSmoking
+* group[=].element[=].display = "A.3.6.1.4 - Number of years smoking"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.component:yearsOfSmoking.valueInteger
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.numberOfPackYears
+* group[=].element[=].display = "A.3.6.1.5 - Number of pack-years"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.component:packYears.valueInteger
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.physicalExamination
+* group[=].element[=].display = "A.3.6.1.6 - Physical examination result"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.component:physicalExamResult
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.functionalExamination
+* group[=].element[=].display = "A.3.6.1.7 - Lung X-ray result"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.component:functionalExamResult
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.resultXRay
+* group[=].element[=].display = "A.3.6.1.8 - Functional examination result"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PreventiveAndScreeningRecordCz.pulmonology.recommendationLDCT
+* group[=].element[=].display = "A.3.6.1.9 - Examination result"
+* group[=].element[=].target.code = #CZ_ObservationPulmonology.interpretation
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 
 
 

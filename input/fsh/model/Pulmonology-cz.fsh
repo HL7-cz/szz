@@ -1,6 +1,6 @@
 Logical: LogCzPulmonologyCz
 Id: LogPulmonologyCz
-Title: "A.3.6 - Pneumology"
+Title: "A.3.6 - Pulmonology"
 Description: """Sdílený zdravotní záznam - Screeningové vyšetření pneumologem."""
 
 * vysetreniPlic 0..1 Base "A.3.6.1 - Výsledek vyšetření v rámci časného záchytu karcinomu plic" """"""

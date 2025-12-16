@@ -99,7 +99,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
     gynecology ..1 and
     biochemistryLaboratory ..1 and
     urology ..1 and
-    pneumology ..1 and
+    pulmonology ..1 and
     gastroenterology ..1 and
     radiology ..1 and
     angiology ..1
@@ -208,10 +208,10 @@ Description: "This profile defines how to represent Composition resource in HL7 
       * ^definition = "This entry holds a reference to the prostate urology observation."
     * entry[observationUrology] only Reference(CZ_ObservationUrology) 
 
-  * section[pneumology]
-    * ^short = "Pneumology Section"
-    * ^definition = "This section holds information about pneumology."
-    * code = DocumentSectionCzSzzCs#10007 "Pneumology record"
+  * section[pulmonology]
+    * ^short = "Pulmonology Section"
+    * ^definition = "This section holds information about pulmonology."
+    * code = DocumentSectionCzSzzCs#10007 "Pulmonology record"
 
   * section[gastroenterology]
     * ^short = "Gastroenterology Section"
