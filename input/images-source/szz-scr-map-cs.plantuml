@@ -14,14 +14,14 @@ legend right
 endlegend
 
 class "Preventivní a screeningový zdravotní záznam" <<LogicalModel>> [[StructureDefinition-LogPreventiveAndScreeningRecordCz.html]]
-note top #EEEEAE [[ConceptMap-ScreeningRecor2FHIR-cz.html]]
+note top #EEEEAE [[ConceptMap-ScreeningRecord2FHIR-cz.html]]
 Concept Mapa
 endnote
 
 class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
-class "cz-observation-height" <<Profile>> [[StructureDefinition-cz-observation-height.html]]
-class "cz-observation-weight" <<Profile>> [[StructureDefinition-cz-observation-weight.html]]
-class "cz-observation-waistcircumference" <<Profile>> [[StructureDefinition-cz-observation-waistcircumference.html]]
+class "cz-observation-height" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
+class "cz-observation-weight" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
+class "cz-observation-waistcircumference" <<Profile>> [[StructureDefinition-cz-waist-circumference.html]]
 class "cz-observation-blood-pressure" <<Profile>> [[StructureDefinition-cz-observation-blood-pressure.html]]
 class "cz-observation-colorectal-cancer" <<Profile>> [[StructureDefinition-cz-observation-colorectal-cancer.html]]
 class "cz-observation-colposcopy-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-colposcopy-cervical-cancer.html]]

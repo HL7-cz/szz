@@ -9,7 +9,7 @@ Description: """This profile defines how to represent Colorectal Cancer Screenin
 * subject only Reference(CZ_PatientCore)
 * effectiveDateTime 0..1
 
-* valueQuantity.code = #µg/g
+* valueQuantity.code = #ug/g
 
 * interpretation.coding from ColorectalCancerResultVS (required)
 * interpretation.coding ^binding.extension[0].extension[0].url = "purpose"

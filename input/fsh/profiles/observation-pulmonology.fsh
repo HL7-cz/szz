@@ -30,7 +30,7 @@ Description: """This profile defines how to represent Pulmonology Observation re
   * valueInteger 0..1
 * component[yearsOfSmoking]
   * ^short = "How many years has the patient been smoking/smoked?"
-  * code = $sct#8517006 "Ex-smoker"
+  * code = $sct#77176002 "Smoker"
   * valueInteger 0..1
 * component[packYears]
   * ^short = "Pack-years = (number of cigarettes per day ÷ 20) × number of years smoked. One pack-year means smoking one pack per day for one year (or 2 packs per day for half a year, or half a pack per day for 2 years, etc.)"

@@ -43,7 +43,8 @@ Description: "Clinical document used to represent a Shared Health Record for the
     allergiesAndIntolerances 0..* and
     medicationStatements 0..* and
     medications 0..* and
-    documentReference 0..*
+    documentReference 0..* and
+    immunization 0..*
 
 * entry[composition].resource only CZ_CompositionSzz
 * entry[patient].resource only CZ_PatientCore
@@ -56,6 +57,7 @@ Description: "Clinical document used to represent a Shared Health Record for the
 * entry[medicationStatements].resource only CZ_MedicationStatement
 * entry[medications].resource only CZ_Medication
 * entry[documentReference].resource only CZ_Attachment or CZ_Logo
+* entry[immunization].resource only CZ_ImmunizationHPV
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

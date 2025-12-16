@@ -3,7 +3,8 @@ Všechny příklady lze nalézt na stránce [artifacts](artifacts.html).
 ### Příklady SZZ
 
 - [Příklad SZZ Emergentního záznamu](Bundle-cz-example-bundle-emergencyrecord.html) - Příklad SZZ s kompletním vyplněním emergentího záznamu
-- [Příklad SZZ pro záznam o screeningových a preventivních vyšetřeních](Bundle-cz-example-bundle-screeningrecord.html) - Příklad SZZ s úplně vyplněným záznamem o screeningových a preventivních vyšetřeních pro mužského pacienta
+- [Příklad SZZ pro záznam o screeningových a preventivních vyšetřeních](Bundle-cz-example-bundle-screeningrecord.html) - Příklad SZZ s vyplněným záznamem o screeningových a preventivních vyšetřeních pro mužského pacienta
+- [Příklad SZZ pro záznam o screeningových a preventivních vyšetřeních 2](Bundle-cz-example-bundle-screeningrecord2.html) - Příklad SZZ s vyplněným záznamem o screeningových a preventivních vyšetřeních pro pacientku
 
 ### Příklady profilů
 
@@ -11,7 +12,9 @@ Všechny příklady lze nalézt na stránce [artifacts](artifacts.html).
 - Příklad [Alergie](AllergyIntolerance-4b343429-16da-4a5b-be80-17e4122f5956.html)
 - Příklad [Kompozice](Composition-f711d704-df5c-4599-ac80-e8636e0f9931.html)
 - Příklad [Loga nemocnice](DocumentReference-040eb849-a513-4d74-b3f3-d2f246a26877.html)
+- Příklad [Immunization](Immunization-dd06896e-959b-44ec-b791-19a68ffdc576.html)
 - Příklad [Medikace](Medication-d6511f3f-a311-4050-a34a-542f1ffe40bd.html)
+- Příklad [Observation - angiologie](Observation-dd8033d4-d1c9-48e8-8edd-c0dda913678d.html)
 - Příklad [Vyšetření - krevní skupiny](Observation-5da80cc6-b699-42dc-aeba-86e229063975.html)
 - Příklad [Vyšetření - krevního tlaku](Observation-d87b5700-f89c-444b-8360-29c9f7673bf1.html)
 - Příklad [Vyšetření - kolonoskopie](Observation-cd2b65ad-9926-4589-98c9-7e581e21602a.html)

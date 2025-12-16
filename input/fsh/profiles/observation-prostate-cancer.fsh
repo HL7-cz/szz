@@ -10,4 +10,4 @@ Description: """This profile defines how to represent Prostate Cancer Screening 
 * effectiveDateTime 0..1
 
 * interpretation.coding from ProstateCancerResultVS (required)
-* valueQuantity.code = #µg/l
+* valueQuantity.code = #ug/l

@@ -3,7 +3,8 @@ All examples can be found on the [artifacts](artifacts.html) page.
 ### SZZ examples
 
 - [Example of an SZZ for an emergency record](Bundle-cz-example-bundle-emergencyrecord.html) - Example of an SZZ with a fully completed emergency record
-- [Example of an SZZ for a screening and preventive examinations record](Bundle-cz-example-bundle-screeningrecord.html) - Example of an SZZ with a fully completed screening and preventive examinations record for male patient
+- [Example of an SZZ for a screening and preventive examinations record](Bundle-cz-example-bundle-screeningrecord.html) - Example of an SZZ with a completed screening and preventive examinations record for male patient
+- [Example of an SZZ for a screening and preventive examinations record 2](Bundle-cz-example-bundle-screeningrecord2.html) - Example of an SZZ with a completed screening and preventive examinations record for female patient
 
 ### Profile examples
 
@@ -11,7 +12,9 @@ All examples can be found on the [artifacts](artifacts.html) page.
 - Example [Allergy](AllergyIntolerance-4b343429-16da-4a5b-be80-17e4122f5956.html)
 - Example [Composition](Composition-f711d704-df5c-4599-ac80-e8636e0f9931.html)
 - Example [Hospital logos](DocumentReference-040eb849-a513-4d74-b3f3-d2f246a26877.html)
+- Example [Immunization](Immunization-dd06896e-959b-44ec-b791-19a68ffdc576.html)
 - Example [Medication](Medication-d6511f3f-a311-4050-a34a-542f1ffe40bd.html)
+- Example [Observation - angiology](Observation-dd8033d4-d1c9-48e8-8edd-c0dda913678d.html)
 - Example [Observation - blood type](Observation-5da80cc6-b699-42dc-aeba-86e229063975.html)
 - Example [Observation - blood pressure](Observation-d87b5700-f89c-444b-8360-29c9f7673bf1.html)
 - Example [Observation - colonoscopy](Observation-cd2b65ad-9926-4589-98c9-7e581e21602a.html)

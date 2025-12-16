@@ -19,8 +19,8 @@ Description: """This profile defines how to represent Urology Observation resour
     PSALevel 0..1 and
     ProstateVolume 0..1 and
     PSAdensity 0..1 and
-    PSAvelocity 0..1 and
-    result 0..1
+    PSAvelocity 0..1
+    
 * component[PSALevel]
   * ^short = "PSA level in µg/l"
   * code = $sct#443969004 "Quantitative measurement of mass concentration of prostate specific antigen in serum or plasma"
@@ -28,7 +28,7 @@ Description: """This profile defines how to represent Urology Observation resour
 
 * component[PSAdensity]
   * ^short = "PSA density in ng/ml/cm3"
-  * code = $sct#63476009 "Prostate specific antigen measurement"
+  * code = $loinc#15325-4
   * valueQuantity.code = #ng[ml][cm3]
 
 * component[PSAvelocity]
@@ -41,10 +41,7 @@ Description: """This profile defines how to represent Urology Observation resour
   * code = $sct#1297142007 "Prostate volume"
   * valueQuantity.code = #ml 
 
-* component[result]
-  * ^short = "Prostate abnormal"
-  * code = $sct#166160000 "Prostate specific antigen abnormal"
-  * valueBoolean 0..1
+* valueCodeableConcept from UrologyResultVS
 
 * interpretation 0..1
   * ^short = "Interpretation of the urology findings"
