@@ -4,7 +4,7 @@ All examples can be found on the [artifacts](artifacts.html) page.
 
 - [Example of an SZZ for an emergency record](Bundle-cz-example-bundle-emergencyrecord.html) - Example of an SZZ with a fully completed emergency record
 - [Example of an SZZ for a screening and preventive examinations record](Bundle-cz-example-bundle-screeningrecord.html) - Example of an SZZ with a completed screening and preventive examinations record for male patient
-- [Example of an SZZ for a screening and preventive examinations record 2](Bundle-cz-example-bundle-screeningrecord2.html) - Example of an SZZ with a completed screening and preventive examinations record for female patient
+- [Example of an SZZ for a screening and preventive examinations record 2](Bundle-cz-example-bundle-screeningrecord-2.html) - Example of an SZZ with a completed screening and preventive examinations record for female patient
 
 ### Profile examples
 

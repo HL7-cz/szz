@@ -4,7 +4,7 @@ Všechny příklady lze nalézt na stránce [artifacts](artifacts.html).
 
 - [Příklad SZZ Emergentního záznamu](Bundle-cz-example-bundle-emergencyrecord.html) - Příklad SZZ s kompletním vyplněním emergentího záznamu
 - [Příklad SZZ pro záznam o screeningových a preventivních vyšetřeních](Bundle-cz-example-bundle-screeningrecord.html) - Příklad SZZ s vyplněným záznamem o screeningových a preventivních vyšetřeních pro mužského pacienta
-- [Příklad SZZ pro záznam o screeningových a preventivních vyšetřeních 2](Bundle-cz-example-bundle-screeningrecord2.html) - Příklad SZZ s vyplněným záznamem o screeningových a preventivních vyšetřeních pro pacientku
+- [Příklad SZZ pro záznam o screeningových a preventivních vyšetřeních 2](Bundle-cz-example-bundle-screeningrecord-2.html) - Příklad SZZ s vyplněným záznamem o screeningových a preventivních vyšetřeních pro pacientku
 
 ### Příklady profilů
 
