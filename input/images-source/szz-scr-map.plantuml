@@ -19,41 +19,65 @@ Concept Map
 endnote
 
 class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
-class "cz-immunization-hpv" <<Profile>> [[StructureDefinition-cz-immunization-hpv.html]]
+class "cz-observation-height" <<Profile>> [[StructureDefinition-cz-observation-height.html]]
+class "cz-observation-weight" <<Profile>> [[StructureDefinition-cz-observation-weight.html]]
+class "cz-observation-waistcircumference" <<Profile>> [[StructureDefinition-cz-observation-waistcircumference.html]]
+class "cz-observation-blood-pressure" <<Profile>> [[StructureDefinition-cz-observation-blood-pressure.html]]
+class "cz-observation-colorectal-cancer" <<Profile>> [[StructureDefinition-cz-observation-colorectal-cancer.html]]
 class "cz-observation-colposcopy-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-colposcopy-cervical-cancer.html]]
 class "cz-observation-cytology-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-cytology-cervical-cancer.html]]
 class "cz-observation-hpv-cervical-cancer" <<Profile>> [[StructureDefinition-cz-observation-hpv-cervical-cancer.html]]
+class "cz-immunization-hpv" <<Profile>> [[StructureDefinition-cz-immunization-hpv.html]]
 class "cz-observation-colonoscopy" <<Profile>> [[StructureDefinition-cz-observation-colonoscopy.html]]
-class "cz-observation-colorectal-cancer" <<Profile>> [[StructureDefinition-cz-observation-colorectal-cancer.html]]
 class "cz-observation-prostate-cancer" <<Profile>> [[StructureDefinition-cz-observation-prostate-cancer.html]]
-class "cz-waist-circumference" <<Profile>> [[StructureDefinition-cz-waist-circumference.html]]
-class "cz-bodyweight" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
-class "cz-bodyheight" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
-class "cz-observation-blood-pressure" <<Profile>> [[StructureDefinition-cz-observation-blood-pressure.html]]
+class "cz-observation-mammography" <<Profile>> [[StructureDefinition-cz-observation-mammography.html]]
+class "cz-observation-mammography-biopsy" <<Profile>> [[StructureDefinition-cz-observation-mammography-biopsy.html]]
+class "cz-observation-lung-cancer" <<Profile>> [[StructureDefinition-cz-observation-lung-cancer.html]]
+class "cz-observation-mri-prostate-cancer" <<Profile>> [[StructureDefinition-cz-observation-mri-prostate-cancer.html]]
+class "cz-observation-urology" <<Profile>> [[StructureDefinition-cz-observation-urology.html]]
+class "cz-observation-urology-biopsy" <<Profile>> [[StructureDefinition-cz-observation-urology-biopsy.html]]
+class "cz-observation-abdomina-aortic-aneurysms" <<Profile>> [[StructureDefinition-cz-observation-abdomina-aortic-aneurysms.html]]
+class "cz-observation-pulmonology" <<Profile>> [[StructureDefinition-cz-observation-pulmonology.html]]
 
 "Preventive and screening health record" <|. "cz-composition-sharedhealthrecord"
-"Preventive and screening health record" <|. "cz-immunization-hpv"
+"Preventive and screening health record" <|. "cz-observation-height"
+"Preventive and screening health record" <|. "cz-observation-weight"
+"Preventive and screening health record" <|. "cz-observation-waistcircumference"
+"Preventive and screening health record" <|. "cz-observation-blood-pressure"
+"Preventive and screening health record" <|. "cz-observation-colorectal-cancer"
 "Preventive and screening health record" <|. "cz-observation-colposcopy-cervical-cancer"
 "Preventive and screening health record" <|. "cz-observation-cytology-cervical-cancer"
 "Preventive and screening health record" <|. "cz-observation-hpv-cervical-cancer"
+"Preventive and screening health record" <|. "cz-immunization-hpv"
 "Preventive and screening health record" <|. "cz-observation-colonoscopy"
-"Preventive and screening health record" <|. "cz-observation-colorectal-cancer"
 "Preventive and screening health record" <|. "cz-observation-prostate-cancer"
-"Preventive and screening health record" <|. "cz-waist-circumference"
-"Preventive and screening health record" <|. "cz-bodyweight"
-"Preventive and screening health record" <|. "cz-bodyheight"
-"Preventive and screening health record" <|. "cz-observation-blood-pressure"
+"Preventive and screening health record" <|. "cz-observation-mammography"
+"Preventive and screening health record" <|. "cz-observation-mammography-biopsy"
+"Preventive and screening health record" <|. "cz-observation-lung-cancer"
+"Preventive and screening health record" <|. "cz-observation-mri-prostate-cancer"
+"Preventive and screening health record" <|. "cz-observation-urology"
+"Preventive and screening health record" <|. "cz-observation-urology-biopsy"
+"Preventive and screening health record" <|. "cz-observation-abdomina-aortic-aneurysms"
+"Preventive and screening health record" <|. "cz-observation-pulmonology"
 
-"cz-composition-sharedhealthrecord" -d[hidden]-> "cz-immunization-hpv"
-"cz-immunization-hpv" -d[hidden]-> "cz-observation-colposcopy-cervical-cancer"
+"cz-composition-sharedhealthrecord" -d[hidden]-> "cz-observation-height"
+"cz-observation-height" -d[hidden]-> "cz-observation-weight"
+"cz-observation-weight" -d[hidden]-> "cz-observation-waistcircumference"
+"cz-observation-waistcircumference" -d[hidden]-> "cz-observation-blood-pressure"
+"cz-observation-blood-pressure" -d[hidden]-> "cz-observation-colorectal-cancer"
+"cz-observation-colorectal-cancer" -d[hidden]-> "cz-observation-colposcopy-cervical-cancer"
 "cz-observation-colposcopy-cervical-cancer" -d[hidden]-> "cz-observation-cytology-cervical-cancer"
 "cz-observation-cytology-cervical-cancer" -d[hidden]-> "cz-observation-hpv-cervical-cancer"
-"cz-observation-hpv-cervical-cancer" -d[hidden]-> "cz-observation-colonoscopy"
-"cz-observation-colonoscopy"-d[hidden]-> "cz-observation-colorectal-cancer"
-"cz-observation-colorectal-cancer" -d[hidden]-> "cz-observation-prostate-cancer"
-"cz-observation-prostate-cancer" -d[hidden]-> "cz-waist-circumference"
-"cz-waist-circumference" -d[hidden]-> "cz-bodyweight"
-"cz-bodyweight" -d[hidden]-> "cz-bodyheight"
-"cz-bodyheight" -d[hidden]-> "cz-observation-blood-pressure"
+"cz-observation-hpv-cervical-cancer" -d[hidden]-> "cz-immunization-hpv"
+"cz-immunization-hpv" -d[hidden]-> "cz-observation-colonoscopy"
+"cz-observation-colonoscopy" -d[hidden]-> "cz-observation-prostate-cancer"
+"cz-observation-prostate-cancer" -d[hidden]-> "cz-observation-mammography"
+"cz-observation-mammography" -d[hidden]-> "cz-observation-mammography-biopsy"
+"cz-observation-mammography-biopsy" -d[hidden]-> "cz-observation-lung-cancer"
+"cz-observation-lung-cancer" -d[hidden]-> "cz-observation-mri-prostate-cancer"
+"cz-observation-mri-prostate-cancer" -d[hidden]-> "cz-observation-urology"
+"cz-observation-urology" -d[hidden]-> "cz-observation-urology-biopsy"
+"cz-observation-urology-biopsy" -d[hidden]-> "cz-observation-abdomina-aortic-aneurysms"
+"cz-observation-abdomina-aortic-aneurysms" -d[hidden]-> "cz-observation-pulmonology"
 
 @enduml
