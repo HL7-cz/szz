@@ -59,7 +59,28 @@ Usage: #example
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][0] = Reference(urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a)
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][1] = Reference(urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1)
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[preventingExamination][2] = Reference(urn:uuid:5031be23-9628-49af-8cac-d23ea87cb8e0)
+* section[preventingAndScreeningRecord].section[gastroenterology].title = "Results of colorectal cancer screening tests"
+* section[preventingAndScreeningRecord].section[gastroenterology].code = DocumentSectionCzSzzCs#10008 "Gastroenterology record"
+* section[preventingAndScreeningRecord].section[gastroenterology].entry[0] =  Reference(urn:uuid:cd2b65ad-9926-4589-98c9-7e581e21602a)
 
+Instance: cz-example-observation-colonoscopy
+InstanceOf: CZ_ObservationColonoscopy
+Title: "Observation: Colonoscopy Example (CZ)"
+Description: "Example of Colonoscopy Observation for Shared Health Record."
+* id = "cd2b65ad-9926-4589-98c9-7e581e21602a"
+* subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* code.coding = $sct#73761001
+* effectiveDateTime = "2025-12-10T10:30:00+01:00"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #imaging
+* status = #final
+* component[0].code = $sct#276218009 "Procedure type"
+* component[=].valueCodeableConcept.coding = CZ_ColonoscopyType#toks "TOKS+"
+* component[+].code = $sct#722818007 "Boston bowel preparation scale"
+* component[=].valueInteger = 9
+* component[+].code = $sct#313170008 "Colonoscopy normal"
+* component[=].valueBoolean = true
+* interpretation.coding = CZ_ColonoscopyInterpretation#kolonoskopie6mes "dispenzární koloskopie za 6 měsíců"
 
 Instance: cz-example-observation-weight
 InstanceOf: CZ_BodyWeight

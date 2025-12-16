@@ -14,7 +14,7 @@ Description: """This profile defines how to represent Colorectal Cancer Screenin
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = ColorectalCancerResultAlternateVS
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = Canonical(ColorectalCancerResultAlternateVS)
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a colorectal cancer findings value set."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"

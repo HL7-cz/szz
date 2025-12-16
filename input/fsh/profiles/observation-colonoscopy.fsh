@@ -43,8 +43,6 @@ Description: """This profile defines how to represent Colonoscopy Observation re
   * valueInteger ^short = "Number of abnormal findings"
   * valueCodeableConcept from CZ_ColonoscopyAbnormalFindingsVS (required)
   * valueCodeableConcept ^short = "Type of abnormal findings"
-  * valueString 0..1
-  * valueString ^short = "Description of other abnormal findings"
 * interpretation 0..1
   * ^short = "Interpretation of the colonoscopy findings"
   * ^definition = "This element provides an overall interpretation of the colonoscopy findings, summarizing the results and their clinical significance."
