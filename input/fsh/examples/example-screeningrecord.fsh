@@ -35,6 +35,9 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1"
 * entry[observation][=].resource = cz-example-observation-bloodPressure
 
+* entry[observation][+].fullUrl = "urn:uuid:cd2b65ad-9926-4589-98c9-7e581e21602a"
+* entry[observation][=].resource = cz-example-observation-colonoscopy
+
 Instance: cz-example-composition2
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Emergency Report (CZ)"
