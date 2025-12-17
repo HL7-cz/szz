@@ -79,8 +79,10 @@ Description: "Example of Abdomina Aortic Aneurysms for Shared Health Record."
 * id = "dd8033d4-d1c9-48e8-8edd-c0dda913678d"
 * code = $sct#698356002 "Abdominal aortic aneurysm screening"
 * status = #final
+* subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
 * effectiveDateTime = "2025-05-15T10:30:00+01:00"
 * valueCodeableConcept = AbdominaAorticAneurysmsResultCS#bez "bez nálezu aneurysmatu"
+* performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
 
 Instance: cz-example-immunization
 InstanceOf: CZ_ImmunizationHPV

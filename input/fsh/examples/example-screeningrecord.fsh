@@ -96,6 +96,7 @@ InstanceOf: CZ_ObservationMRIProstateCancer
 * component[discoveryZone].code = $sct#314399000 "Region of prostate"
 * component[discoveryZone].valueCodeableConcept = $sct#399384005 "Transition zone of prostate"
 * valueCodeableConcept = ResultMRIProstateCancerCS#3 "PI-RADS 3"
+* performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
 
 Instance: cz-example-observation-colorectal-cancer
 InstanceOf: CZ_ObservationColorectalCancer
@@ -112,6 +113,7 @@ Description: "Example of Colorectal Cancer Observation for Shared Health Record.
 * valueQuantity.value = 18
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #ug/g
+* performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
 
 Instance: cz-example-observation-prostate-cancer
 InstanceOf: CZ_ObservationProstateCancer
@@ -119,15 +121,16 @@ Title: "Observation: Prostate Cancer Screening Example (CZ)"
 Description: "Example of Prostate Cancer Observation for Shared Health Record."
 * id = "824055fa-6107-49c8-b217-f029aa7b8872"
 * subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
-* code.coding = $loinc#35741-8
+* code.coding = $loinc#2857-1
 * effectiveDateTime = "2025-12-13T11:30:00+01:00"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #laboratory
 * status = #final
 * interpretation.coding = ProstateCancerResultCS#01133
-* valueQuantity.value = 5
+* valueQuantity.value = 4
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #ug/l
+* performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
 
 Instance: cz-example-observation-colonoscopy
 InstanceOf: CZ_ObservationColonoscopy
@@ -147,6 +150,7 @@ Description: "Example of Colonoscopy Observation for Shared Health Record."
 * component[+].code = $sct#313170008 "Colonoscopy normal"
 * component[=].valueBoolean = true
 * interpretation.coding = CZ_ColonoscopyInterpretation#kolonoskopie6mes "dispenzární koloskopie za 6 měsíců"
+* performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
 
 Instance: cz-example-observation-weight
 InstanceOf: CZ_BodyWeight
