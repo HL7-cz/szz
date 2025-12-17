@@ -85,7 +85,7 @@ Obsahuje údaje o zdravotní pojišťovně pacienta, čísle pojištěnce a př�
 Uvedení zamýšleného příjemce zprávy, zpravidla cílového poskytovatele akutní lůžkové péče (CPALP) nebo jiného zdravotnického zařízení, kterému je pacient předán. 
 
 **Autor** 
-Identifikační údaje člena výjezdové skupiny ZZS, který záznam vytvořil a je za něj zodpovědný. 
+Identifikační údaje autora SZZ, který záznam vytvořil a je za něj zodpovědný. 
 
 **Metadata dokumentu** 
 Obsahuje další administrativní informace o dokumentu – např. kategorie, verze, datum a čas vytvoření, stav dokumentu, jazyk a stupeň důvěrnosti. 

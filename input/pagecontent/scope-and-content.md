@@ -87,7 +87,7 @@ Contains data on the patient's health insurance company, policy number, and any 
 Specification of the intended recipient of the report, usually the target acute inpatient care provider (CPALP) or another healthcare facility to which the patient is transferred.
 
 **Author**
-Identification data of the member of the Emergency Medical Service (ZZS) team who created the record and is responsible for it.
+Identification data of Shared Health Record Author which created the record and is responsible for it.
 
 **Document Metadata**
 Contains other administrative information about the document – e.g., category, version, date and time of creation, document status, language, and degree of confidentiality.
