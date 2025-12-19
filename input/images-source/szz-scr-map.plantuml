@@ -20,7 +20,7 @@ endnote
 
 class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
 class "cz-observation-height" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
-class "cz-observation-weight" <<Profile>> [[StructureDefinition-cz-bodyweightt.html]]
+class "cz-observation-weight" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
 class "cz-observation-waistcircumference" <<Profile>> [[StructureDefinition-cz-waist-circumference.html]]
 class "cz-observation-blood-pressure" <<Profile>> [[StructureDefinition-cz-observation-blood-pressure.html]]
 class "cz-observation-colorectal-cancer" <<Profile>> [[StructureDefinition-cz-observation-colorectal-cancer.html]]
