@@ -3,6 +3,7 @@ Id:         cz-cervical-cancer-cytology-result-cs
 Title:      "Cervical Cancer Screening Cytology Result Code System"
 Description:  """Cervical cancer screening cytology result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-cervical-cancer-cytology-result-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -20,6 +21,7 @@ Id:         cz-cervical-cancer-cytology-result-vs
 Title:      "Cervical Cancer Screening Cytology Result Value Set"
 Description: """Cervical cancer screening cytology result value set includes selected codes from Colorectal Cancer Screening Result Code System."""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-cervical-cancer-cytology-result-vs"
 * ^experimental = false
 
 * include codes from system CervicalCancerCytologyResultCS

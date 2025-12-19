@@ -3,6 +3,7 @@ Id:         cz-result-biopsy-breast-cs
 Title:      "Biopsy Breast Result Code System"
 Description:  """Biopsy Breast result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-result-biopsy-breast-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -24,6 +25,7 @@ Id: cz-result-biopsy-breast-vs
 Title: "Biopsy Breast Result Valueset"
 Description:  """Biopsy Breast Result value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-result-biopsy-breast-vs"
 * ^experimental = false
 
 * include codes from system ResultBiopsyBreastCS

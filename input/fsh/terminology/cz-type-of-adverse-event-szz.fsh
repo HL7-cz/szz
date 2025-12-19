@@ -3,6 +3,7 @@ Id:         cz-type-of-adverse-event-szz-cs
 Title:      "Type of adverse event Code System"
 Description:  """Type of adverse event code system according to act $34a para 2 of Act No. 325/2021 Coll., on health services, as amended."""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-type-of-adverse-event-szz-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -23,6 +24,7 @@ Id:         cz-type-of-adverse-event-szz-vs
 Title:      "Type of adverse event Value Set"
 Description:  """Type of adverse event value set includes selected codes from Type of adverse event Code System."""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-type-of-adverse-event-szz-vs"
 * ^experimental = false
 
 * include codes from system TypeOfAdverseEventSzzCS

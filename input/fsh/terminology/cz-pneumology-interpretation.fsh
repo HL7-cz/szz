@@ -3,6 +3,7 @@ Id:         cz-pulmonology-interpretation-cs
 Title:      "Pulmonology interpretation Code System"
 Description:  """Pulmonology interpretation code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-pulmonology-interpretation-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -20,6 +21,7 @@ Id: cz-pulmonology-interpretation-vs
 Title:      "Pulmonology interpretation Value set"
 Description:  """Pulmonology interpretation value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-pulmonology-interpretation-vs"
 * ^experimental = false
 
 * include codes from system PulmonologyInterpretationCS

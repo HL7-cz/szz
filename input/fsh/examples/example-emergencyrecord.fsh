@@ -76,8 +76,8 @@ Usage: #example
 * clinicalStatus = $hl7-allergy-intolerance-clinical#active
 * verificationStatus = $hl7-allergy-intolerance-verification#confirmed
 * type = AllergyIntoleranceTypeSzzCs#allergy "alergie"
-* category[0] = AllergyIntoleranceCategorySzzCs#medication "léčivo"
-* criticality = AllergyIntoleranceCriticalitySzzCs#high "vysoká"
+* category[0] = $hl7-allergy-intolerance-category-cs#medication "léčivo"
+* criticality = $hl7-allergy-intolerance-category-vs#high "vysoká"
 * code = $dlp_lecivePripravky#0233172 "V-PENICILIN BBP"
 * patient = Reference(urn:uuid:142534ac-0274-4a16-b6a2-d4d4f24ff67b)
 * onsetDateTime = "2020-01-15"

@@ -3,6 +3,7 @@ Id:         cz-tobacco-history-cs
 Title:      "Tobacco History Code System"
 Description:  """Tobacco history code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-tobacco-history-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -20,6 +21,7 @@ Id: cz-tobacco-history-vs
 Title: "Tobacco History Valueset"
 Description:  """Tobacco History value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-tobacco-history-vs"
 * ^experimental = false
 
 * include codes from system TobaccoHistoryCS

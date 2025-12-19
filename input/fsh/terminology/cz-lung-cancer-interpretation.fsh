@@ -3,6 +3,7 @@ Id:         cz-lung-cancer-interpretation-cs
 Title:      "Lung Cancer interpretation Code System"
 Description:  """Lung Cancer interpretation code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-lung-cancer-interpretation-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -24,6 +25,7 @@ Id: cz-lung-cancer-interpretation-vs
 Title:      "Lung Cancer interpretation Value set"
 Description:  """Lung Cancer interpretation value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-lung-cancer-interpretation-vs"
 * ^experimental = false
 
 * include codes from system LungCancerInterpretationCS

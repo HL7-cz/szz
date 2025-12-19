@@ -3,6 +3,7 @@ Id:         cz-functional-examination-pulmonology-result-cs
 Title:      "Functional Examination Pulmonology Result Code System"
 Description:  """Functional Examination Pulmonology Result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-functional-examination-pulmonology-result-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -24,6 +25,7 @@ Id:         cz-functional-examination-pulmonology-result-vs
 Title:      "Functional Examination Pulmonology Result Value Set"
 Description:  """Functional Examination Pulmonology Result value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-functional-examination-pulmonology-result-vs"
 * ^experimental = false
 
 * include codes from system FunctionalExaminationPulmonologyResultCS

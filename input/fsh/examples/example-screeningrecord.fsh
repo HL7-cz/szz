@@ -144,7 +144,7 @@ Description: "Example of Colonoscopy Observation for Shared Health Record."
 * category.coding.code = #imaging
 * status = #final
 * component[0].code = $sct#276218009 "Procedure type"
-* component[=].valueCodeableConcept.coding = CZ_ColonoscopyType#toks "TOKS+"
+* component[=].valueCodeableConcept.coding = CZ_ColonoscopyTypeCS#toks "TOKS+"
 * component[+].code = $sct#722818007 "Boston bowel preparation scale"
 * component[=].valueInteger = 9
 * component[+].code = $sct#313170008 "Colonoscopy normal"

@@ -3,6 +3,7 @@ Id: cz-region-of-prostate-vs
 Title: "Region of prostate for MRI for prostate cancer determination"
 Description: "The Value Set is used for region of prostate for cancer determination in the Shared Health Record."
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-region-of-prostate-vs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"

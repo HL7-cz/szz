@@ -3,6 +3,7 @@ Id: cz-allergy-reaction-category-szz-vs
 Title: "Allergy reaction category"
 Description: "The Value Set is used for Record of allergy or other significant adverse reaction to a substance or medicinal product in the Shared Health Record to indicate the Allergy reaction category."
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-allergy-reaction-category-szz-vs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"

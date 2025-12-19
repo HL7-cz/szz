@@ -3,6 +3,7 @@ Id:         cz-type-biopsy-breast-cs
 Title:      "Type of Breast Biopsy Code System"
 Description:  """Type of Breast Biopsy code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-type-biopsy-breast-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -23,6 +24,7 @@ Id: cz-type-biopsy-breast-vs
 Title: "Type of Breast Biopsy Valueset"
 Description:  """Type of Breast Biopsy value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-type-biopsy-breast-vs"
 * ^experimental = false
 
 * include codes from system TypeBiopsyBreastCS

@@ -2,6 +2,8 @@ ValueSet: CZ_ObservationUnitsWeightVs
 Id: cz-observationUnitsWeight-vs
 Title: "ObservationsUnitWeight"
 Description: "UCUM units for weight"
+
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-observationUnitsWeight-vs"
 * ^language = #cs
 * ^version = "1.0.0"
 * ^status = #active

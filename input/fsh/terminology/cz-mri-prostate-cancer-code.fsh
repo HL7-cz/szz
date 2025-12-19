@@ -3,6 +3,7 @@ Id: cz-mri-prostate-cancer-code-vs
 Title: "Method of MRI for prostate cancer determination"
 Description: "The Value Set is used for screening methods for prostate cancer determination in the Shared Health Record."
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-mri-prostate-cancer-code-vs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"

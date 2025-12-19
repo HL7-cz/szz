@@ -3,6 +3,7 @@ Id:         cz-result-mri-prostate-cancer-cs
 Title:      "MRI Prostate Cancer Result Code System"
 Description:  """MRI Prostate Cancer result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-result-mri-prostate-cancer-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -24,6 +25,7 @@ Id: cz-result-mri-prostate-cancer-vs
 Title: "MRI Prostate Cancer Result Valueset"
 Description:  """MRI Prostate Cancer Result value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-result-mri-prostate-cancer-vs"
 * ^experimental = false
 
 * include codes from system ResultMRIProstateCancerCS

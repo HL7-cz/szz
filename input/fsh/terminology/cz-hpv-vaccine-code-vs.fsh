@@ -3,6 +3,7 @@ Id: cz-hpv-vaccine-code-vs
 Title: "CZ HPV Vaccine Code Value Set"
 Description: "This value set includes codes for HPV vaccines used in the Czech Republic."
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-hpv-vaccine-code-vs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"

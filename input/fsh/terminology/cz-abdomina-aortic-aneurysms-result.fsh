@@ -3,6 +3,7 @@ Id:         cz-abdomina-aortic-aneurysms-result-cs
 Title:      "Abdomina Aortic Aneurysms Result Code System"
 Description:  """Abdomina Aortic Aneurysms result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-abdomina-aortic-aneurysms-result-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -23,6 +24,7 @@ Id:         cz-abdomina-aortic-aneurysms-result-vs
 Title:      "Abdomina Aortic Aneurysms Result Value set"
 Description:  """Abdomina Aortic Aneurysms result value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-abdomina-aortic-aneurysms-result-vs"
 * ^experimental = false
 * include codes from system AbdominaAorticAneurysmsResultCS
 

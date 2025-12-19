@@ -3,6 +3,7 @@ Id: cz-colonoscopy-interpretation
 Title: "CZ Colonoscopy Interpretation Code System"
 Description: "This code system defines the codes for interpreting colonoscopy findings in the context of the Shared Health Record (SZZ CZ)."
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-colonoscopy-interpretation"
 * ^language = #cs
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -25,5 +26,7 @@ ValueSet: CZ_ColonoscopyInterpretationVS
 Id: cz-colonoscopy-interpretation-vs
 Title: "CZ Colonoscopy Interpretation Value Set"
 Description: "This value set includes selected codes from the CZ Colonoscopy Interpretation Code System."
+
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-colonoscopy-interpretation-vs"
 * ^experimental = false
 * include codes from system CZ_ColonoscopyInterpretation

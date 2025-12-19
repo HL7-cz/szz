@@ -3,6 +3,7 @@ Id: cz-allergy-intolerance-type-szz-cs
 Title: "Allergy reaction type (CZ supplement)"
 Description: "The Code System is used for Record of allergy or other significant adverse reaction to a substance or medicinal product in the Shared Health Record to indicate the Allergy reaction type."
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-allergy-intolerance-type-szz-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -12,7 +13,6 @@ Description: "The Code System is used for Record of allergy or other significant
 * ^experimental = false
 * ^content = #supplement
 * ^supplements = $hl7-allergy-intolerance-type-cs
-* ^url = "https://hl7.cz/fhir/szz/CodeSystem/cz-allergy-intolerance-type-szz-cs"
 
 * ^property[+].code = #notSelectable
 * ^property[=].uri = "http://hl7.org/fhir/concept-properties#notSelectable"

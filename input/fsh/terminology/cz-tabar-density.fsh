@@ -3,6 +3,7 @@ Id:         cz-tabar-density-cs
 Title:      "Tabar Density Result Code System"
 Description:  """Tabar density result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-tabar-density-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -24,6 +25,7 @@ Id: cz-tabar-density-vs
 Title:      "Tabar Density Result Value set"
 Description:  """Tabar density result value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-tabar-density-vs"
 * ^experimental = false
 
 * include codes from system TabarDensityCS

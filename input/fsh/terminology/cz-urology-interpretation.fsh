@@ -3,6 +3,7 @@ Id:         cz-urology-interpretation-cs
 Title:      "Urology interpretation Code System"
 Description:  """Urology interpretation code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-urology-interpretation-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -22,6 +23,7 @@ Id: cz-urology-interpretation-vs
 Title:      "Urology interpretation Value set"
 Description:  """Urology interpretation value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-urology-interpretation-vs"
 * ^experimental = false
 
 * include codes from system UrologyInterpretationCS

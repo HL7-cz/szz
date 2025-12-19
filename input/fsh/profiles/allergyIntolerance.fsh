@@ -4,8 +4,8 @@ Id: cz-allergyIntolerance-szz
 Title: "Allergy intolerance (SZZ CZ)"
 Description: "Czech profile for allergy intolerance. "
 
-* category from AllergyIntoleranceCategorySzzVs (required)
-* criticality from AllergyIntoleranceCriticalitySzzVs (required)
+* category from $hl7-allergy-intolerance-category-vs (required)
+* criticality from $hl7-allergy-intolerance-criticality-vs (required)
 * reaction 0..*
   * severity from ClinicalSeverityOfSymptomsSzzVs (required)
   * manifestation from AllergyReactionCategorySzzVs (required)

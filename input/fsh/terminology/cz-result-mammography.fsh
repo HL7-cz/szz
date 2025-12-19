@@ -3,6 +3,7 @@ Id:         cz-result-mammography-cs
 Title:      "Mammography Result Code System"
 Description:  """Mammography result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-result-mammography-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -30,6 +31,7 @@ Id: cz-result-mammography-vs
 Title:      "Mammography Result Value Set"
 Description:  """Mammography result value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-result-mammography-vs"
 * ^experimental = false
 
 * include codes from system ResultMamographyCS

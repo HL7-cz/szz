@@ -3,6 +3,7 @@ Id:         cz-birads-density-cs
 Title:      "Birads Density Result Code System"
 Description:  """Birads density result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-birads-density-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -22,6 +23,7 @@ Id: cz-birads-density-vs
 Title:      "Birads Density Result Value set"
 Description:  """Birads density result value set"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-birads-density-vs"
 * ^experimental = false
 
 * include codes from system BiradsDensityCS

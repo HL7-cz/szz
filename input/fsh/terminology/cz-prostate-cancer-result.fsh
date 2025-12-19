@@ -3,6 +3,7 @@ Id:         cz-Prostate-cancer-result-cs
 Title:      "Prostate Cancer Screening Result Code System"
 Description:  """Prostate cancer screening result code system"""
 
+* ^url = "https://ncez.mzcr.cz/terminology/CodeSystem/cz-Prostate-cancer-result-cs"
 * ^language = #cs //-CZ
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^version = "1.0.0"
@@ -22,6 +23,7 @@ Id:         cz-Prostate-cancer-result-vs
 Title:      "Prostate Cancer Screening Result Value Set"
 Description: """Prostate cancer screening result value set includes selected codes from Prostate Cancer Screening Result Code System."""
 
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-Prostate-cancer-result-vs"
 * ^experimental = false
 
 * include codes from system ProstateCancerResultCS

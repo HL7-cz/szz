@@ -5,10 +5,10 @@ Alias: $dlp_lecprip = https://ncez.mzcr.cz/fhir/ValueSet/cz-dlplecivepripravky-v
 Alias: $hl7-observation-category = http://hl7.org/fhir/ValueSet/observation-category
 Alias: $hl7-reaction-event-severity = http://hl7.org/fhir/ValueSet/reaction-event-severity
 Alias: $hl7-allergy-intolerance-type = http://hl7.org/fhir/ValueSet/allergy-intolerance-type
-Alias: $hl7-allergy-intolerance-criticality = http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality
-Alias: $hl7-allergy-intolerance-category = http://hl7.org/fhir/ValueSet/allergy-intolerance-category
 Alias: $hl7-allergyintolerance-code = http://hl7.org/fhir/ValueSet/allergyintolerance-code
 Alias: $hl7-AllergenWithExceptions = https://ncez.mzcr.cz/terminology/ValueSet/AllergenWithExceptions
+Alias: $hl7-allergy-intolerance-category-vs = https://ncez.mzcr.cz/terminology/ValueSet/allergy-intolerance-category-cz
+Alias: $hl7-allergy-intolerance-criticality-vs = https://ncez.mzcr.cz/terminology/ValueSet/allergy-intolerance-criticality-cz
 
 // Code systems
 Alias: $loinc =  http://loinc.org
@@ -18,9 +18,9 @@ Alias: $UCUM = http://unitsofmeasure.org
 Alias: $dlp_lecivePripravky = https://ncez.mzcr.cz/fhir/CodeSystem/dlp-lecive-pripravky-cs
 Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/nclppol
 Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
-Alias: $hl7-allergy-intolerance-category-cs = http://hl7.org/fhir/allergy-intolerance-category
+Alias: $hl7-allergy-intolerance-category-cs = https://ncez.mzcr.cz/terminology/CodeSystem/allergy-intolerance-category-cz
+Alias: $hl7-allergy-intolerance-criticality-cs = https://ncez.mzcr.cz/terminology/CodeSystem/allergy-intolerance-criticality-cz
 Alias: $hl7-allergy-intolerance-type-cs = http://hl7.org/fhir/allergy-intolerance-type
-Alias: $hl7-allergy-intolerance-criticality-cs = http://hl7.org/fhir/allergy-intolerance-criticality
 Alias: $hl7-allergy-intolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $hl7-allergy-intolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $hl7-reaction-event-severity-cs = http://hl7.org/fhir/reaction-event-severity
