@@ -387,7 +387,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.examinationResult
 * group[=].element[=].display = "A.3.7.2.2 - Result of clinical examination"
-* group[=].element[=].target.code = #CZ_ObservationUrology.component:result.valueBoolean
+* group[=].element[=].target.code = #CZ_ObservationUrology.valueCodeableConcept
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PreventiveAndScreeningRecordCz.urology.followupUrologicalExamination.levelPSA

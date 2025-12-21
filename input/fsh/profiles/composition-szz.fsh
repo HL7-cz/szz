@@ -212,6 +212,10 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * ^short = "Pulmonology Section"
     * ^definition = "This section holds information about pulmonology."
     * code = DocumentSectionCzSzzCs#10007 "Pulmonology record"
+    * entry 0..1
+    * entry only Reference(CZ_ObservationPulmonology)
+    * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+
 
   * section[gastroenterology]
     * ^short = "Gastroenterology Section"

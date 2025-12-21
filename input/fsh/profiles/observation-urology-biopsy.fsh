@@ -18,7 +18,7 @@ Description: """This profile defines how to represent Urology Biopsy Observation
     typeOfBiopsy 0..1
 * component[typeOfBiopsy]
   * ^short = "Type of biopsy"
-  * code = $sct#65575008 "Biopsy of prostate"
+  * code = $sct#118877007 "Procedure on prostate"
   * valueCodeableConcept from TypeBiopsyProstateVS (required)
 
 * valueCodeableConcept from ResultBiopsyProstateVS

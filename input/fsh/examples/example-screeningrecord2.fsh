@@ -41,6 +41,27 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:dd8033d4-d1c9-48e8-8edd-c0dda913678d"
 * entry[observation][=].resource = cz-example-angiology
 
+* entry[observation][+].fullUrl = "urn:uuid:180d74d4-fe14-408c-a3a8-07da4e3b8fcd"
+* entry[observation][=].resource = cz-example-observation-colposcopy-cervical-cancer
+
+* entry[observation][+].fullUrl = "urn:uuid:40ee0269-0027-4e7b-b061-e039c06cf988"
+* entry[observation][=].resource = cz-example-observation-cytology-cervical-cancer
+
+* entry[observation][+].fullUrl = "urn:uuid:1d79f716-c583-4e42-a68f-bc8c9bb2781d"
+* entry[observation][=].resource = cz-example-observation-hpv-cervical-cancer
+
+* entry[observation][+].fullUrl = "urn:uuid:0a3b5d6a-e9a8-4aa2-bcff-7c916540bf08"
+* entry[observation][=].resource = cz-example-observation-mammography
+
+* entry[observation][+].fullUrl = "urn:uuid:fa768d55-f16c-457b-8bdc-1d0b1c9e24fa"
+* entry[observation][=].resource = cz-example-observation-mammography-biopsy
+
+* entry[observation][+].fullUrl = "urn:uuid:f564cd9a-422f-439b-ae17-b2c0a1311ead"
+* entry[observation][=].resource = cz-example-observation-lung-cancer
+
+* entry[observation][+].fullUrl = "urn:uuid:407b583e-4c05-47eb-b0df-6d8166c0d4f1"
+* entry[observation][=].resource = cz-example-observation-pulmonology
+
 Instance: cz-example-composition3
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Screening Report 2 (CZ)"
@@ -68,17 +89,162 @@ Usage: #example
 * section[preventingAndScreeningRecord].section[gynecology].title = "Gynecology record"
 * section[preventingAndScreeningRecord].section[gynecology].code = DocumentSectionCzSzzCs#10004 "Gynecology record"
 * section[preventingAndScreeningRecord].section[gynecology].entry[0] = Reference(urn:uuid:dd06896e-959b-44ec-b791-19a68ffdc576)
+* section[preventingAndScreeningRecord].section[gynecology].entry[1] = Reference(urn:uuid:180d74d4-fe14-408c-a3a8-07da4e3b8fcd)
+* section[preventingAndScreeningRecord].section[gynecology].entry[2] = Reference(urn:uuid:40ee0269-0027-4e7b-b061-e039c06cf988)
+* section[preventingAndScreeningRecord].section[gynecology].entry[3] = Reference(urn:uuid:1d79f716-c583-4e42-a68f-bc8c9bb2781d)
+* section[preventingAndScreeningRecord].section[radiology].title = "Results of imaging observation"
+* section[preventingAndScreeningRecord].section[radiology].code = DocumentSectionCzSzzCs#10009 "Radiology record"
+* section[preventingAndScreeningRecord].section[radiology].entry[0] = Reference(urn:uuid:0a3b5d6a-e9a8-4aa2-bcff-7c916540bf08)
+* section[preventingAndScreeningRecord].section[radiology].entry[1] = Reference(urn:uuid:fa768d55-f16c-457b-8bdc-1d0b1c9e24fa)
+* section[preventingAndScreeningRecord].section[radiology].entry[2] = Reference(urn:uuid:f564cd9a-422f-439b-ae17-b2c0a1311ead)
+* section[preventingAndScreeningRecord].section[radiology].entry[3] = Reference(urn:uuid:dd8033d4-d1c9-48e8-8edd-c0dda913678d)
+* section[preventingAndScreeningRecord].section[pulmonology].title = "Results of pulmonology observation"
+* section[preventingAndScreeningRecord].section[pulmonology].code = DocumentSectionCzSzzCs#10007 "Pulmonology record"
+* section[preventingAndScreeningRecord].section[pulmonology].entry[0] = Reference(urn:uuid:407b583e-4c05-47eb-b0df-6d8166c0d4f1)
 * section[preventingAndScreeningRecord].section[angiology].title = "Angiology record"
 * section[preventingAndScreeningRecord].section[angiology].code = DocumentSectionCzSzzCs#10010 "Angiology record"
 * section[preventingAndScreeningRecord].section[angiology].entry[0] = Reference(urn:uuid:dd8033d4-d1c9-48e8-8edd-c0dda913678d)
+
+Instance: cz-example-observation-mammography
+InstanceOf: CZ_ObservationMammography
+Title : "Observation: Mammography"
+Description: "Example of Mammography for Shared Health Record"
+Usage: #example
+* id = "0a3b5d6a-e9a8-4aa2-bcff-7c916540bf08"
+* code.coding = $sct#71651007 "Mammography"
+* status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #imaging
+* subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
+* effectiveDateTime = "2025-04-14T10:30:00+01:00"
+* component[densityTabar].code = DensityTypeCs#tabar "Klasifikace dle Tabára"
+* component[densityTabar].valueCodeableConcept = TabarDensityCS#4 "Tabár IV"
+* component[densityBirads].code = DensityTypeCs#birads "Klasifikace dle BiRADS"
+* component[densityBirads].valueCodeableConcept = BiradsDensityCS#40 "BIRADS D"
+* valueCodeableConcept = ResultMamographyCS#1 "nejednoznačný nález - potřeba dalšího vyšetření"
+* performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
+
+Instance: cz-example-observation-mammography-biopsy
+InstanceOf: CZ_ObservationMammographyBiopsy
+Title : "Observation: Mammography biopsy"
+Description: "Example of Mammography biopsy for Shared Health Record"
+Usage: #example
+* id = "fa768d55-f16c-457b-8bdc-1d0b1c9e24fa"
+* status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #laboratory
+* subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
+* effectiveDateTime = "2025-04-14T11:30:00+01:00"
+* code.coding = $sct#122548005 "Biopsy of breast"
+* component[typeOfBiopsy].code = $sct#392089008 "Breast procedure"
+* component[typeOfBiopsy].valueCodeableConcept = TypeBiopsyBreastCS#core-cut "core-cut biopsie"
+* valueCodeableConcept = ResultBiopsyBreastCS#chyba "nezdařený odběr"
+* performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
+
+
+Instance: cz-example-observation-lung-cancer
+InstanceOf: CZ_ObservationLungCancer
+Title : "Observation: Lung cancer"
+Description: "Example of Lung cancer for Shared Health Record"
+Usage: #example
+* id = "f564cd9a-422f-439b-ae17-b2c0a1311ead"
+* code.coding = $sct#77477000 "Computed tomography"
+* status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #imaging
+* subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
+* effectiveDateTime = "2024-04-14T10:30:00+01:00"
+* component[typeOfObservation].code = $sct#241540006 "CT of lungs"
+* component[typeOfObservation].valueCodeableConcept = TypeLungCancerObservationCS#vstupni "vstupní"
+* valueCodeableConcept = ResultLungCancerCS#neurcity "neurčitý"
+* interpretation.coding = LungCancerInterpretationCS#ldctza6w "Kontrolní LDCT za 6-8 týdnů"
+* performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
+
+Instance: cz-example-observation-pulmonology
+InstanceOf: CZ_ObservationPulmonology 
+Title : "Observation: Pulmonology"
+Description: "Example of Pulmonology for Shared Health Record"
+Usage: #example
+* id = "407b583e-4c05-47eb-b0df-6d8166c0d4f1"
+* code.coding = $sct#301230006 "Lung finding"
+* status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #exam
+* subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
+* effectiveDateTime = "2024-04-14T10:30:00+01:00"
+* component[medicalHistoryOfSmoking].code = $sct#365981007 "Finding of tobacco smoking behavior"
+* component[medicalHistoryOfSmoking].valueCodeableConcept = TobaccoHistoryCS#exsmoker "exkuřák (přestal před více než měsícem)"
+* component[yearsSinceQuittingSmoking].code = $sct#160617001 "Stopped smoking"
+* component[yearsSinceQuittingSmoking].valueInteger = 2
+* component[yearsOfSmoking].code = $sct#266918002 "Tobacco smoking consumption"
+* component[yearsOfSmoking].valueInteger = 10
+* component[packYears].code = $sct#782516008 "Number of calculated smoking pack years"
+* component[packYears].valueInteger = 20
+* component[physicalExamResult].code = $sct#5880005 "Physical examination"
+* component[physicalExamResult].valueCodeableConcept = PhysicalExaminationPulmonologyResultCS#patological "patologický poslechový nález"
+* component[functionalExamResult].code = $sct#12894003 "Functional assessment"
+* component[functionalExamResult].valueCodeableConcept = FunctionalExaminationPulmonologyResultCS#nespecificDisorder "nespecifikovaná porucha"
+* component[xray].code = $sct#399208008 "Plain chest X-ray"
+* component[xray].valueCodeableConcept = PulmonologyResultCS#pathological "patologický nález"
+
+* interpretation.coding = PulmonologyInterpretationCS#recommended "Doporučení screeningového LDCT plic - ano"
+
+
+Instance: cz-example-observation-hpv-cervical-cancer
+InstanceOf: CZ_ObservationHPVCervicalCancer
+Title : "Observation: HPV cervical cancer"
+Description: "Example of HPV cervical cancer for Shared Health Record"
+Usage: #example
+* id = "1d79f716-c583-4e42-a68f-bc8c9bb2781d"
+* code = $loinc#95532-8
+* status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #laboratory
+* subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
+* effectiveDateTime = "2025-04-15T10:30:00+01:00"
+* valueCodeableConcept = CervicalCancerHPVResultCS#pozitivni "Pozitivní nález"
+* performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
+
+Instance: cz-example-observation-cytology-cervical-cancer
+InstanceOf: CZ_ObservationCytologyCervicalCancer
+Title : "Observation: Cytology cervical cancer"
+Description: "Example of Cytology cervical cancer for Shared Health Record"
+Usage: #example
+* id = "40ee0269-0027-4e7b-b061-e039c06cf988"
+* code = $loinc#19771-5
+* status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #laboratory
+* subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
+* effectiveDateTime = "2025-07-15T10:30:00+01:00"
+* valueCodeableConcept = CervicalCancerCytologyResultCS#abnormalni "Abnormální nález"
+* performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
+
+Instance: cz-example-observation-colposcopy-cervical-cancer
+InstanceOf: CZ_ObservationColposcopyCervicalCancer
+Title: "Observation: Colposcopy cervical cancer"
+Description: "Example of Colposcopy cervical cancer for Shared Health Record."
+Usage: #example
+* id = "180d74d4-fe14-408c-a3a8-07da4e3b8fcd"
+* code = $loinc#29757-2
+* status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #procedure
+* subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
+* effectiveDateTime = "2025-06-15T10:30:00+01:00"
+* valueCodeableConcept = CervicalCancerColposcopyResultCS#biopsie "provedena biopsie"
+* performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
 
 Instance: cz-example-angiology
 InstanceOf: CZ_ObservationAbdominaAorticAneurysms
 Title: "Observation: Abdomina Aortic Aneurysms Example (CZ)"
 Description: "Example of Abdomina Aortic Aneurysms for Shared Health Record."
+Usage: #example
 * id = "dd8033d4-d1c9-48e8-8edd-c0dda913678d"
 * code = $sct#698356002 "Abdominal aortic aneurysm screening"
 * status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #imaging
 * subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
 * effectiveDateTime = "2025-05-15T10:30:00+01:00"
 * valueCodeableConcept = AbdominaAorticAneurysmsResultCS#bez "bez nálezu aneurysmatu"

@@ -4,7 +4,7 @@ Id: cz-observation-urology
 Title: "Observation: Urology (SZZ CZ)"
 Description: """This profile defines how to represent Urology Observation resource in HL7 FHIR for the scope of this guide."""
 
-* code.coding = $loinc#32465-7 "Physical findings of Prostate"
+* code.coding = $sct#249604002
 
 * subject only Reference(CZ_PatientCore)
 * effectiveDateTime 0..1
@@ -24,17 +24,17 @@ Description: """This profile defines how to represent Urology Observation resour
 * component[PSALevel]
   * ^short = "PSA level in µg/l"
   * code = $sct#443969004 "Quantitative measurement of mass concentration of prostate specific antigen in serum or plasma"
-  * valueQuantity.code = #µg[l]
+  * valueQuantity.code = #ug/l
 
 * component[PSAdensity]
   * ^short = "PSA density in ng/ml/cm3"
   * code = $loinc#15325-4
-  * valueQuantity.code = #ng[ml][cm3]
+  * valueQuantity.code = #ng/ml/cm3
 
 * component[PSAvelocity]
-  * ^short = "PSA velocity in ng/ml/cm3"
+  * ^short = "PSA velocity in ng/ml/annus"
   * code = $sct#63476009 "Prostate specific antigen measurement"
-  * valueQuantity.code = #ng[ml][cm3] 
+  * valueQuantity.code = #ng/ml/a
 
 * component[ProstateVolume]
   * ^short = "Prostate volume in ml"

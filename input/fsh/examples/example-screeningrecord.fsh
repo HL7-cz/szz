@@ -47,6 +47,12 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:76879fde-d561-4435-b119-6bb579bea0f5"
 * entry[observation][=].resource = cz-example-observation-mri-prostate-cancer
 
+* entry[observation][+].fullUrl = "urn:uuid:57838f4e-238c-43e4-9088-42971d8171a6"
+* entry[observation][=].resource = cz-example-observation-urology-biopsy
+
+* entry[observation][+].fullUrl = "urn:uuid:bc143cd8-4638-4823-87d5-6bc16ce68e85"
+* entry[observation][=].resource = cz-example-observation-urology
+
 Instance: cz-example-composition2
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Screening Report (CZ)"
@@ -83,6 +89,60 @@ Usage: #example
 * section[preventingAndScreeningRecord].section[radiology].title = "Results of imaging observation"
 * section[preventingAndScreeningRecord].section[radiology].code = DocumentSectionCzSzzCs#10009 "Radiology record"
 * section[preventingAndScreeningRecord].section[radiology].entry[0] = Reference(urn:uuid:76879fde-d561-4435-b119-6bb579bea0f5)
+* section[preventingAndScreeningRecord].section[urology].title = "Result of urology observations"
+* section[preventingAndScreeningRecord].section[urology].code = DocumentSectionCzSzzCs#10006 "Urology record"
+* section[preventingAndScreeningRecord].section[urology].entry[0] = Reference(urn:uuid:824055fa-6107-49c8-b217-f029aa7b8872)
+* section[preventingAndScreeningRecord].section[urology].entry[1] = Reference(urn:uuid:57838f4e-238c-43e4-9088-42971d8171a6)
+* section[preventingAndScreeningRecord].section[urology].entry[2] = Reference(urn:uuid:bc143cd8-4638-4823-87d5-6bc16ce68e85)
+
+Instance: cz-example-observation-urology-biopsy
+InstanceOf: CZ_ObservationUrologyBiopsy
+Title: "Observation: Urology biopsy (CZ)"
+Description: "Urology biopsy example for Shared Health Record containing Screening Report."
+Usage: #example
+* id = "57838f4e-238c-43e4-9088-42971d8171a6"
+* subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* code.coding = $sct#65575008
+* effectiveDateTime = "2025-11-13T10:30:00+01:00"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #laboratory
+* status = #final
+* component[typeOfBiopsy].code =  $sct#118877007 "Procedure on prostate"
+* component[typeOfBiopsy].valueCodeableConcept = TypeBiopsyProstateCS#focused "cílená"
+* valueCodeableConcept = ResultBiopsyProstateCS#malsig "maligní - klinicky signifikatní"
+* performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
+
+Instance: cz-example-observation-urology
+InstanceOf: CZ_ObservationUrology
+Title: "Observation: Urology examination (CZ)"
+Description: "Urology examination example for Shared Health Record containing Screening Report."
+Usage: #example
+* id = "bc143cd8-4638-4823-87d5-6bc16ce68e85"
+* subject = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
+* code.coding = $sct#249604002
+* effectiveDateTime = "2025-11-13T11:30:00+01:00"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #exam
+* status = #final
+* component[PSALevel].code = $sct#443969004 "Quantitative measurement of mass concentration of prostate specific antigen in serum or plasma"
+* component[PSALevel].valueQuantity.value = 4
+* component[PSALevel].valueQuantity.system = $UCUM
+* component[PSALevel].valueQuantity.code = #ug/l 
+* component[PSAdensity].code = $loinc#15325-4
+* component[PSAdensity].valueQuantity.value = 0.20
+* component[PSAdensity].valueQuantity.system = $UCUM
+* component[PSAdensity].valueQuantity.code = #ng/ml/cm3 
+* component[PSAvelocity].code = $sct#63476009 "Prostate specific antigen measurement"
+* component[PSAvelocity].valueQuantity.value = 0.75
+* component[PSAvelocity].valueQuantity.system = $UCUM
+* component[PSAvelocity].valueQuantity.code = #ng/ml/a 
+* component[ProstateVolume].code = $sct#1297142007 "Prostate volume"
+* component[ProstateVolume].valueQuantity.value = 20
+* component[ProstateVolume].valueQuantity.system = $UCUM
+* component[ProstateVolume].valueQuantity.code = #ml
+* valueCodeableConcept = UrologyResultCS#abnormal "abnormální"
+* interpretation.coding = UrologyInterpretationCS#mriwith "MRI s kontrastní látkou /biopsie"
+* performer[0] = Reference(urn:uuid:38e5929e-afe4-40bc-ba9d-c0a80549791e)
 
 Instance: cz-example-observation-mri-prostate-cancer
 InstanceOf: CZ_ObservationMRIProstateCancer
