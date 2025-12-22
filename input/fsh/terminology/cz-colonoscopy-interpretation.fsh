@@ -12,7 +12,7 @@ Description: "This code system defines the codes for interpreting colonoscopy fi
 * ^jurisdiction = urn:iso:std:iso:3166#CZ "Czechia"
 * ^experimental = false
 * ^caseSensitive = true
-* ^status = #draft
+* ^status = #active
 
 * #negativni "negativní - návrat do screeningu"
 * #kolonoskopie6mes "dispenzární koloskopie za 6 měsíců"

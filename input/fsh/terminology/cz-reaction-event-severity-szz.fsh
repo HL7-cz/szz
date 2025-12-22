@@ -49,7 +49,7 @@ Description: "The Value Set is used for Record of allergy or other significant a
 * ^date = "2025-03-05"
 * ^jurisdiction = urn:iso:std:iso:3166#CZ "Czechia"
 * ^experimental = false
-* ^status = #draft
+* ^status = #active
 
 * ^compose.inactive = false
 

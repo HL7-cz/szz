@@ -12,7 +12,7 @@ Description: "This code system defines the codes for colonoscopy types in the co
 * ^jurisdiction = urn:iso:std:iso:3166#CZ "Czechia"
 * ^experimental = false
 * ^caseSensitive = true
-* ^status = #draft
+* ^status = #active
 
 * #screening "Screeningová"
 * #toks "TOKS+"

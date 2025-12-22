@@ -33,7 +33,7 @@ Usage: #example
 * entry[observation][=].resource = cz-example-observation-height2
 
 * entry[observation][+].fullUrl = "urn:uuid:82451f85-ee50-4367-b809-0511ea469269"
-* entry[observation][=].resource = cz-example-observation-bloodPressure2
+* entry[observation][=].resource = cz-example-observation-waist-circumference
 
 * entry[immunization][+].fullUrl = "urn:uuid:dd06896e-959b-44ec-b791-19a68ffdc576"
 * entry[immunization][=].resource = cz-example-immunization
@@ -186,7 +186,7 @@ Usage: #example
 * component[functionalExamResult].valueCodeableConcept = FunctionalExaminationPulmonologyResultCS#nespecificDisorder "nespecifikovaná porucha"
 * component[xray].code = $sct#399208008 "Plain chest X-ray"
 * component[xray].valueCodeableConcept = PulmonologyResultCS#pathological "patologický nález"
-
+* performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
 * interpretation.coding = PulmonologyInterpretationCS#recommended "Doporučení screeningového LDCT plic - ano"
 
 
@@ -301,27 +301,19 @@ Usage: #example
 * status = #final
 * performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
 
-Instance: cz-example-observation-bloodPressure2
-InstanceOf: CZ_ObservationBloodPressure
-Title: "Observation: Blood Pressure Example (CZ)"
-Description: "Example of Blood Pressure Observation for Shared Health Record."
+Instance: cz-example-observation-waist-circumference
+InstanceOf: CZ_WaistCircumference
+Title: "Observation: Waist circumference Example (CZ)"
+Description: "Example of Waist circumference Observation for Shared Health Record."
 Usage: #example
 * id = "82451f85-ee50-4367-b809-0511ea469269"
 * subject = Reference(urn:uuid:cb1344a1-ee6e-45b3-a6b4-c3eacae4ddec)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code = $loinc#85354-9 "Blood pressure panel with all children optional"
-* component[0].code.coding = $loinc#8480-6 "Systolic blood pressure"
-* component[0].valueQuantity.value = 115
-* component[0].valueQuantity.unit = "mmHg"
-* component[0].valueQuantity.system = "http://unitsofmeasure.org"
-* component[0].valueQuantity.code = #mm[Hg]
-* component[1].code.coding = $loinc#8462-4 "Diastolic blood pressure"
-* component[1].valueQuantity.value = 75
-* component[1].valueQuantity.unit = "mmHg"
-* component[1].valueQuantity.system = "http://unitsofmeasure.org"
-* component[1].valueQuantity.code = #mm[Hg]
-
+* code = $loinc#8280-0
+* valueQuantity.value = 100
+* valueQuantity.unit = "cm"
+* valueQuantity.system = "http://unitsofmeasure.org"
 * effectiveDateTime = "2025-05-15T10:35:00+01:00"
 * status = #final
 * performer[0] = Reference(urn:uuid:2a06ef57-f377-4031-a098-612aa44f54b2)
