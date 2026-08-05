@@ -79,7 +79,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * entry[medicationHistoryDuringHospitalization]
     * ^short = "Medication History Information"
     * ^definition = "This entry holds a reference to the medication history."
-  * entry[medicationHistoryDuringHospitalization] only Reference(CZ_MedicationStatement) 
+  * entry[medicationHistoryDuringHospitalization] only Reference(CZ_MedicationStatementCore) 
 
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 

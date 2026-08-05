@@ -87,7 +87,7 @@ Usage: #example
 * reaction[0].manifestation[0] = $sct#267036007 "Dyspnea"
 
 Instance: cz-example-medicationstatement
-InstanceOf: CZ_MedicationStatement
+InstanceOf: CZ_MedicationStatementCore
 Title: "MedicationStatement: Fludeoxythymidin (CZ)"
 Description: "Example of MedicationStatement resource representing Fludeoxythymidin medication."
 Usage: #example
@@ -116,7 +116,7 @@ Usage: #example
 * recorder = Reference(urn:uuid:428025b5-e328-4542-8812-dd6a874c44f9)
 
 Instance: cz-example-medication
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Title: "Medication: Fludeoxythymidin (CZ)"
 Description: "Example of Medication resource representing Fludeoxythymidin medication."
 Usage: #example

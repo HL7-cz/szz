@@ -54,8 +54,8 @@ Description: "Clinical document used to represent a Shared Health Record for the
 * entry[observation].resource only Observation or CZ_ObservationBloodType or CZ_BodyWeight or CZ_BodyWeight
 * entry[adverseEvent].resource only CZ_AdverseEvent
 * entry[allergiesAndIntolerances].resource only CZ_AllergyIntoleranceSzz
-* entry[medicationStatements].resource only CZ_MedicationStatement
-* entry[medications].resource only CZ_Medication
+* entry[medicationStatements].resource only CZ_MedicationStatementCore
+* entry[medications].resource only CZ_MedicationCore
 * entry[documentReference].resource only CZ_Logo
 * entry[immunization].resource only CZ_ImmunizationHPV
 

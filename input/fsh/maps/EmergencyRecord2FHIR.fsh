@@ -138,22 +138,22 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-MedicationStatement"
 * group[=].element[+].code = #EmergencyRecord.usedMedication.identification
 * group[=].element[=].display = "A.3.4.1 - Identification of medicinal product"
-* group[=].element[=].target.code = #CZ_MedicationStatement.medicationCodeableConcept
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.medicationCodeableConcept
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EmergencyRecord.usedMedication.quantity
 * group[=].element[=].display = "A.3.4.2 - Quantity"
-* group[=].element[=].target.code = #CZ_MedicationStatement.dosage.doseAndRate.doseQuantity
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.dosage.doseAndRate.doseQuantity
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EmergencyRecord.usedMedication.dateOfAdministration
 * group[=].element[=].display = "A.2.4.3 - Date of administration"
-* group[=].element[=].target.code = #CZ_MedicationStatement.effectiveDateTime
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EmergencyRecord.usedMedication.sourceOfRecord
 * group[=].element[=].display = "A.2.4.4 - Source of record"
-* group[=].element[=].target.code = #CZ_MedicationStatement.informationSource
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.informationSource
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 

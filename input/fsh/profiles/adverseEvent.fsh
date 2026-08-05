@@ -18,4 +18,4 @@ Description: "Czech profile for adverse event. "
 * suspectEntity ^slicing.rules = #open
 //* suspectEntity.instance 1..
 * suspectEntity contains medication 0..*
-* suspectEntity[medication].instance only Reference(CZ_Medication or Substance)
+* suspectEntity[medication].instance only Reference(CZ_MedicationCore or Substance)
