@@ -15,7 +15,6 @@ endlegend
 class "Hlavička sdíleného zdravotního záznamu" <<LogicalModel>> [[StructureDefinition-HeaderSzzCz.html]]
 
 class "cz-organization-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
-class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
 class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
 class "cz-bundle-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-bundle-sharedhealthrecord.html]]
@@ -25,15 +24,13 @@ class "cz-provenance" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/Str
 "Hlavička sdíleného zdravotního záznamu" <|. "cz-composition-sharedhealthrecord"
 "Hlavička sdíleného zdravotního záznamu" <|. "cz-bundle-sharedhealthrecord"
 "Hlavička sdíleného zdravotního záznamu" <|. "cz-patient-core"
-"Hlavička sdíleného zdravotního záznamu" <|. "cz-coverage"
 "Hlavička sdíleného zdravotního záznamu" <|. "cz-practitioner-core"
 "Hlavička sdíleného zdravotního záznamu" <|. "cz-organization-core"
 "Hlavička sdíleného zdravotního záznamu" <|. "cz-provenance"
 
 "cz-bundle-sharedhealthrecord" -d[hidden]-> "cz-composition-sharedhealthrecord"
 "cz-composition-sharedhealthrecord" -d[hidden]-> "cz-patient-core"
-"cz-patient-core" -d[hidden]-> "cz-coverage"
-"cz-coverage" -d[hidden]-> "cz-practitioner-core"
+"cz-patient-core" -d[hidden]-> "cz-practitioner-core"
 "cz-practitioner-core" -d[hidden]-> "cz-organization-core"
 "cz-organization-core" -d[hidden]-> "cz-provenance"
 @enduml

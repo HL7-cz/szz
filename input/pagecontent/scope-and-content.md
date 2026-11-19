@@ -81,7 +81,7 @@ This section contains basic patient data, including identifiers (RID/DRID), give
 The section includes the patient's contact persons (legal representatives, close relatives, or other persons) who can provide additional information about the patient. The contact type is differentiated by role (e.g., emergency contact, legal representative, other relationship to the patient).
 
 **Health Insurance**
-Contains data on the patient's health insurance company, policy number, and any supplementary information on the insurance relationship.
+Contains data on the patient's health insurance company and health insurance number.
 
 **Document Recipient**
 Specification of the intended recipient of the report, usually the target acute inpatient care provider (CPALP) or another healthcare facility to which the patient is transferred.

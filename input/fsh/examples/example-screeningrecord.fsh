@@ -53,12 +53,6 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:bc143cd8-4638-4823-87d5-6bc16ce68e85"
 * entry[observation][=].resource = cz-example-observation-urology
 
-* entry[organization][1].fullUrl = "urn:uuid:a4c7e9b2-5d1f-4a38-8e6c-1b9d2f7a3c42"
-* entry[organization][1].resource = cz-example-insurer2
-
-* entry[coverage].fullUrl = "urn:uuid:c8e1f5a3-7b2d-4c69-9f4e-3a6d8b1c5e73"
-* entry[coverage].resource = cz-example-coverage2
-
 Instance: cz-example-composition2
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Screening Report (CZ)"
@@ -112,11 +106,6 @@ Usage: #example
 * section[preventingAndScreeningRecord].section[urology].entry[0] = Reference(urn:uuid:824055fa-6107-49c8-b217-f029aa7b8872)
 * section[preventingAndScreeningRecord].section[urology].entry[1] = Reference(urn:uuid:57838f4e-238c-43e4-9088-42971d8171a6)
 * section[preventingAndScreeningRecord].section[urology].entry[2] = Reference(urn:uuid:bc143cd8-4638-4823-87d5-6bc16ce68e85)
-* section[coverage].title = "Health insurance"
-* section[coverage].code = $loinc#87520-3
-* section[coverage].text.status = #generated
-* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Všeobecná zdravotní pojišťovna České republiky (111), číslo pojištěnce 0551621110</p></div>"
-* section[coverage].entry[0] = Reference(urn:uuid:c8e1f5a3-7b2d-4c69-9f4e-3a6d8b1c5e73)
 
 Instance: cz-example-observation-urology-biopsy
 InstanceOf: CZ_ObservationUrologyBiopsy
@@ -372,6 +361,9 @@ Description: "Male patient in SZZ"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
 * identifier[CPOJ][=].value = "0551621110"
 * identifier[CPOJ][=].use = #official
+* identifier[CPOJ][=].assigner.identifier.system = "https://ncez.mzcr.cz/fhir/sid/kp"
+* identifier[CPOJ][=].assigner.identifier.value = "111"
+* identifier[CPOJ][=].assigner.display = "Všeobecná zdravotní pojišťovna České republiky"
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
 
@@ -396,23 +388,3 @@ Description: "Male patient in SZZ"
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
 
-Instance: cz-example-insurer2
-InstanceOf: CZ_OrganizationCore
-Title: "Organization: Health insurance company (CZ)"
-Description: "Example of the health insurance company of the patient."
-Usage: #example
-* id = "a4c7e9b2-5d1f-4a38-8e6c-1b9d2f7a3c42"
-* identifier[KP].system = "https://ncez.mzcr.cz/fhir/sid/kp"
-* identifier[KP].value = "111"
-* name = "Všeobecná zdravotní pojišťovna České republiky"
-
-Instance: cz-example-coverage2
-InstanceOf: CZ_Coverage
-Title: "Coverage: Public health insurance (CZ)"
-Description: "Example of the patient's public health insurance."
-Usage: #example
-* id = "c8e1f5a3-7b2d-4c69-9f4e-3a6d8b1c5e73"
-* status = #active
-* subscriberId = "0551621110"
-* beneficiary = Reference(urn:uuid:fe858e7c-ba5f-4641-9878-7c6c4790634f)
-* payor = Reference(urn:uuid:a4c7e9b2-5d1f-4a38-8e6c-1b9d2f7a3c42)

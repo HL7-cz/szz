@@ -79,7 +79,7 @@ Tento oddíl obsahuje základní údaje o pacientovi, včetně identifikátorů 
 Oddíl zahrnuje kontaktní osoby pacienta (zákonní zástupci, blízcí příbuzní nebo jiné osoby), které mohou poskytovat dodatečné informace o pacientovi. Typ kontaktu je rozlišen podle role (např. emergentní kontakt, zákonný zástupce, jiný vztah k pacientovi). 
 
 **Zdravotní pojištění** 
-Obsahuje údaje o zdravotní pojišťovně pacienta, čísle pojištěnce a případné doplňující informace o pojistném vztahu. 
+Obsahuje údaje o zdravotní pojišťovně pacienta a čísle pojištěnce. 
 
 **Příjemce dokumentu** 
 Uvedení zamýšleného příjemce zprávy, zpravidla cílového poskytovatele akutní lůžkové péče (CPALP) nebo jiného zdravotnického zařízení, kterému je pacient předán. 

@@ -135,36 +135,17 @@
             A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.
             </td>
             <td>
-            equivalent
-            </td>
-            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
-            <td>
-            section:coverage
-            </td>
-            <td>
-            Composition (CZ_CompositionSzz)
-            </td>
-            <td>
-            
-            </td>
-          </tr>
-          <tr>
-            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.payer</a></td>
-            <td>
-            A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.
-            </td>
-            <td>
             related-to
             </td>
-            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html">Coverage (CZ core)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
+            <td>
+            identifier:CPOJ
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).subject
+            </td>
             <td>
             
-            </td>
-            <td>
-            Composition (CZ_CompositionSzz).section:coverage.entry
-            </td>
-            <td>
-            Composition.section:coverage.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')
             </td>
           </tr>
           <tr>
@@ -175,15 +156,15 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html">Organization (CZ core)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
             <td>
-            identifier:KP
+            identifier:CPOJ.assigner.identifier
             </td>
             <td>
-            Coverage (CZ_Coverage).payor
+            Composition (CZ_CompositionSzz).subject
             </td>
             <td>
-            
+            Health insurance company code (system https://ncez.mzcr.cz/fhir/sid/kp).
             </td>
           </tr>
           <tr>
@@ -194,31 +175,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html">Organization (CZ core)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
             <td>
-            name
+            identifier:CPOJ.assigner.display
             </td>
             <td>
-            Coverage (CZ_Coverage).payor
-            </td>
-            <td>
-            
-            </td>
-          </tr>
-          <tr>
-            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.payer.insuranceNumber</a></td>
-            <td>
-            A.1.3.3 - Health insurance number
-            </td>
-            <td>
-            equivalent
-            </td>
-            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html">Coverage (CZ core)</a></td>
-            <td>
-            subscriberId
-            </td>
-            <td>
-            Composition (CZ_CompositionSzz).section:coverage.entry
+            Composition (CZ_CompositionSzz).subject
             </td>
             <td>
             
@@ -240,7 +202,7 @@
             Composition (CZ_CompositionSzz).subject
             </td>
             <td>
-            The health insurance number is also carried as the patient identifier (CPOJ).
+            
             </td>
           </tr>
           <tr>

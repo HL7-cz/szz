@@ -15,7 +15,6 @@ endlegend
 class "Shared Health Record" <<LogicalModel>> [[StructureDefinition-HeaderSzzCz.html]]
 
 class "cz-organization-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
-class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
 class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
 class "cz-bundle-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-bundle-sharedhealthrecord.html]]
@@ -25,15 +24,13 @@ class "cz-provenance" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/Str
 "Shared Health Record" <|. "cz-composition-sharedhealthrecord"
 "Shared Health Record" <|. "cz-bundle-sharedhealthrecord"
 "Shared Health Record" <|. "cz-patient-core"
-"Shared Health Record" <|. "cz-coverage"
 "Shared Health Record" <|. "cz-practitioner-core"
 "Shared Health Record" <|. "cz-organization-core"
 "Shared Health Record" <|. "cz-provenance"
 
 "cz-bundle-sharedhealthrecord" -d[hidden]-> "cz-composition-sharedhealthrecord"
 "cz-composition-sharedhealthrecord" -d[hidden]-> "cz-patient-core"
-"cz-patient-core" -d[hidden]-> "cz-coverage"
-"cz-coverage" -d[hidden]-> "cz-practitioner-core"
+"cz-patient-core" -d[hidden]-> "cz-practitioner-core"
 "cz-practitioner-core" -d[hidden]-> "cz-organization-core"
 "cz-organization-core" -d[hidden]-> "cz-provenance"
 @enduml

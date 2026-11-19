@@ -38,7 +38,6 @@ Description: "Clinical document used to represent a Shared Health Record for the
     practitioner 1..* and
     practitionerRole 0..* and
     organization 0..* and
-    coverage 0..* and
     observation 0..* and
     adverseEvent 0..* and
     allergiesAndIntolerances 0..* and
@@ -53,7 +52,6 @@ Description: "Clinical document used to represent a Shared Health Record for the
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 * entry[organization].resource only CZ_OrganizationCore
-* entry[coverage].resource only CZ_Coverage
 * entry[observation].resource only CZ_ObservationBloodType or CZ_BodyHeight or CZ_BodyWeight or CZ_WaistCircumference or CZ_ObservationBloodPressure or CZ_ObservationColorectalCancer or CZ_ObservationProstateCancer or CZ_ObservationCytologyCervicalCancer or CZ_ObservationHPVCervicalCancer or CZ_ObservationColposcopyCervicalCancer or CZ_ObservationColonoscopy or CZ_ObservationMammography or CZ_ObservationMammographyBiopsy or CZ_ObservationLungCancer or CZ_ObservationMRIProstateCancer or CZ_ObservationAbdominaAorticAneurysms or CZ_ObservationPulmonology or CZ_ObservationUrology or CZ_ObservationUrologyBiopsy
 * entry[adverseEvent].resource only CZ_AdverseEvent
 * entry[allergiesAndIntolerances].resource only CZ_AllergyIntolerance
