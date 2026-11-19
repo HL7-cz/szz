@@ -1,9 +1,765 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir../../input-cache/schemas/R5/fhir-single.xsd">
-<!--h3 id="overview">Mapování logického modelu hlavičky</h3>
-<a> </a-->
-<p>V této části je uveden diagram, který ukazuje, jak je logický model hlavičky Sdíleného zdravotního záznamu mapován na profily HL7 FHIR v rámci implementační specifikace.</p>
-<!--p>Hereafter a browseable diagram showing how the Imaging Order header model is realized by the HL7 FHIR Profiles of this guide</p-->
-<h3 id="model">Model Overview</h3>
-<a> </a>
-<p>{% include szzHead-map-cs.svg %}</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <style type="text/css">
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+
+    <!-- Název stránky je doplněn ze sushi-config.yaml. -->
+
+    <p>
+      Tato stránka vysvětluje, jak jsou konceptuální prvky logického modelu hlavičky vyjádřeny v odpovídajících FHIR profilech použitých v této implementační příručce.
+    </p>
+
+    <h3>Přehled modelu</h3>
+
+    <p>{% include szzHead-map-cs.svg %}</p>
+
+    <div class="table-wrap">
+
+      <strong>Kontext mapování</strong>
+
+      <ul>
+        <li><strong>Zdrojový logický model:</strong> <a href="StructureDefinition-LogHeaderSzzCz.html">A.1 - Hlavička dokumentu</a></li>
+        <li><strong>Zdrojový mapovací soubor:</strong> <code>Header2FHIR.fsh</code></li>
+        <li><strong>Rozsah mapování:</strong> A.1 Hlavička dokumentu Sdíleného zdravotního záznamu</li>
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Hlavička -&gt; FHIR profily (CZ SZZ)">
+
+        <caption>Hlavička -&gt; FHIR profily (CZ SZZ)</caption>
+
+        <thead>
+
+          <tr>
+            <th colspan="2" class="src-head">Hlavička (Logický model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cíl</th>
+          </tr>
+
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Reference</th>
+            <th class="tgt-sub">Poznámky</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">subjekt</a></td>
+            <td>
+            A.1.1 - Identifikace a A.1.2 - Kontaktní informace pacienta
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).subject
+            </td>
+            <td>
+            Composition.subject.ofType(Patient).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core')
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">subjekt</a></td>
+            <td>
+            A.1.1 - Identifikace a A.1.2 - Kontaktní informace pacienta
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            subject
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">pojistovna</a></td>
+            <td>
+            A.1.3 Zdravotní pojištění
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            extension:basedOn:order
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            K diskusi, zda jsou údaje o plátci předávány s požadavkem, nebo jinou cestou. Ověřit také použité rozšíření.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">pojistovna</a></td>
+            <td>
+            A.1.3 Zdravotní pojištění
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:sectionPayers.entry
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            Composition.section:sectionPayers.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">pojistovna.kodPojistovny</a></td>
+            <td>
+            A.1.3.1 Kód zdravotní pojišťovny
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html">Organization (CZ core)</a></td>
+            <td>
+            identifier:KP
+            </td>
+            <td>
+            Coverage (CZ_Coverage).payor
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">pojistovna.nazev</a></td>
+            <td>
+            A.1.3.2 Název zdravotní pojišťovny
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html">Organization (CZ core)</a></td>
+            <td>
+            name
+            </td>
+            <td>
+            Coverage (CZ_Coverage).payor
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">pojistovna.cisloPojistence</a></td>
+            <td>
+            A.1.3.3 Číslo zdravotního pojištění
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html">Coverage (CZ core)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz).entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">pojistovna.cisloPojistence</a></td>
+            <td>
+            A.1.3.3 Číslo zdravotního pojištění
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).subject
+            </td>
+            <td>
+            Pokud je číslo pojištěnce považováno za jeden z identifikátorů pacienta; to platí v některých jurisdikcích.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">prijemce</a></td>
+            <td>
+            A.1.4 Příjemce dokumentu
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            extension:information-recipient
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            Composition.extension:information-recipient.valueReference.resolve().ofType(PractitionerRole)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">prijemce.idPrijemce</a></td>
+            <td>
+            A.1.4.1 ID příjemce
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            Composition.extension:information-recipient.valueReference.resolve()
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">prijemce.jmeno</a></td>
+            <td>
+            A.1.4.2 Jméno příjemce
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            practitioner.name
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">prijemce.idOrganizace</a></td>
+            <td>
+            A.1.4.3 ID organizace příjemce
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            organization.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">prijemce.organizace</a></td>
+            <td>
+            A.1.4.4 Organizace příjemce
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            organization
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">informationRecipient.address</a></td>
+            <td>
+            A.1.4.5 - Address
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            address
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">informationRecipient.country</a></td>
+            <td>
+            A.1.4.6 - Country
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            address.country
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">informationRecipient.telecom</a></td>
+            <td>
+            A.1.4.7 - Telecom
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            telecom
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">autor</a></td>
+            <td>
+            A.1.5 Autor dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            Composition.author.resolve().ofType(PractitionerRole).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core')
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">autor</a></td>
+            <td>
+            A.1.5 Autor dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            author
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">autor.idAutor</a></td>
+            <td>
+            A.1.5.1 Identifikátor autora
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">autor.jmeno</a></td>
+            <td>
+            A.1.5.2 Jméno autora
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            practitioner.name
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            Pokud jde o PractitionerRole.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">autor.idOrganizace</a></td>
+            <td>
+            A.1.5.3 ID organizace
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            organization.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            Pokud jde o organizaci.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">autor.organizace</a></td>
+            <td>
+            A.1.5.4 Organizace autora
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            organization
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">autor.datum</a></td>
+            <td>
+            A.1.5.5 Datum a čas uložení
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            date
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata</a></td>
+            <td>
+            A.1.6 Metadata dokumentu
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.dokumentId</a></td>
+            <td>
+            A.1.6.1 ID dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bundle-sharedhealthrecord.html">Bundle (SZZ CZ)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz)
+            </td>
+            <td>
+            Pokud jde o identifikátor konkrétní instance záznamu.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.kategorie</a></td>
+            <td>
+            A.1.6.2 Kategorie dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            type
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.stav</a></td>
+            <td>
+            A.1.6.3 Stav dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            status
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.vytvoreni</a></td>
+            <td>
+            A.1.6.4 Datum a čas vytvoření
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bundle-sharedhealthrecord.html">Bundle (SZZ CZ)</a></td>
+            <td>
+            timestamp
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz)
+            </td>
+            <td>
+            Pokud jde o okamžik, kdy byla tato konkrétní verze záznamu sestavena do Bundle.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.vytvoreni</a></td>
+            <td>
+            A.1.6.4 Datum a čas vytvoření
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            date
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            Pokud jde o okamžik vytvoření dokumentu (nezávisle na jeho verzi).
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.nazevDokumentu</a></td>
+            <td>
+            A.1.6.5 Název dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            title
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.spravce</a></td>
+            <td>
+            A.1.6.6 Správce dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            custodian
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.duveryhodnost</a></td>
+            <td>
+            A.1.6.7 Důvěrnost dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            confidentiality
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.jazyk</a></td>
+            <td>
+            A.1.6.8 Jazyk dokumentu
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            language
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">metadata.verze</a></td>
+            <td>
+            A.1.6.9 Verze
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            extension:versionNumber.valueString
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            Jako business verze, nikoli jako verze zdroje.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">podpis</a></td>
+            <td>
+            A.1.7 Elektronické podpisy
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bundle-sharedhealthrecord.html">Bundle (SZZ CZ)</a></td>
+            <td>
+            signature
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz)
+            </td>
+            <td>
+            Elektronický podpis Bundle.
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
 </div>

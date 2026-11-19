@@ -1,8 +1,1829 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir../../input-cache/schemas/R5/fhir-single.xsd">
-<!--h3 id="overview">Header Model map</h3>
-<a> </a-->
-<p>Hereafter a browseable diagram showing how the Preventive and screening health record of Patient Shared Health Record model is realized by the HL7 FHIR Profiles of this guide</p>
-<h3 id="model">Model Overview</h3>
-<a> </a>
-<p>{% include szz-scr-map.svg %}</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <style type="text/css">
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+
+    <!-- The page title is supplied by sushi-config.yaml. -->
+
+    <p>
+      This page explains how conceptual elements from the Preventive and Screening Health Record logical model are expressed in the corresponding FHIR profiles used by this Implementation Guide.
+    </p>
+
+    <h3>Model Overview</h3>
+
+    <p>{% include szz-scr-map.svg %}</p>
+
+    <div class="table-wrap">
+
+      <strong>Mapping Context</strong>
+
+      <ul>
+        <li><strong>Source logical model:</strong> <a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">A.3 - Preventive and screening health record</a></li>
+        <li><strong>Source mapping file:</strong> <code>ScreeningRecord2FHIR.fsh</code></li>
+        <li><strong>Mapping scope:</strong> A.3 Preventive and screening health record</li>
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Preventive and Screening Health Record -&gt; FHIR Profiles (CZ SZZ)">
+
+        <caption>Preventive and Screening Health Record -&gt; FHIR Profiles (CZ SZZ)</caption>
+
+        <thead>
+
+          <tr>
+            <th colspan="2" class="src-head">Preventive and Screening Health Record (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">FHIR Target</th>
+          </tr>
+
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relationship</th>
+            <th class="tgt-sub">Resource/Profile</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Reference</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><a href="StructureDefinition-SzzCz.html">Szz.body.preventiveAndScreeningRecord</a></td>
+            <td>
+            A.3 - Preventive and screening health record
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">PreventiveAndScreeningRecord.generalPractitioner</a></td>
+            <td>
+            A.3.1 - General Practitioner
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord.section:generalPractitioner
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.colorectalScreening.resultDate</a></td>
+            <td>
+            A.3.1.1.1 - Date of quantitative TOKS result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colorectal-cancer.html">Observation: Colorectal Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:observationColorectalCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.colorectalScreening.resultTOKS</a></td>
+            <td>
+            A.3.1.1.2 - Quantitative TOKS result (health service code reported to the health insurance company)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colorectal-cancer.html">Observation: Colorectal Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:observationColorectalCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.colorectalScreening.levelTOKS</a></td>
+            <td>
+            A.3.1.1.3 - TOKS level
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colorectal-cancer.html">Observation: Colorectal Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:observationColorectalCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.prostateCancerScreening.resultDate</a></td>
+            <td>
+            A.3.1.2.1 - Date of PSA result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-prostate-cancer.html">Observation: Prostate Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:observationProstateCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.prostateCancerScreening.resultPSA</a></td>
+            <td>
+            A.3.1.2.2 - Quantitative PSA result (health service code reported to the health insurance company)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-prostate-cancer.html">Observation: Prostate Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:observationProstateCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.examinationDate</a></td>
+            <td>
+            A.3.1.3.1 - Date of result of preventive check-up performed
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation: Height (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.examinationDate</a></td>
+            <td>
+            A.3.1.3.1 - Date of result of preventive check-up performed
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation: Weight (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.examinationDate</a></td>
+            <td>
+            A.3.1.3.1 - Date of result of preventive check-up performed
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-waist-circumference.html">Observation: Waist circumference  (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.examinationDate</a></td>
+            <td>
+            A.3.1.3.1 - Date of result of preventive check-up performed
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-blood-pressure.html">Observation: Blood Pressure (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.height</a></td>
+            <td>
+            A.3.1.3.2 - Height
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation: Height (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.weight</a></td>
+            <td>
+            A.3.1.3.3 - Weight
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation: Weight (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.systolicPressure</a></td>
+            <td>
+            A.3.1.3.4 - Pressure (systolic)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-blood-pressure.html">Observation: Blood Pressure (SZZ CZ)</a></td>
+            <td>
+            component[0].valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.diastolicPressure</a></td>
+            <td>
+            A.3.1.3.5 - Pressure (diastolic)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-blood-pressure.html">Observation: Blood Pressure (SZZ CZ)</a></td>
+            <td>
+            component[1].valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GeneralPractitionerCz.html">GeneralPractitioner.preventiveCheckUp.waistCircumference</a></td>
+            <td>
+            A.3.1.3.6 - Waist circumference
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-waist-circumference.html">Observation: Waist circumference  (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">PreventiveAndScreeningRecord.gynekology</a></td>
+            <td>
+            A.3.2 - Gynekology
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord.section:gynecology
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.colorectalScreening.resultDate</a></td>
+            <td>
+            A.3.2.1.1 - Date of quantitative FOBT result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colorectal-cancer.html">Observation: Colorectal Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationColorectalCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.colorectalScreening.resultTOKS</a></td>
+            <td>
+            A.3.2.1.2 - Quantitative TOKS result (health service code reported to the health insurance company)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colorectal-cancer.html">Observation: Colorectal Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationColorectalCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.colorectalScreening.levelTOKS</a></td>
+            <td>
+            A.3.2.1.3 - TOKS level
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colorectal-cancer.html">Observation: Colorectal Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationColorectalCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.examinationCytology.examinationDate</a></td>
+            <td>
+            A.3.2.2.1 - Date of cytological examination
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-cytology-cervical-cancer.html">Observation: Cervical Cancer Cytology Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationCervicalCancerCytologyScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.examinationCytology.examinationResult</a></td>
+            <td>
+            A.3.2.2.2 - Result of cytological examination
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-cytology-cervical-cancer.html">Observation: Cervical Cancer Cytology Screening (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationCervicalCancerCytologyScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.examinationHPV.examinationDate</a></td>
+            <td>
+            A.3.2.3.1 - Date of high-risk HPV test
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-hpv-cervical-cancer.html">Observation: Cervical Cancer HPV Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationCervicalCancerHPVScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.examinationHPV.resultHPV</a></td>
+            <td>
+            A.3.2.3.2 - Result of high-risk HPV test
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-hpv-cervical-cancer.html">Observation: Cervical Cancer HPV Screening (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationCervicalCancerHPVScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.expertColposcopy.examinationDate</a></td>
+            <td>
+            A.3.2.4.1 - Date of expert colposcopy
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colposcopy-cervical-cancer.html">Observation: Cervical Cancer Colposcopy Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationCervicalCancerColposcopy
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.expertColposcopy.examinationResult</a></td>
+            <td>
+            A.3.2.4.2 - Result of expert colposcopy
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colposcopy-cervical-cancer.html">Observation: Cervical Cancer Colposcopy Screening (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:observationCervicalCancerColposcopy
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.preventiveCheckUp.examinationDate</a></td>
+            <td>
+            A.3.2.5.1 - Date of result of preventive check-up
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation: Height (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.preventiveCheckUp.examinationDate</a></td>
+            <td>
+            A.3.2.5.1 - Date of result of preventive check-up
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation: Weight (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.preventiveCheckUp.height</a></td>
+            <td>
+            A.3.2.5.2 - Height
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation: Height (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.preventiveCheckUp.weight</a></td>
+            <td>
+            A.3.2.5.3 - Weight
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation: Weight (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.preventiveCheckUp.vaccinationHPV</a></td>
+            <td>
+            A.3.2.5.4 - HPV vaccination
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-immunization-hpv.html">Immunization against HPV Resource Profile (SZZ CZ)</a></td>
+            <td>
+            status
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:preventingExamination
+            </td>
+            <td>
+            Immunization status: completed or not done
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.preventiveCheckUp.lastHPVVaccinationDate</a></td>
+            <td>
+            A.3.2.5.5 - HPV vaccination - year of last dose
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-immunization-hpv.html">Immunization against HPV Resource Profile (SZZ CZ)</a></td>
+            <td>
+            occurrenceDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GynecologyCz.html">Gynecology.preventiveCheckUp.vaccineHPV</a></td>
+            <td>
+            A.3.2.5.6 - HPV vaccination - vaccine
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-immunization-hpv.html">Immunization against HPV Resource Profile (SZZ CZ)</a></td>
+            <td>
+            vaccineCode
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gynecology.entry:preventingExamination
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">PreventiveAndScreeningRecord.gastroenterology</a></td>
+            <td>
+            A.3.3 - Gatroenterology
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord.section:gastroenterology
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GastroenterologyCz.html">Gastroenterology.colorectalScreening.resultDate</a></td>
+            <td>
+            A.3.3.1.1 - Date of colonoscopy result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colonoscopy.html">Observation: Colonoscopy (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gastroenterology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GastroenterologyCz.html">Gastroenterology.colorectalScreening.type</a></td>
+            <td>
+            A.3.3.1.2 - Type of colonoscopy performed
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colonoscopy.html">Observation: Colonoscopy (SZZ CZ)</a></td>
+            <td>
+            component:colonoscopyType.valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gastroenterology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GastroenterologyCz.html">Gastroenterology.colorectalScreening.completeness</a></td>
+            <td>
+            A.3.3.1.3 - Completeness of the colonoscopy performed
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colonoscopy.html">Observation: Colonoscopy (SZZ CZ)</a></td>
+            <td>
+            status
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gastroenterology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GastroenterologyCz.html">Gastroenterology.colorectalScreening.resultBBPS</a></td>
+            <td>
+            A.3.3.1.4 - BBPS result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colonoscopy.html">Observation: Colonoscopy (SZZ CZ)</a></td>
+            <td>
+            component:ColonoscopyBBPS.valueInteger
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gastroenterology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GastroenterologyCz.html">Gastroenterology.colorectalScreening.normalFindings</a></td>
+            <td>
+            A.3.3.1.5 - Colonoscopy result - normal findings
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colonoscopy.html">Observation: Colonoscopy (SZZ CZ)</a></td>
+            <td>
+            component:ColonoscopyNormal.valueBoolean
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gastroenterology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GastroenterologyCz.html">Gastroenterology.colorectalScreening.mostSeriousFinding</a></td>
+            <td>
+            A.3.3.1.6 - Colonoscopy result - pathology (most serious finding)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colonoscopy.html">Observation: Colonoscopy (SZZ CZ)</a></td>
+            <td>
+            component:ColonoscopyAbnormal.valueCodeableConcept.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gastroenterology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GastroenterologyCz.html">Gastroenterology.colorectalScreening.numberOfAdenomasOrSerratedLesions</a></td>
+            <td>
+            A.3.3.1.7 - Colonoscopy result: pathology (adenomas and serrated lesions)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colonoscopy.html">Observation: Colonoscopy (SZZ CZ)</a></td>
+            <td>
+            component:ColonoscopyAbnormal.valueInteger
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gastroenterology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-GastroenterologyCz.html">Gastroenterology.colorectalScreening.recommendedProcedure</a></td>
+            <td>
+            A.3.3.1.8 - Colonoscopy exam.result: Further recomm.examinations
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colonoscopy.html">Observation: Colonoscopy (SZZ CZ)</a></td>
+            <td>
+            interpretation.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:gastroenterology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">PreventiveAndScreeningRecord.radiology</a></td>
+            <td>
+            A.3.4 - Radiology
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord.section:radiology
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.mammographyExamination.resultDate</a></td>
+            <td>
+            A.3.4.1.1 - Date of mammography examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mammography.html">Observation: Mammography (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMammography
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.mammographyExamination.tissueDensity</a></td>
+            <td>
+            A.3.4.1.2 - Breast tissue density according to BIRADS/Tabár classification
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mammography.html">Observation: Mammography (SZZ CZ)</a></td>
+            <td>
+            component:densityTabar.valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMammography
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.mammographyExamination.tissueDensity</a></td>
+            <td>
+            A.3.4.1.2 - Breast tissue density according to BIRADS/Tabár classification
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mammography.html">Observation: Mammography (SZZ CZ)</a></td>
+            <td>
+            component:densityBirads.valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMammography
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.mammographyExamination.examinationResult</a></td>
+            <td>
+            A.3.4.1.3 - Mammography result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mammography.html">Observation: Mammography (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMammography
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.breastBiopsyResult.resultDate</a></td>
+            <td>
+            A.3.4.2.1 - Biopsy result date
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mammography-biopsy.html">Observation: Mammography Biopsy(SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMammographyBiopsy
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.breastBiopsyResult.biopsyType</a></td>
+            <td>
+            A.3.4.2.2 - Biopsy type
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mammography-biopsy.html">Observation: Mammography Biopsy(SZZ CZ)</a></td>
+            <td>
+            component:typeOfBiopsy.valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMammographyBiopsy
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.breastBiopsyResult.biopsyResult</a></td>
+            <td>
+            A.3.4.2.3 - Biopsy result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mammography-biopsy.html">Observation: Mammography Biopsy(SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMammographyBiopsy
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.lungExamination.resultDate</a></td>
+            <td>
+            A.3.4.3.1 - Date of LDCT result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-lung-cancer.html">Observation: Lung cancer (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationLungCancer
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.lungExamination.examinationType</a></td>
+            <td>
+            A.3.4.3.2 - Type of LDCT examination
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-lung-cancer.html">Observation: Lung cancer (SZZ CZ)</a></td>
+            <td>
+            component:typeOfObservation.valueCodeableConcept.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationLungCancer
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.lungExamination.examinationResult</a></td>
+            <td>
+            A.3.4.3.3 - LDCT result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-lung-cancer.html">Observation: Lung cancer (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationLungCancer
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.lungExamination.recommendedProcedure</a></td>
+            <td>
+            A.3.4.3.4 - LDCT examination result: Further recommended examinations
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-lung-cancer.html">Observation: Lung cancer (SZZ CZ)</a></td>
+            <td>
+            interpretation.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationLungCancer
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.prostateExamination.resultDate</a></td>
+            <td>
+            A.3.4.4.1 - MRI result date
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mri-prostate-cancer.html">Observation: MRI Prostate Cancer (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMRIProstateCancer
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.prostateExamination.examinationType</a></td>
+            <td>
+            A.3.4.4.2 - Type of MRI examination
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mri-prostate-cancer.html">Observation: MRI Prostate Cancer (SZZ CZ)</a></td>
+            <td>
+            code.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMRIProstateCancer
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.prostateExamination.examinationResult</a></td>
+            <td>
+            A.3.4.4.3 - MRI result (PI-RADS)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mri-prostate-cancer.html">Observation: MRI Prostate Cancer (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMRIProstateCancer
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.prostateExamination.findingPIRADS3</a></td>
+            <td>
+            A.3.4.4.4 - Finding in the case of PI-RADS 3
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-mri-prostate-cancer.html">Observation: MRI Prostate Cancer (SZZ CZ)</a></td>
+            <td>
+            component:discoveryZone.valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationMRIProstateCancer
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.examinationAneurysmAbnormalAorta.resultDate</a></td>
+            <td>
+            A.3.4.5.1 - Date of USG examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-abdomina-aortic-aneurysms.html">Observation: Abdomina aortic aneurysms (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationAbdominaAorticAneurysms
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-RadiologyCz.html">Radiology.examinationAneurysmAbnormalAorta.examinationResult</a></td>
+            <td>
+            A.3.4.5.2 - Ultrasound examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-abdomina-aortic-aneurysms.html">Observation: Abdomina aortic aneurysms (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:radiology.entry:observationAbdominaAorticAneurysms
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">PreventiveAndScreeningRecord.biochemistryLab</a></td>
+            <td>
+            A.3.5 - Biochemistry Lab
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord.section:biochemistryLaboratory
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-BiochemistryLabCz.html">BiochemistryLab.colorectalScreening.resultDate</a></td>
+            <td>
+            A.3.5.1.1 - Date of quantitative TOKS result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colorectal-cancer.html">Observation: Colorectal Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:biochemistryLaboratory.entry:observationColorectalCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-BiochemistryLabCz.html">BiochemistryLab.colorectalScreening.levelTOKS</a></td>
+            <td>
+            A.3.5.1.2 - TOKS level
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-colorectal-cancer.html">Observation: Colorectal Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:biochemistryLaboratory.entry:observationColorectalCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-BiochemistryLabCz.html">BiochemistryLab.prostateCancerScreening.analysisDate</a></td>
+            <td>
+            A.3.5.2.1 - Date of PSA analysis
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-prostate-cancer.html">Observation: Prostate Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:biochemistryLaboratory.entry:observationProstateCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-BiochemistryLabCz.html">BiochemistryLab.prostateCancerScreening.levelPSA</a></td>
+            <td>
+            A.3.5.2.2 - PSA level
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-prostate-cancer.html">Observation: Prostate Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:biochemistryLaboratory.entry:observationProstateCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">PreventiveAndScreeningRecord.pulmonology</a></td>
+            <td>
+            A.3.6 - Pulmonology
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord.section:pulmonology
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.dateOfResult</a></td>
+            <td>
+            A.3.6.1.1 - Date of pulmonary examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.smoker</a></td>
+            <td>
+            A.3.6.1.2 - Smoking (medical history)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            component:medicalHistoryOfSmoking.valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.numberOfYearsSinceQuitting</a></td>
+            <td>
+            A.3.6.1.3 - Number of years since quitting smoking
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            component:yearsSinceQuittingSmoking.valueInteger
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.numberOfYearsSmoking</a></td>
+            <td>
+            A.3.6.1.4 - Number of years smoking
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            component:yearsOfSmoking.valueInteger
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.numberOfPackYears</a></td>
+            <td>
+            A.3.6.1.5 - Number of pack-years
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            component:packYears.valueInteger
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.physicalExamination</a></td>
+            <td>
+            A.3.6.1.6 - Physical examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            component:physicalExamResult
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.resultXRay</a></td>
+            <td>
+            A.3.6.1.7 - Lung X-ray result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.functionalExamination</a></td>
+            <td>
+            A.3.6.1.8 - Functional examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            component:functionalExamResult
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PulmonologyCz.html">Pulmonology.lungExamination.recommendationLDCT</a></td>
+            <td>
+            A.3.6.1.9 - Examination result: Recommendation for LDCT lung screening
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-pulmonology.html">Observation: Pulmonology (SZZ CZ)</a></td>
+            <td>
+            interpretation
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:pulmonology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">PreventiveAndScreeningRecord.urology</a></td>
+            <td>
+            A.3.7 - Urology
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord.section:urology
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.prostateCancerScreening.resultDate</a></td>
+            <td>
+            A.3.7.1.1 - Date of PSA screening result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-prostate-cancer.html">Observation: Prostate Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationProstateCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.prostateCancerScreening.levelPSA</a></td>
+            <td>
+            A.3.7.1.2 - Screening PSA level
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-prostate-cancer.html">Observation: Prostate Cancer Screening (SZZ CZ)</a></td>
+            <td>
+            valueQuantity.value
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationProstateCancerScreening
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupUrologicalExamination.resultDate</a></td>
+            <td>
+            A.3.7.2.1 - Date of examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology.html">Observation: Urology (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrology
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupUrologicalExamination.examinationResult</a></td>
+            <td>
+            A.3.7.2.2 - Result of clinical examination
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology.html">Observation: Urology (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrology
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupUrologicalExamination.levelPSA</a></td>
+            <td>
+            A.3.7.2.3 - PSA level
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology.html">Observation: Urology (SZZ CZ)</a></td>
+            <td>
+            component:levelPSA.valueQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrology
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupUrologicalExamination.prostateVolume</a></td>
+            <td>
+            A.3.7.2.4 - Prostate volume
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology.html">Observation: Urology (SZZ CZ)</a></td>
+            <td>
+            component:prostateVolume.valueQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrology
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupUrologicalExamination.densityPSA</a></td>
+            <td>
+            A.3.7.2.5 - Determination of PSA density (PSAD)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology.html">Observation: Urology (SZZ CZ)</a></td>
+            <td>
+            component:PSAdensity.valueQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrology
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupUrologicalExamination.velocityPSA</a></td>
+            <td>
+            A.3.7.2.6 - Determination of PSA velocity (PSAV)
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology.html">Observation: Urology (SZZ CZ)</a></td>
+            <td>
+            component:PSAvelocity.valueQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrology
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupUrologicalExamination.furtherProcedure</a></td>
+            <td>
+            A.3.7.2.7 - Examination result: Further recommended examinations
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology.html">Observation: Urology (SZZ CZ)</a></td>
+            <td>
+            interpretation.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrology
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupBiopsy.resultDate</a></td>
+            <td>
+            A.3.7.3.1 - Date of biopsy examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology-biopsy.html">Observation: Urology Biopsy(SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrologyBiopsy
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupBiopsy.biopsyType</a></td>
+            <td>
+            A.3.7.3.2 - Type of biopsy performed
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology-biopsy.html">Observation: Urology Biopsy(SZZ CZ)</a></td>
+            <td>
+            component:typeOfBiopsy.valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrologyBiopsy
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-UrologyCz.html">Urology.followupBiopsy.examinationResult</a></td>
+            <td>
+            A.3.7.3.3 - Biopsy examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-urology-biopsy.html">Observation: Urology Biopsy(SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:urology.entry:observationUrologyBiopsy
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-PreventiveAndScreeningRecordCz.html">PreventiveAndScreeningRecord.angiology</a></td>
+            <td>
+            A.3.8 - Angiology
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord.section:angiology
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-AngiologyCz.html">Angiology.abdominalAorticAneurysmAcreening.dateOfResult</a></td>
+            <td>
+            A.3.8.1.1 - Date of ultrasound examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-abdomina-aortic-aneurysms.html">Observation: Abdomina aortic aneurysms (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:angiology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-AngiologyCz.html">Angiology.abdominalAorticAneurysmAcreening.examinationResult</a></td>
+            <td>
+            A.3.8.1.2 - Ultrasound examination result
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-observation-abdomina-aortic-aneurysms.html">Observation: Abdomina aortic aneurysms (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept.coding.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:angiology.entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
 </div>

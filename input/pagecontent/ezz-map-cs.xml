@@ -1,9 +1,632 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir../../input-cache/schemas/R5/fhir-single.xsd">
-<!--h3 id="overview">Mapování logického modelu hlavičky</h3>
-<a> </a-->
-<p>V této části je uveden diagram, který ukazuje, jak je logický model Emergentního zdravontího záznamu pro Sdílený zdravotní záznam mapován na profily HL7 FHIR v rámci implementační specifikace.</p>
-<!--p>Hereafter a browseable diagram showing how the Imaging Order header model is realized by the HL7 FHIR Profiles of this guide</p-->
-<h3 id="model">Model Overview</h3>
-<a> </a>
-<p>{% include szz-ezz-map-cs.svg %}</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <style type="text/css">
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+
+    <!-- Název stránky je doplněn ze sushi-config.yaml. -->
+
+    <p>
+      Tato stránka vysvětluje, jak jsou konceptuální prvky logického modelu emergentního zdravotního záznamu vyjádřeny v odpovídajících FHIR profilech použitých v této implementační příručce.
+    </p>
+
+    <h3>Přehled modelu</h3>
+
+    <p>{% include szz-ezz-map-cs.svg %}</p>
+
+    <div class="table-wrap">
+
+      <strong>Kontext mapování</strong>
+
+      <ul>
+        <li><strong>Zdrojový logický model:</strong> <a href="StructureDefinition-LogEmergencyRecordCz.html">A.2 - Emergentní zdravotní záznam</a></li>
+        <li><strong>Zdrojový mapovací soubor:</strong> <code>EmergencyRecord2FHIR.fsh</code></li>
+        <li><strong>Rozsah mapování:</strong> A.2 Emergentní zdravotní záznam</li>
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Emergentní zdravotní záznam -&gt; FHIR profily (CZ SZZ)">
+
+        <caption>Emergentní zdravotní záznam -&gt; FHIR profily (CZ SZZ)</caption>
+
+        <thead>
+
+          <tr>
+            <th colspan="2" class="src-head">Emergentní zdravotní záznam (Logický model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cíl</th>
+          </tr>
+
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Reference</th>
+            <th class="tgt-sub">Poznámky</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><a href="StructureDefinition-LogSzzCz.html">telo.emergentniZZ</a></td>
+            <td>
+            A.2 - Emergentní zdravotní záznam
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:emergencyRecord
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">krevniSkupina</a></td>
+            <td>
+            A.2.1 - Krevní skupina
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:emergencyRecord.entry:bloodType
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">krevniSkupina.typ</a></td>
+            <td>
+            A.2.1.1 - Typ krevní skupiny
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observation-blood-type.html">Observation: Blood Type (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:bloodType
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">krevniSkupina.rhFaktor</a></td>
+            <td>
+            A.2.1.2 - Rh faktor
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observation-blood-type.html">Observation: Blood Type (SZZ CZ)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:bloodType
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">krevniSkupina.kodVysetreni</a></td>
+            <td>
+            A.2.1.3 - Kód vyšetření krevní skupiny
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observation-blood-type.html">Observation: Blood Type (SZZ CZ)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:bloodType
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">krevniSkupina.datumZjisteni</a></td>
+            <td>
+            A.2.1.4 - Datum zjištění krevní skupiny
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observation-blood-type.html">Observation: Blood Type (SZZ CZ)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:bloodType
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">autor</a></td>
+            <td>
+            A.1.5 Autor dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observation-blood-type.html">Observation: Blood Type (SZZ CZ)</a></td>
+            <td>
+            performer
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:bloodType
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie</a></td>
+            <td>
+            A.2.2 - Alergie a nežádoucí reakce
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.latka</a></td>
+            <td>
+            A.2.2.1 - Látka - alergen
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.kategorieAlergenu</a></td>
+            <td>
+            A.2.2.2 - Kategorie alergenu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td>
+            category
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.kryticnost</a></td>
+            <td>
+            A.2.2.3 - Původce
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td>
+            criticality
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.typReakce</a></td>
+            <td>
+            A.2.2.4 - Typ reakce
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td>
+            type
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.manifestace</a></td>
+            <td>
+            A.2.2.5 - Manifestace
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td>
+            reaction.manifestation
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.zavaznostReakce</a></td>
+            <td>
+            A.2.2.6 - Klinická závažnost projevu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td>
+            reaction.severity
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.datumZjisteni</a></td>
+            <td>
+            A.2.2.7 - Datum zjištění
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td>
+            onsetDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.puvodceZaznamu</a></td>
+            <td>
+            A.2.2.8 - Původce záznamu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td>
+            recorder
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:allergiesAndAdverseReactions
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">ostatniEmergentniUdaje</a></td>
+            <td>
+            A.2.3 - Ostatní emergentní údaje
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:emergencyRecord.entry:otherEmergencyInformation
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">ostatniEmergentniUdaje.typUdalosti</a></td>
+            <td>
+            A.2.3.1 - Typ události
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-adverse-event.html">Adverse event (SZZ CZ)</a></td>
+            <td>
+            event
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:otherEmergencyInformation
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">ostatniEmergentniUdaje.podezrelaSubstance</a></td>
+            <td>
+            A.2.3.2. - Podezřelá substance
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-adverse-event.html">Adverse event (SZZ CZ)</a></td>
+            <td>
+            suspectEntity.instance.code
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:otherEmergencyInformation
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">ostatniEmergentniUdaje.podezrelaSubstance</a></td>
+            <td>
+            A.2.3.2. - Podezřelá substance
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-adverse-event.html">Adverse event (SZZ CZ)</a></td>
+            <td>
+            suspectEntity.instance.description
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:otherEmergencyInformation
+            </td>
+            <td>
+            V případě, že kód nestačí k identifikaci látky, např. u bylinného přípravku.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">ostatniEmergentniUdaje.datumZjisteni</a></td>
+            <td>
+            A.2.3.3 - Datum zjištění
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-adverse-event.html">Adverse event (SZZ CZ)</a></td>
+            <td>
+            date
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:otherEmergencyInformation
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">ostatniEmergentniUdaje.puvodceZaznamu</a></td>
+            <td>
+            A.2.3.4 - Původce záznamu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-adverse-event.html">Adverse event (SZZ CZ)</a></td>
+            <td>
+            recorder
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:otherEmergencyInformation
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">pouziteLecivePripravky</a></td>
+            <td>
+            A.2.4 - Léčivé přípravky použité při poskytování zdravotních služeb u poskytovatelů lůžkové péče
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:emergencyRecord.entry:medicationHistoryDuringHospitalization
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">pouziteLecivePripravky.identifikace</a></td>
+            <td>
+            A.3.4.1 - Identifikace léčivého přípravku
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-medicationStatement-cz-core.html">Medication Statement (CZ core)</a></td>
+            <td>
+            medicationCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:medicationHistoryDuringHospitalization
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">pouziteLecivePripravky.mnozstvi</a></td>
+            <td>
+            A.3.4.2 - Množství
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-medicationStatement-cz-core.html">Medication Statement (CZ core)</a></td>
+            <td>
+            dosage.doseAndRate.doseQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:medicationHistoryDuringHospitalization
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">pouziteLecivePripravky.datumPodani</a></td>
+            <td>
+            A.2.4.3 - Datum podání
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-medicationStatement-cz-core.html">Medication Statement (CZ core)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:medicationHistoryDuringHospitalization
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">pouziteLecivePripravky.zdrojZaznamu</a></td>
+            <td>
+            A.2.4.4 - Zdroj záznamu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-medicationStatement-cz-core.html">Medication Statement (CZ core)</a></td>
+            <td>
+            informationSource
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).section:emergencyRecord.entry:medicationHistoryDuringHospitalization
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-LogSzzCz.html">telo.preventivniAscreeningovyZZ</a></td>
+            <td>
+            A.3 - Preventivní a screeningový zdravotní záznam
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:preventingAndScreeningRecord
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
 </div>

@@ -14,9 +14,6 @@ legend right
 endlegend
 
 class "Emergentní zdravotní záznam" <<LogicalModel>> [[StructureDefinition-LogEmergencyRecordCz.html]]
-note top #EEEEAE [[ConceptMap-EmergencyRecord2FHIR-cz.html]]
-Concept Mapa
-endnote
 
 class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
 class "cz-observation-blood-type" <<Profile>> [[StructureDefinition-cz-observation-blood-type.html]]

@@ -1,8 +1,765 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir../../input-cache/schemas/R5/fhir-single.xsd">
-<!--h3 id="overview">Header Model map</h3>
-<a> </a-->
-<p>Hereafter a browseable diagram showing how the Shared Health Record header model is realized by the HL7 FHIR Profiles of this guide</p>
-<h3 id="model">Model Overview</h3>
-<a> </a>
-<p>{% include szzHead-map.svg %}</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <style type="text/css">
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+
+    <!-- The page title is supplied by sushi-config.yaml. -->
+
+    <p>
+      This page explains how conceptual elements from the Header logical model are expressed in the corresponding FHIR profiles used by this Implementation Guide.
+    </p>
+
+    <h3>Model Overview</h3>
+
+    <p>{% include szzHead-map.svg %}</p>
+
+    <div class="table-wrap">
+
+      <strong>Mapping Context</strong>
+
+      <ul>
+        <li><strong>Source logical model:</strong> <a href="StructureDefinition-HeaderSzzCz.html">A.1 - Document header</a></li>
+        <li><strong>Source mapping file:</strong> <code>Header2FHIR.fsh</code></li>
+        <li><strong>Mapping scope:</strong> A.1 Document header of the Shared Health Record</li>
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Header -&gt; FHIR Profiles (CZ SZZ)">
+
+        <caption>Header -&gt; FHIR Profiles (CZ SZZ)</caption>
+
+        <thead>
+
+          <tr>
+            <th colspan="2" class="src-head">Header (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">FHIR Target</th>
+          </tr>
+
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relationship</th>
+            <th class="tgt-sub">Resource/Profile</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Reference</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.subject</a></td>
+            <td>
+            A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).subject
+            </td>
+            <td>
+            Composition.subject.ofType(Patient).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core')
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.subject</a></td>
+            <td>
+            A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            subject
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.payer</a></td>
+            <td>
+            A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            extension:basedOn:order
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            To be discussed if the payor data are conveyed with the request or through other means. Check also the extension to be used.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.payer</a></td>
+            <td>
+            A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            section:sectionPayers.entry
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            Composition.section:sectionPayers.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.payer.insuranceCode</a></td>
+            <td>
+            A.1.3.1 - Health insurance code
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html">Organization (CZ core)</a></td>
+            <td>
+            identifier:KP
+            </td>
+            <td>
+            Coverage (CZ_Coverage).payor
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.payer.insuranceName</a></td>
+            <td>
+            A.1.3.2 - Health insurance name
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html">Organization (CZ core)</a></td>
+            <td>
+            name
+            </td>
+            <td>
+            Coverage (CZ_Coverage).payor
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.payer.insuranceNumber</a></td>
+            <td>
+            A.1.3.3 - Health insurance number
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html">Coverage (CZ core)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz).entry
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.payer.insuranceNumber</a></td>
+            <td>
+            A.1.3.3 - Health insurance number
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).subject
+            </td>
+            <td>
+            If treated as one of the Patient identifiers; this applies in some jurisdictions.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.informationRecipient</a></td>
+            <td>
+            A.1.4 - Information recipient - (intended recipient or recipients of the report), if applicable
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            extension:information-recipient
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            Composition.extension:information-recipient.valueReference.resolve().ofType(PractitionerRole)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.informationRecipient.identifier</a></td>
+            <td>
+            A.1.4.1 - Recipient identifier
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            Composition.extension:information-recipient.valueReference.resolve()
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.informationRecipient.name</a></td>
+            <td>
+            A.1.4.2 - Recipient name
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            practitioner.name
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.informationRecipient.organizationID</a></td>
+            <td>
+            A.1.4.3 - Recipient organisation ID
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            organization.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.informationRecipient.organization</a></td>
+            <td>
+            A.1.4.4 - Recipient organisation
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            organization
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.informationRecipient.address</a></td>
+            <td>
+            A.1.4.5 - Address
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            address
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.informationRecipient.country</a></td>
+            <td>
+            A.1.4.6 - Country
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            address.country
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.informationRecipient.telecom</a></td>
+            <td>
+            A.1.4.7 - Telecom
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            telecom
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).extension:information-recipient
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.author</a></td>
+            <td>
+            A.1.5 - Author (by whom the Shared health record was/were authored). Multiple authors could be provided.
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            Composition.author.resolve().ofType(PractitionerRole).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core')
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.author</a></td>
+            <td>
+            A.1.5 - Author (by whom the Shared health record was/were authored). Multiple authors could be provided.
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            author
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.author.identifier</a></td>
+            <td>
+            A.1.5.1 - Author identifier
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.author.name</a></td>
+            <td>
+            A.1.5.2 - Author name
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            practitioner.name
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            If PractitionerRole
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.author.organizationID</a></td>
+            <td>
+            A.1.5.3 - Author organisation ID
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            organization.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            If Organization
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.author.organization</a></td>
+            <td>
+            A.1.5.4 - Author organisation
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html">Practitioner Role (CZ core)</a></td>
+            <td>
+            organization
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz).author
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.author.dateTime</a></td>
+            <td>
+            A.1.5.5 - Date Time
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            date
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata</a></td>
+            <td>
+            A.1.6 - Document metadata
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.identifier</a></td>
+            <td>
+            A.1.6.1 - Document ID
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bundle-sharedhealthrecord.html">Bundle (SZZ CZ)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz)
+            </td>
+            <td>
+            If it is the identifier of a particular report instance
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.type</a></td>
+            <td>
+            A.1.6.2 - Document type
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            type
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.status</a></td>
+            <td>
+            A.1.6.3 - Document status
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            status
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.dateTime</a></td>
+            <td>
+            A.1.6.4 - Report date and time
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bundle-sharedhealthrecord.html">Bundle (SZZ CZ)</a></td>
+            <td>
+            timestamp
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz)
+            </td>
+            <td>
+            If it is when this particular version of this report has been assembled into a Bundle.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.dateTime</a></td>
+            <td>
+            A.1.6.4 - Report date and time
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            date
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            If it is when this document has been created (independently of its version)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.title</a></td>
+            <td>
+            A.1.6.5 - Document title
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            title
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.custodian</a></td>
+            <td>
+            A.1.6.6 - Report custodian
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            custodian
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.confidentiality</a></td>
+            <td>
+            A.1.6.7 - Confidentiality
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            confidentiality
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.language</a></td>
+            <td>
+            A.1.6.8 - Language
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            language
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.documentMetadata.version</a></td>
+            <td>
+            A.1.6.9 - Version
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td>
+            extension:versionNumber.valueString
+            </td>
+            <td>
+            Composition (CZ_CompositionSzz)
+            </td>
+            <td>
+            As business version, not as resource version
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-HeaderSzzCz.html">Header.digitalSignature</a></td>
+            <td>
+            A.1.7 - Digital signature
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-bundle-sharedhealthrecord.html">Bundle (SZZ CZ)</a></td>
+            <td>
+            signature
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz)
+            </td>
+            <td>
+            Digital signature of the Bundle
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
 </div>

@@ -13,9 +13,6 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Shared Health Record" <<LogicalModel>> [[StructureDefinition-HeaderSzzCz.html]]
-note top #EEEEAE [[ConceptMap-Header2FHIR-cz.html]]
-Concept Map
-endnote
 
 class "cz-organization-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]

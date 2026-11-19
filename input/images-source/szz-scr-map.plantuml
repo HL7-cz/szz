@@ -14,9 +14,6 @@ legend right
 endlegend
 
 class "Preventive and screening health record" <<LogicalModel>> [[StructureDefinition-PreventiveAndScreeningRecordCz.html]]
-note top #EEEEAE [[ConceptMap-ScreeningRecord2FHIR-cz.html]]
-Concept Map
-endnote
 
 class "cz-composition-sharedhealthrecord" <<Profile>> [[StructureDefinition-cz-composition-sharedhealthrecord.html]]
 class "cz-observation-height" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
