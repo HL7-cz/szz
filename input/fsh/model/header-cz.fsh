@@ -15,6 +15,9 @@ Description: """Hlavička sdíleného zdravotního záznamu podle české specif
   * jmeno 0..1 HumanName "A.1.4.2 Jméno příjemce" """Jméno a příjmení osoby příjemce."""
   * idOrganizace 0..1 Identifier "A.1.4.3 ID organizace příjemce" """Identifikátor organizace příjemce (např. NRPZS, IČO)."""
   * organizace 0..1 string "A.1.4.4 Organizace příjemce" """Název a identifikační údaje zařízení nebo pracoviště příjemce."""
+  * adresa 0..1 Address "A.1.4.5 Adresa" """Poštovní, domácí a/nebo kancelářská adresa příjemce. Adresy jsou vždy sekvence částí adresy (např. řádek adresy, země, PSČ, město), i když se formát poštovní adresy může lišit v závislosti na zemi."""
+  * zeme 1..1 CodeableConcept "A.1.4.6 Země" """Země zamýšleného příjemce jako součást adresy."""
+  * telekom 0..* ContactPoint "A.1.4.7 Telekom" """Telekomunikační kontakt příjemce (telefon, e-mail apod.). Může být uvedeno více kontaktů."""
 
 * autor 1..* Base "A.1.5 Autor dokumentu" """Osoba nebo systém, který dokument vytvořil."""
   * idAutor 1..* Identifier "A.1.5.1 Identifikátor autora" """Identifikační číslo autora (zdravotnický pracovník nebo IS)."""

@@ -282,9 +282,9 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.kryticnost</a></td>
+            <td><a href="StructureDefinition-LogEmergencyRecordCz.html">alergie.kriticnost</a></td>
             <td>
-            A.2.2.3 - Původce
+            A.2.2.3 - Kritičnost
             </td>
             <td>
             ekvivalentní
@@ -531,7 +531,7 @@
           <tr>
             <td><a href="StructureDefinition-LogEmergencyRecordCz.html">pouziteLecivePripravky.identifikace</a></td>
             <td>
-            A.3.4.1 - Identifikace léčivého přípravku
+            A.2.4.1 - Identifikace léčivého přípravku
             </td>
             <td>
             ekvivalentní
@@ -550,7 +550,7 @@
           <tr>
             <td><a href="StructureDefinition-LogEmergencyRecordCz.html">pouziteLecivePripravky.mnozstvi</a></td>
             <td>
-            A.3.4.2 - Množství
+            A.2.4.2 - Množství
             </td>
             <td>
             ekvivalentní

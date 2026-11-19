@@ -531,7 +531,7 @@
           <tr>
             <td><a href="StructureDefinition-EmergencyRecordCz.html">EmergencyRecord.usedMedication.identification</a></td>
             <td>
-            A.3.4.1 - Identification of medicinal product
+            A.2.4.1 - Identification of medicinal product
             </td>
             <td>
             equivalent
@@ -550,7 +550,7 @@
           <tr>
             <td><a href="StructureDefinition-EmergencyRecordCz.html">EmergencyRecord.usedMedication.quantity</a></td>
             <td>
-            A.3.4.2 - Quantity
+            A.2.4.2 - Quantity
             </td>
             <td>
             equivalent

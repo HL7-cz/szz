@@ -135,17 +135,17 @@
             A.1.3 Zdravotní pojištění
             </td>
             <td>
-            související
+            ekvivalentní
             </td>
             <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
             <td>
-            extension:basedOn:order
+            section:coverage
             </td>
             <td>
             Composition (CZ_CompositionSzz)
             </td>
             <td>
-            K diskusi, zda jsou údaje o plátci předávány s požadavkem, nebo jinou cestou. Ověřit také použité rozšíření.
+            
             </td>
           </tr>
           <tr>
@@ -156,15 +156,15 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html">Coverage (CZ core)</a></td>
             <td>
-            section:sectionPayers.entry
+            
             </td>
             <td>
-            Composition (CZ_CompositionSzz)
+            Composition (CZ_CompositionSzz).section:coverage.entry
             </td>
             <td>
-            Composition.section:sectionPayers.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')
+            Composition.section:coverage.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')
             </td>
           </tr>
           <tr>
@@ -215,10 +215,10 @@
             </td>
             <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html">Coverage (CZ core)</a></td>
             <td>
-            identifier
+            subscriberId
             </td>
             <td>
-            Bundle (CZ_BundleSzz).entry
+            Composition (CZ_CompositionSzz).section:coverage.entry
             </td>
             <td>
             
@@ -234,13 +234,13 @@
             </td>
             <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
             <td>
-            identifier
+            identifier:CPOJ
             </td>
             <td>
             Composition (CZ_CompositionSzz).subject
             </td>
             <td>
-            Pokud je číslo pojištěnce považováno za jeden z identifikátorů pacienta; to platí v některých jurisdikcích.
+            Číslo pojištěnce se uvádí také jako identifikátor pacienta (CPOJ).
             </td>
           </tr>
           <tr>
@@ -339,9 +339,9 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-LogHeaderSzzCz.html">informationRecipient.address</a></td>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">prijemce.adresa</a></td>
             <td>
-            A.1.4.5 - Address
+            A.1.4.5 Adresa
             </td>
             <td>
             související
@@ -358,9 +358,9 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-LogHeaderSzzCz.html">informationRecipient.country</a></td>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">prijemce.zeme</a></td>
             <td>
-            A.1.4.6 - Country
+            A.1.4.6 Země
             </td>
             <td>
             související
@@ -377,9 +377,9 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-LogHeaderSzzCz.html">informationRecipient.telecom</a></td>
+            <td><a href="StructureDefinition-LogHeaderSzzCz.html">prijemce.telekom</a></td>
             <td>
-            A.1.4.7 - Telecom
+            A.1.4.7 Telekom
             </td>
             <td>
             související
@@ -743,17 +743,55 @@
             A.1.7 Elektronické podpisy
             </td>
             <td>
+            související
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-provenance.html">Provenance (CZ core)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz).entry:provenance
+            </td>
+            <td>
+            Podpisy se zaznamenávají ve zdrojích Provenance vložených do Bundle dokumentu; Provenance.target určuje podepsané zdroje.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logDigitalSignatureCz.html">elektronickyPodpis</a></td>
+            <td>
+            A.1.7.1 - Elektronický podpis
+            </td>
+            <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-bundle-sharedhealthrecord.html">Bundle (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-provenance.html">Provenance (CZ core)</a></td>
             <td>
-            signature
+            signature.data
             </td>
             <td>
-            Bundle (CZ_BundleSzz)
+            Provenance (CZ_Provenance).signature
             </td>
             <td>
-            Elektronický podpis Bundle.
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logDigitalSignatureCz.html">casoveRazitko</a></td>
+            <td>
+            A.1.7.2 - Elektronické časové razítko
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-provenance.html">Provenance (CZ core)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Provenance (CZ_Provenance).signature
+            </td>
+            <td>
+            Bez samostatného prvku FHIR. Časové razítko je součástí struktury JAdES v Provenance.signature.data (A.1.7.1); signature.when není časovým razítkem (viz standard Elektronické podepisování EHR).
             </td>
           </tr>
         </tbody>

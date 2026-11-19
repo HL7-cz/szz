@@ -41,6 +41,12 @@ Usage: #example
 * entry[medications].fullUrl = "urn:uuid:d6511f3f-a311-4050-a34a-542f1ffe40bd"
 * entry[medications].resource = cz-example-medication
 
+* entry[organization][1].fullUrl = "urn:uuid:6b1f3c2e-8a4d-4e57-9c1b-2f7d3e9a5b10"
+* entry[organization][1].resource = cz-example-insurer
+
+* entry[coverage].fullUrl = "urn:uuid:9d2e4a71-3c5b-4f86-a0d2-7e1b6c8f4a21"
+* entry[coverage].resource = cz-example-coverage
+
 Instance: cz-example-composition
 InstanceOf: CZ_CompositionSzz
 Title: "Composition: Emergency Report (CZ)"
@@ -66,6 +72,11 @@ Usage: #example
 * section[emergencyRecord].entry[allergiesAndAdverseReactions] = Reference(urn:uuid:4b343429-16da-4a5b-be80-17e4122f5956)
 * section[emergencyRecord].entry[otherEmergencyInformation] = Reference(urn:uuid:74d87d39-d681-4df4-80a5-975b359e6210)
 * section[emergencyRecord].entry[medicationHistoryDuringHospitalization] = Reference(urn:uuid:ce0f692f-0461-4ed0-8df3-f8db265f755c)
+* section[coverage].title = "Health insurance"
+* section[coverage].code = $loinc#87520-3
+* section[coverage].text.status = #generated
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Všeobecná zdravotní pojišťovna České republiky (111), číslo pojištěnce 0551621110</p></div>"
+* section[coverage].entry[0] = Reference(urn:uuid:9d2e4a71-3c5b-4f86-a0d2-7e1b6c8f4a21)
 
 Instance: cz-example-allergyintolerance
 InstanceOf: CZ_AllergyIntolerance
@@ -237,3 +248,23 @@ Description: "Blood type observation for Patient Králík in SZZ"
 * valueCodeableConcept = $sct#112144000 "Blood group A"
 * effectiveDateTime = "2025-10-20T10:30:00+01:00"
 
+Instance: cz-example-insurer
+InstanceOf: CZ_OrganizationCore
+Title: "Organization: Health insurance company (CZ)"
+Description: "Example of the health insurance company of the patient."
+Usage: #example
+* id = "6b1f3c2e-8a4d-4e57-9c1b-2f7d3e9a5b10"
+* identifier[KP].system = "https://ncez.mzcr.cz/fhir/sid/kp"
+* identifier[KP].value = "111"
+* name = "Všeobecná zdravotní pojišťovna České republiky"
+
+Instance: cz-example-coverage
+InstanceOf: CZ_Coverage
+Title: "Coverage: Public health insurance (CZ)"
+Description: "Example of the patient's public health insurance."
+Usage: #example
+* id = "9d2e4a71-3c5b-4f86-a0d2-7e1b6c8f4a21"
+* status = #active
+* subscriberId = "0551621110"
+* beneficiary = Reference(urn:uuid:142534ac-0274-4a16-b6a2-d4d4f24ff67b)
+* payor = Reference(urn:uuid:6b1f3c2e-8a4d-4e57-9c1b-2f7d3e9a5b10)

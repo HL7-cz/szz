@@ -135,17 +135,17 @@
             A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.
             </td>
             <td>
-            related-to
+            equivalent
             </td>
             <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
             <td>
-            extension:basedOn:order
+            section:coverage
             </td>
             <td>
             Composition (CZ_CompositionSzz)
             </td>
             <td>
-            To be discussed if the payor data are conveyed with the request or through other means. Check also the extension to be used.
+            
             </td>
           </tr>
           <tr>
@@ -156,15 +156,15 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html">Coverage (CZ core)</a></td>
             <td>
-            section:sectionPayers.entry
+            
             </td>
             <td>
-            Composition (CZ_CompositionSzz)
+            Composition (CZ_CompositionSzz).section:coverage.entry
             </td>
             <td>
-            Composition.section:sectionPayers.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')
+            Composition.section:coverage.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')
             </td>
           </tr>
           <tr>
@@ -215,10 +215,10 @@
             </td>
             <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html">Coverage (CZ core)</a></td>
             <td>
-            identifier
+            subscriberId
             </td>
             <td>
-            Bundle (CZ_BundleSzz).entry
+            Composition (CZ_CompositionSzz).section:coverage.entry
             </td>
             <td>
             
@@ -234,13 +234,13 @@
             </td>
             <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html">Patient (CZ core)</a></td>
             <td>
-            identifier
+            identifier:CPOJ
             </td>
             <td>
             Composition (CZ_CompositionSzz).subject
             </td>
             <td>
-            If treated as one of the Patient identifiers; this applies in some jurisdictions.
+            The health insurance number is also carried as the patient identifier (CPOJ).
             </td>
           </tr>
           <tr>
@@ -743,17 +743,55 @@
             A.1.7 - Digital signature
             </td>
             <td>
+            related-to
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-provenance.html">Provenance (CZ core)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Bundle (CZ_BundleSzz).entry:provenance
+            </td>
+            <td>
+            Signatures are recorded in Provenance resources included in the document Bundle; Provenance.target identifies the signed resources.
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-DigitalSignatureCz.html">DigitalSignature.digitalSignature</a></td>
+            <td>
+            A.1.7.1 - Electronic signature or document seal
+            </td>
+            <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-bundle-sharedhealthrecord.html">Bundle (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-provenance.html">Provenance (CZ core)</a></td>
             <td>
-            signature
+            signature.data
             </td>
             <td>
-            Bundle (CZ_BundleSzz)
+            Provenance (CZ_Provenance).signature
             </td>
             <td>
-            Digital signature of the Bundle
+            
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-DigitalSignatureCz.html">DigitalSignature.timestamp</a></td>
+            <td>
+            A.1.7.2 - Electronic time stamp
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-provenance.html">Provenance (CZ core)</a></td>
+            <td>
+            
+            </td>
+            <td>
+            Provenance (CZ_Provenance).signature
+            </td>
+            <td>
+            No separate FHIR element. The timestamp is part of the JAdES structure in Provenance.signature.data (A.1.7.1); signature.when is not a timestamp (see the EHR Electronic Signing standard).
             </td>
           </tr>
         </tbody>

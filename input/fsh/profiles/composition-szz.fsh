@@ -43,8 +43,17 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * obeys text-or-section
 
 * section contains
+    coverage 0..1 and
     emergencyRecord 0..1 and
     preventingAndScreeningRecord 0..1
+
+///////////////////////////////// COVERAGE SECTION ///////////////////////////////////////
+* section[coverage]
+  * ^short = "Health insurance"
+  * ^definition = "This section holds information about the patient's health insurance (A.1.3): the health insurance company and the health insurance number."
+  * code = $loinc#87520-3 //"Coverage type"
+  * entry 1..
+  * entry only Reference(CZ_Coverage)
 
 ///////////////////////////////// Emergency record SECTION ///////////////////////////////////////
 * section[emergencyRecord]
@@ -127,7 +136,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
     * entry[preventingExamination]
       * ^short = "Preventing Examination"
       * ^definition = "This entry holds a reference to the preventing examination."
-    * entry[preventingExamination] only Reference(CZ_BodyHeight or CZ_BodyWeight or CZ_WaistCircumference)
+    * entry[preventingExamination] only Reference(CZ_BodyHeight or CZ_BodyWeight or CZ_WaistCircumference or CZ_ObservationBloodPressure)
     * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
   * section[gynecology]

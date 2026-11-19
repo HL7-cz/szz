@@ -38,27 +38,34 @@ Description: "Clinical document used to represent a Shared Health Record for the
     practitioner 1..* and
     practitionerRole 0..* and
     organization 0..* and
+    coverage 0..* and
     observation 0..* and
     adverseEvent 0..* and
     allergiesAndIntolerances 0..* and
     medicationStatements 0..* and
     medications 0..* and
     documentReference 0..* and
-    immunization 0..*
+    immunization 0..* and
+    provenance 0..*
 
 * entry[composition].resource only CZ_CompositionSzz
 * entry[patient].resource only CZ_PatientCore
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 * entry[organization].resource only CZ_OrganizationCore
-* entry[observation].resource only Observation or CZ_ObservationBloodType or CZ_BodyWeight or CZ_BodyWeight
+* entry[coverage].resource only CZ_Coverage
+* entry[observation].resource only CZ_ObservationBloodType or CZ_BodyHeight or CZ_BodyWeight or CZ_WaistCircumference or CZ_ObservationBloodPressure or CZ_ObservationColorectalCancer or CZ_ObservationProstateCancer or CZ_ObservationCytologyCervicalCancer or CZ_ObservationHPVCervicalCancer or CZ_ObservationColposcopyCervicalCancer or CZ_ObservationColonoscopy or CZ_ObservationMammography or CZ_ObservationMammographyBiopsy or CZ_ObservationLungCancer or CZ_ObservationMRIProstateCancer or CZ_ObservationAbdominaAorticAneurysms or CZ_ObservationPulmonology or CZ_ObservationUrology or CZ_ObservationUrologyBiopsy
 * entry[adverseEvent].resource only CZ_AdverseEvent
 * entry[allergiesAndIntolerances].resource only CZ_AllergyIntolerance
 * entry[medicationStatements].resource only CZ_MedicationStatementCore
 * entry[medications].resource only CZ_MedicationCore
 * entry[documentReference].resource only CZ_Logo
 * entry[immunization].resource only CZ_ImmunizationHPV
+* entry[provenance].resource only CZ_Provenance
+* entry[provenance] ^short = "Provenance and signatures for resources in the document"
+* entry[provenance] ^definition = "Provenance resources recording the origin and signatures of document resources. Provenance.target identifies the signed resources; the Composition does not reference Provenance through a signature section."
 
+* signature only CZ_Signature
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
   * when ^short = "When was signed"

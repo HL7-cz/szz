@@ -294,7 +294,7 @@
             effectiveDateTime
             </td>
             <td>
-            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
             </td>
             <td>
             
@@ -351,7 +351,7 @@
             component[0].valueQuantity.value
             </td>
             <td>
-            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
             </td>
             <td>
             
@@ -370,7 +370,7 @@
             component[1].valueQuantity.value
             </td>
             <td>
-            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry
+            Composition (CZ_CompositionSzz).section:preventingAndScreeningRecord.section:generalPractitioner.entry:preventingExamination
             </td>
             <td>
             
