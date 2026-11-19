@@ -81,28 +81,40 @@ Usage: #example
 * custodian = Reference(urn:uuid:08f3f0c5-69ac-45c6-9bec-b8ab940ec721)
 * section[preventingAndScreeningRecord].title = "Preventive and screening health record"
 * section[preventingAndScreeningRecord].code = DocumentSectionCzSzzCs#10002 "Preventive and screening health record"
+* section[preventingAndScreeningRecord].text.status = #generated
+* section[preventingAndScreeningRecord].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Preventive and screening health record</p></div>"
 * section[preventingAndScreeningRecord].section[generalPractitioner].title = "General practitioner record"
 * section[preventingAndScreeningRecord].section[generalPractitioner].code = DocumentSectionCzSzzCs#10003 "General practitioner record"
+* section[preventingAndScreeningRecord].section[generalPractitioner].text.status = #generated
+* section[preventingAndScreeningRecord].section[generalPractitioner].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>General practitioner record</p></div>"
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[0] = Reference(urn:uuid:31e1de93-1c46-4f9e-849c-c46f8c7f1496)
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[1] = Reference(urn:uuid:504f3628-9a5e-4a1a-83b0-418c4b8dc38b)
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[2] = Reference(urn:uuid:82451f85-ee50-4367-b809-0511ea469269)
 * section[preventingAndScreeningRecord].section[gynecology].title = "Gynecology record"
 * section[preventingAndScreeningRecord].section[gynecology].code = DocumentSectionCzSzzCs#10004 "Gynecology record"
+* section[preventingAndScreeningRecord].section[gynecology].text.status = #generated
+* section[preventingAndScreeningRecord].section[gynecology].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Gynecology record</p></div>"
 * section[preventingAndScreeningRecord].section[gynecology].entry[0] = Reference(urn:uuid:dd06896e-959b-44ec-b791-19a68ffdc576)
 * section[preventingAndScreeningRecord].section[gynecology].entry[1] = Reference(urn:uuid:180d74d4-fe14-408c-a3a8-07da4e3b8fcd)
 * section[preventingAndScreeningRecord].section[gynecology].entry[2] = Reference(urn:uuid:40ee0269-0027-4e7b-b061-e039c06cf988)
 * section[preventingAndScreeningRecord].section[gynecology].entry[3] = Reference(urn:uuid:1d79f716-c583-4e42-a68f-bc8c9bb2781d)
 * section[preventingAndScreeningRecord].section[radiology].title = "Results of imaging observation"
 * section[preventingAndScreeningRecord].section[radiology].code = DocumentSectionCzSzzCs#10009 "Radiology record"
+* section[preventingAndScreeningRecord].section[radiology].text.status = #generated
+* section[preventingAndScreeningRecord].section[radiology].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Results of imaging observation</p></div>"
 * section[preventingAndScreeningRecord].section[radiology].entry[0] = Reference(urn:uuid:0a3b5d6a-e9a8-4aa2-bcff-7c916540bf08)
 * section[preventingAndScreeningRecord].section[radiology].entry[1] = Reference(urn:uuid:fa768d55-f16c-457b-8bdc-1d0b1c9e24fa)
 * section[preventingAndScreeningRecord].section[radiology].entry[2] = Reference(urn:uuid:f564cd9a-422f-439b-ae17-b2c0a1311ead)
 * section[preventingAndScreeningRecord].section[radiology].entry[3] = Reference(urn:uuid:dd8033d4-d1c9-48e8-8edd-c0dda913678d)
 * section[preventingAndScreeningRecord].section[pulmonology].title = "Results of pulmonology observation"
 * section[preventingAndScreeningRecord].section[pulmonology].code = DocumentSectionCzSzzCs#10007 "Pulmonology record"
+* section[preventingAndScreeningRecord].section[pulmonology].text.status = #generated
+* section[preventingAndScreeningRecord].section[pulmonology].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Results of pulmonology observation</p></div>"
 * section[preventingAndScreeningRecord].section[pulmonology].entry[0] = Reference(urn:uuid:407b583e-4c05-47eb-b0df-6d8166c0d4f1)
 * section[preventingAndScreeningRecord].section[angiology].title = "Angiology record"
 * section[preventingAndScreeningRecord].section[angiology].code = DocumentSectionCzSzzCs#10010 "Angiology record"
+* section[preventingAndScreeningRecord].section[angiology].text.status = #generated
+* section[preventingAndScreeningRecord].section[angiology].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Angiology record</p></div>"
 * section[preventingAndScreeningRecord].section[angiology].entry[0] = Reference(urn:uuid:dd8033d4-d1c9-48e8-8edd-c0dda913678d)
 
 Instance: cz-example-observation-mammography

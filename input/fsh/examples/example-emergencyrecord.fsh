@@ -60,13 +60,15 @@ Usage: #example
 * custodian = Reference(urn:uuid:f84d821c-ba13-412b-a340-2547a6f36b7f)
 * section[emergencyRecord].title = "Emergency Record"
 * section[emergencyRecord].code = DocumentSectionCzSzzCs#10001 "Emergency health record"
+* section[emergencyRecord].text.status = #generated
+* section[emergencyRecord].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Emergency Record</p></div>"
 * section[emergencyRecord].entry[bloodType] = Reference(urn:uuid:5da80cc6-b699-42dc-aeba-86e229063975)
 * section[emergencyRecord].entry[allergiesAndAdverseReactions] = Reference(urn:uuid:4b343429-16da-4a5b-be80-17e4122f5956)
 * section[emergencyRecord].entry[otherEmergencyInformation] = Reference(urn:uuid:74d87d39-d681-4df4-80a5-975b359e6210)
 * section[emergencyRecord].entry[medicationHistoryDuringHospitalization] = Reference(urn:uuid:ce0f692f-0461-4ed0-8df3-f8db265f755c)
 
 Instance: cz-example-allergyintolerance
-InstanceOf: CZ_AllergyIntoleranceSzz
+InstanceOf: CZ_AllergyIntolerance
 Title: "AllergyIntolerance: Penicillin Allergy (CZ)"
 Description: "Example of AllergyIntolerance resource representing allergy to Penicillin."
 Usage: #example
@@ -75,7 +77,7 @@ Usage: #example
 * identifier[=].value = "ALG20200115"
 * clinicalStatus = $hl7-allergy-intolerance-clinical#active
 * verificationStatus = $hl7-allergy-intolerance-verification#confirmed
-* type = AllergyIntoleranceTypeSzzCs#allergy "alergie"
+* type = #allergy
 * category[0] = $hl7-allergy-intolerance-category-cs#medication "léčivo"
 * criticality = $hl7-allergy-intolerance-category-vs#high "vysoká"
 * code = $dlp_lecivePripravky#0233172 "V-PENICILIN BBP"
@@ -83,7 +85,7 @@ Usage: #example
 * onsetDateTime = "2020-01-15"
 * recordedDate = "2020-01-16"
 * recorder = Reference(urn:uuid:428025b5-e328-4542-8812-dd6a874c44f9)
-* reaction[0].severity = ClinicalSeverityOfSymptomsSzzCs#mild "mírná"
+* reaction[0].severity = #mild
 * reaction[0].manifestation[0] = $sct#267036007 "Dyspnea"
 
 Instance: cz-example-medicationstatement

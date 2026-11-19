@@ -251,7 +251,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-allergyIntolerance-cz-core.html">Allergy Intolerance (CZ core)</a></td>
             <td>
             code
             </td>
@@ -270,7 +270,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-allergyIntolerance-cz-core.html">Allergy Intolerance (CZ core)</a></td>
             <td>
             category
             </td>
@@ -289,7 +289,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-allergyIntolerance-cz-core.html">Allergy Intolerance (CZ core)</a></td>
             <td>
             criticality
             </td>
@@ -308,7 +308,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-allergyIntolerance-cz-core.html">Allergy Intolerance (CZ core)</a></td>
             <td>
             type
             </td>
@@ -327,7 +327,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-allergyIntolerance-cz-core.html">Allergy Intolerance (CZ core)</a></td>
             <td>
             reaction.manifestation
             </td>
@@ -346,7 +346,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-allergyIntolerance-cz-core.html">Allergy Intolerance (CZ core)</a></td>
             <td>
             reaction.severity
             </td>
@@ -365,7 +365,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-allergyIntolerance-cz-core.html">Allergy Intolerance (CZ core)</a></td>
             <td>
             onsetDateTime
             </td>
@@ -384,7 +384,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-allergyIntolerance-szz.html">Allergy intolerance (SZZ CZ)</a></td>
+            <td><a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-allergyIntolerance-cz-core.html">Allergy Intolerance (CZ core)</a></td>
             <td>
             recorder
             </td>

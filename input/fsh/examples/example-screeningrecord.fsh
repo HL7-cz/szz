@@ -72,8 +72,12 @@ Usage: #example
 * custodian = Reference(urn:uuid:2ef3f712-d586-4b3e-92eb-6a5bddc58a68)
 * section[preventingAndScreeningRecord].title = "Preventive and screening health record"
 * section[preventingAndScreeningRecord].code = DocumentSectionCzSzzCs#10002 "Preventive and screening health record"
+* section[preventingAndScreeningRecord].text.status = #generated
+* section[preventingAndScreeningRecord].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Preventive and screening health record</p></div>"
 * section[preventingAndScreeningRecord].section[generalPractitioner].title = "General practitioner record"
 * section[preventingAndScreeningRecord].section[generalPractitioner].code = DocumentSectionCzSzzCs#10003 "General practitioner record"
+* section[preventingAndScreeningRecord].section[generalPractitioner].text.status = #generated
+* section[preventingAndScreeningRecord].section[generalPractitioner].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>General practitioner record</p></div>"
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[0] = Reference(urn:uuid:8a6733be-e107-44b6-99a8-77869faea42a)
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[1] = Reference(urn:uuid:d87b5700-f89c-444b-8360-29c9f7673bf1)
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[2] = Reference(urn:uuid:5031be23-9628-49af-8cac-d23ea87cb8e0)
@@ -81,16 +85,24 @@ Usage: #example
 * section[preventingAndScreeningRecord].section[generalPractitioner].entry[4] = Reference(urn:uuid:824055fa-6107-49c8-b217-f029aa7b8872)
 * section[preventingAndScreeningRecord].section[gastroenterology].title = "Results of colorectal cancer screening tests"
 * section[preventingAndScreeningRecord].section[gastroenterology].code = DocumentSectionCzSzzCs#10008 "Gastroenterology record"
+* section[preventingAndScreeningRecord].section[gastroenterology].text.status = #generated
+* section[preventingAndScreeningRecord].section[gastroenterology].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Results of colorectal cancer screening tests</p></div>"
 * section[preventingAndScreeningRecord].section[gastroenterology].entry[0] =  Reference(urn:uuid:cd2b65ad-9926-4589-98c9-7e581e21602a)
 * section[preventingAndScreeningRecord].section[biochemistryLaboratory].title = "Results of biochemistry laboratory tests"
 * section[preventingAndScreeningRecord].section[biochemistryLaboratory].code = DocumentSectionCzSzzCs#10005 "Biochemistry laboratory record"
+* section[preventingAndScreeningRecord].section[biochemistryLaboratory].text.status = #generated
+* section[preventingAndScreeningRecord].section[biochemistryLaboratory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Results of biochemistry laboratory tests</p></div>"
 * section[preventingAndScreeningRecord].section[biochemistryLaboratory].entry[0] = Reference(urn:uuid:02f3d1a4-4a5c-42ae-9f68-ba2f7dfe88a8)
 * section[preventingAndScreeningRecord].section[biochemistryLaboratory].entry[1] = Reference(urn:uuid:824055fa-6107-49c8-b217-f029aa7b8872)
 * section[preventingAndScreeningRecord].section[radiology].title = "Results of imaging observation"
 * section[preventingAndScreeningRecord].section[radiology].code = DocumentSectionCzSzzCs#10009 "Radiology record"
+* section[preventingAndScreeningRecord].section[radiology].text.status = #generated
+* section[preventingAndScreeningRecord].section[radiology].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Results of imaging observation</p></div>"
 * section[preventingAndScreeningRecord].section[radiology].entry[0] = Reference(urn:uuid:76879fde-d561-4435-b119-6bb579bea0f5)
 * section[preventingAndScreeningRecord].section[urology].title = "Result of urology observations"
 * section[preventingAndScreeningRecord].section[urology].code = DocumentSectionCzSzzCs#10006 "Urology record"
+* section[preventingAndScreeningRecord].section[urology].text.status = #generated
+* section[preventingAndScreeningRecord].section[urology].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Result of urology observations</p></div>"
 * section[preventingAndScreeningRecord].section[urology].entry[0] = Reference(urn:uuid:824055fa-6107-49c8-b217-f029aa7b8872)
 * section[preventingAndScreeningRecord].section[urology].entry[1] = Reference(urn:uuid:57838f4e-238c-43e4-9088-42971d8171a6)
 * section[preventingAndScreeningRecord].section[urology].entry[2] = Reference(urn:uuid:bc143cd8-4638-4823-87d5-6bc16ce68e85)

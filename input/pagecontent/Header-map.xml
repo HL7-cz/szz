@@ -253,13 +253,13 @@
             </td>
             <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
             <td>
-            extension:information-recipient
+            extension:informationRecipient
             </td>
             <td>
             Composition (CZ_CompositionSzz)
             </td>
             <td>
-            Composition.extension:information-recipient.valueReference.resolve().ofType(PractitionerRole)
+            Composition.extension:informationRecipient.valueReference.resolve().ofType(PractitionerRole)
             </td>
           </tr>
           <tr>
@@ -275,10 +275,10 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionSzz).extension:information-recipient
+            Composition (CZ_CompositionSzz).extension:informationRecipient
             </td>
             <td>
-            Composition.extension:information-recipient.valueReference.resolve()
+            Composition.extension:informationRecipient.valueReference.resolve()
             </td>
           </tr>
           <tr>
@@ -294,7 +294,7 @@
             practitioner.name
             </td>
             <td>
-            Composition (CZ_CompositionSzz).extension:information-recipient
+            Composition (CZ_CompositionSzz).extension:informationRecipient
             </td>
             <td>
             
@@ -313,7 +313,7 @@
             organization.identifier
             </td>
             <td>
-            Composition (CZ_CompositionSzz).extension:information-recipient
+            Composition (CZ_CompositionSzz).extension:informationRecipient
             </td>
             <td>
             
@@ -332,7 +332,7 @@
             organization
             </td>
             <td>
-            Composition (CZ_CompositionSzz).extension:information-recipient
+            Composition (CZ_CompositionSzz).extension:informationRecipient
             </td>
             <td>
             
@@ -351,7 +351,7 @@
             address
             </td>
             <td>
-            Composition (CZ_CompositionSzz).extension:information-recipient
+            Composition (CZ_CompositionSzz).extension:informationRecipient
             </td>
             <td>
             
@@ -370,7 +370,7 @@
             address.country
             </td>
             <td>
-            Composition (CZ_CompositionSzz).extension:information-recipient
+            Composition (CZ_CompositionSzz).extension:informationRecipient
             </td>
             <td>
             
@@ -389,7 +389,7 @@
             telecom
             </td>
             <td>
-            Composition (CZ_CompositionSzz).extension:information-recipient
+            Composition (CZ_CompositionSzz).extension:informationRecipient
             </td>
             <td>
             
@@ -728,7 +728,7 @@
             </td>
             <td><a href="StructureDefinition-cz-composition-sharedhealthrecord.html">Composition (SZZ CZ)</a></td>
             <td>
-            extension:versionNumber.valueString
+            extension:version.valueString
             </td>
             <td>
             Composition (CZ_CompositionSzz)
